@@ -7,7 +7,23 @@ body {
 header {
 	#navigation-bar {
 		font-family: $stack-lato;
-		font-size: 1em;
+		font-size: 1.15em;
 		font-weight: 900;
+	}
+	#key-messages {
+		font-family: $stack-poppins;
+		h2 {
+			text-transform: uppercase;
+			font-size: 5em;
+			font-weight: 700;
+			letter-spacing: -0.025em;
+		}
+		p {
+			font-size: 1.8em;
+		}
+		p:nth-of-type(2) {
+			font-size: 2.4em;
+		}
+
 	}
 }

@@ -27,22 +27,62 @@ header {
 		left: 0;
 		right: 0;
 		color: $navigation-color;
+
 		h1 {
+			color: #fffef2;
 			@include screen(tablet) {
-			display: inline-block;
-			float: left;
+				display: inline-block;
+				float: left;
+			}
+		}
+
+		#menu {
+			#menu-line-mobile {
+				color: white;
+				background: black;
+			}
+		}
+	}
+	#key-messages {
+		position:absolute;
+		top: 180px;
+ 	   	left: 0;
+    	right: 0;
+    	width: 65%;
+		text-align: center;
+		z-index: 200;
+		color: #fff;
+		h2 {
+			margin: 0;
+		}
+		p {
+			color: #fffef2; 
+		}
+		p:nth-of-type(2) {
+			color: #ffd454;
+		}
+		#inquiry-button {
+			width: 25%;
+			margin: 0 auto;
+			padding: 10px 0;
+			color: #42B574;
+			border: 2px solid #42B574;
+			transition: .3s all ease;
+			&:hover {
+				color: #fffef2;
+				background: #42B574;
+				cursor: pointer;
 			}
 		}
 	}
 
 	#header-background-video {
-		position: fixed;
+		position: absolute;
 	    top: 50%;
 	    left: 50%;
 	    min-width: 100%;
-	    min-height: 100%;
 	    width: auto;
-	    height: auto;
+	    height: 100vh;
 	    z-index: -100;
 	    -ms-transform: translateX(-50%) translateY(-50%);
 	    -moz-transform: translateX(-50%) translateY(-50%);
@@ -51,30 +91,42 @@ header {
 	    background: url(img/backgroundtop.jpg) no-repeat;
 	    background-size: cover; 
 	}
-	#menu {
-		#menu-line-mobile {
-			color: white;
-			background: black;
-		}
-	}
 }
 
 #nav {
 	@include screen(tablet) {
 		display: inline-block;
 		float: right;
-		margin: 30px 0 0 0;
+		margin: 40px 0 0 0;
 	}
 
 	li {
 		@include screen(tablet) {
 			display: inline-block;
+			position: relative;
+			margin-left: 20px;
 		}
 
 		a {
 			color: $navigation-color;
 			text-decoration: none;
-			padding: 10px;
+			padding: 10px 0;
+			&:after {
+				content: '';
+    			position: absolute;
+    			top: 100%;
+   				left: 50%;
+    			width: 0;
+    			height: 2px;
+    			margin-top: 4px;
+    			background: linear-gradient(90deg, #42b574 0%, #84c450 100%);
+    			transition: .3s all ease;
+			}
+			&:hover:after {
+				color: #fffef2;
+				left:0;
+				width: 100%;
+			}
 		}
 	}
 }
