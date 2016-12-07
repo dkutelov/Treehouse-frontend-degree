@@ -30,12 +30,12 @@ gulp.task('styles', function () {
 			this.emit('end');
 		}))
 		.pipe(sourcemaps.init())
-		.pipe(autoprefixer())
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(DIST_PATH))
+		.pipe(autoprefixer())
 		.pipe(livereload());
 });
 

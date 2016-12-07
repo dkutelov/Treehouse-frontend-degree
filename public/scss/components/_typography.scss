@@ -46,9 +46,26 @@ body {
 
 	&-subtitle {
 		font-size: 1.2em;
+		font-weight: 400;
 		@include screen(tablet) {
 			font-size: 2.4em;
 		}
 	}
 
+}
+
+.section {
+	&--main-heading {
+		font-family: $stack-lato;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size:2em;
+	}
+
+	&--subheading {
+		font-family: $stack-poppins;
+		font-weight: 400;
+		text-transform: capitalize;
+	}
 }

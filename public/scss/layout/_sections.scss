@@ -1,0 +1,47 @@
+.section {
+	&--features {
+		text-align: center;
+	}
+
+	&--tb-padding {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include screen(tablet) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+	}
+
+	&--background-grey {
+		background: $light-grey;
+		background: linear-gradient($plain-white, $light-grey);
+	}
+
+	&--main-heading {
+		display: inline-block;
+		position: relative;
+		text-transform: uppercase;
+		&:after {
+			@extend %Underline;
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	&--subheading {
+		text-align: center;
+		margin-top:0;
+		@include screen(tablet){
+			margin-top:0.5em;
+		}
+	}
+}
+
+.feature {
+	
+	&--heading {
+		position: relative;
+		text-transform: uppercase;
+	}
+
+}
