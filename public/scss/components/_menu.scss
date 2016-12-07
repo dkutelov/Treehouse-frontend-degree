@@ -1,0 +1,67 @@
+.menu {
+	
+	@include screen(tablet) {
+		display: inline-block;
+		float: right;
+		margin: 45px 0 0 0;
+	}
+
+	&-mobile-line {
+		position:absolute;
+		top: 22%;
+		left: 0%;
+		width: 30%;
+		color: $plain-white;
+		background: $plain-black;
+		height: 45px;
+		margin: 0;
+		@include screen(tablet) {
+			display:none;
+		}
+		&-icon {
+			position: absolute;
+			z-index: 500;
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+			margin: 5px 15px;
+		}
+		&-text {
+			position: absolute;
+			z-index: 500;
+			top: -5%;
+			left: 50%;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+	}
+
+	&-item {
+		display: none;
+		color: $plain-white;
+		text-decoration: none;
+		padding: 10px 0 3.5px 0;
+		
+		@include screen(tablet){
+			display: inline-block;
+			position: relative;
+			margin-left: 15px;
+		}
+		
+		&:after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			width: 0;
+			height: 2px;
+			background: linear-gradient(90deg, #42b574 0%, #84c450 100%);
+			transition: .3s all ease;
+		}
+		
+		&:hover:after {
+			left:0;
+			width: 100%;
+		}
+	}
+}

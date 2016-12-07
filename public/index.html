@@ -2,7 +2,7 @@
 <html lang="en-US">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Portfolio - Front-end developer Dariy Kutleov</title>
+		<title>Kutelov.com - Web Development</title>
 		<meta name="description" content="">
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -31,32 +31,40 @@
 		<video autoplay muted loop poster="img/backgroundtop.jpg" id="header-background-video">
 			<source src="video/backrgound-video-short.mp4" type="video/mp4">
 		</video>
-		<div id="navigation-bar" class="container">
+
+		<img srcset="img/backgroundtop1x.jpg 768w, img/backgroundtop2x.jpg 1267w" id="header-background-image">
+
+		<div class="container header-container">
 			<!-- Name -->
-			<h1>kutelov.com</h1>
+			<h1 class="header-container-name">kutelov.com</h1>
+			<img class="header-container-logo"src="dist/img/logo-kutelov.png" alt="logo">
 			<!-- Menu -->
-			<div id="menu">
-				<div id="menu-line-mobile">
-					<svg><use xlink:href="#menu-navigation-icon" x="0" y="0"/></svg>
-					<p>Menu</p>
-				</div>
-			</div>
-			<div id="main-navigation">
-				<ul id="nav">
-	    			<li><a href="#home">HOME</a></li>
-					<li><a href="#skills">SKILLS</a></li>
-					<li><a href="#features">FEATURES</a></li>
-					<li><a href="#projects">SKILLS</a></li>
-					<li><a href="#contacts">CONTACT</a></li>
-				</ul>
-			</div>
+			
+			<nav class="menu">
+				<a class="menu-item" href="#home">HOME</a>
+				<a class="menu-item"  href="#skills">SKILLS</a>
+				<a class="menu-item"  href="#features">FEATURES</a></li>
+				<a class="menu-item"  href="#projects">SKILLS</a></li>
+				<a class="menu-item"  href="#contacts">CONTACT</a></li>
+			</nav>
+		</div>
+		<!-- Line opening menu on mobile -->
+		<div class="menu-mobile-line">
+			<svg class="menu-mobile-line-icon">
+				<use xlink:href="#menu-navigation-icon" x="0" y="0"/>
+			</svg>
+			<p class="menu-mobile-line-text">Menu</p>
 		</div>
 		<!-- Key Messages -->
-		<div class="container" id="key-messages">
-			<h2>Cutting Edge</br>Web Development</h2>
-			<p>To succeed in whatever you do, you need  modern, responsive and superfast digital solutions that stand out, engage and inspire.</p>
-			<p>Let's get down to work!</p>
-			<div id="inquiry-button">
+		<div class="key-messages">
+			<h2 class="key-messages-title">Cutting Edge</br>Web Development</h2>
+			<div class="key-messages-content">
+				<p class="key-messages-content-text">To succeed in whatever you do, you need</p>
+				<div class="key-messages-content-rotating-words">modern</div> 
+				<p class="key-messages-content-text">digital solutions that stand out, engage and inspire.</p>
+			</div>
+			<h3 class="key-messages-subtitle">Let's get down to work!</h3>
+			<div class="button button-lime js-inquiry">
 				<span>inquire</span>
 			</div>
 		</div>

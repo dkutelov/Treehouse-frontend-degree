@@ -1,6 +1,10 @@
 header {
 	position:relative;
+	height: 100%;
 	@include screen(tablet) {
+		height: 60vh;
+	}
+	@include screen(desktop) {
 		height: 100vh;
 	}
 	&::after {
@@ -10,124 +14,143 @@ header {
     	right: 0;
     	bottom: 0;
     	top: 0;
-    	background: rgba(25, 25, 25, 0.6);
+    	background: $dark-layer;
     	z-index: 1;
 	}
-	#menu-line-mobile {
-		@include screen(tablet) {
-			display:none;
-		}
-	}
+}
 
-	#navigation-bar {
-		position: absolute;
-		z-index: 10;
-		height: 100px;
-		top: 0;
-		left: 0;
-		right: 0;
-		color: $navigation-color;
-
-		h1 {
-			color: #fffef2;
-			@include screen(tablet) {
-				display: inline-block;
-				float: left;
-			}
-		}
-
-		#menu {
-			#menu-line-mobile {
-				color: white;
-				background: black;
-			}
-		}
-	}
-	#key-messages {
-		position:absolute;
-		top: 180px;
- 	   	left: 0;
-    	right: 0;
-    	width: 65%;
-		text-align: center;
-		z-index: 200;
-		color: #fff;
-		h2 {
-			margin: 0;
-		}
-		p {
-			color: #fffef2; 
-		}
-		p:nth-of-type(2) {
-			color: #ffd454;
-		}
-		#inquiry-button {
-			width: 25%;
-			margin: 0 auto;
-			padding: 10px 0;
-			color: #42B574;
-			border: 2px solid #42B574;
-			transition: .3s all ease;
-			&:hover {
-				color: #fffef2;
-				background: #42B574;
-				cursor: pointer;
-			}
-		}
-	}
-
-	#header-background-video {
+#header-background-video {
+	display: none;
+	@include screen(tablet) {
+		display: block;
 		position: absolute;
 	    top: 50%;
 	    left: 50%;
 	    min-width: 100%;
 	    width: auto;
-	    height: 100vh;
+	    height: 60vh;
 	    z-index: -100;
 	    -ms-transform: translateX(-50%) translateY(-50%);
 	    -moz-transform: translateX(-50%) translateY(-50%);
 	    -webkit-transform: translateX(-50%) translateY(-50%);
 	    transform: translateX(-50%) translateY(-50%);
 	    background: url(img/backgroundtop.jpg) no-repeat;
-	    background-size: cover; 
+	    background-size: cover;
+    }
+    @include screen(desktop) {
+		height: 100vh;
 	}
 }
 
-#nav {
-	@include screen(tablet) {
-		display: inline-block;
-		float: right;
-		margin: 40px 0 0 0;
-	}
-
-	li {
-		@include screen(tablet) {
-			display: inline-block;
-			position: relative;
-			margin-left: 20px;
-		}
-
-		a {
-			color: $navigation-color;
-			text-decoration: none;
-			padding: 10px 0;
-			&:after {
-				content: '';
-    			position: absolute;
-    			top: 100%;
-   				left: 50%;
-    			width: 0;
-    			height: 2px;
-    			margin-top: 4px;
-    			background: linear-gradient(90deg, #42b574 0%, #84c450 100%);
-    			transition: .3s all ease;
-			}
-			&:hover:after {
-				color: #fffef2;
-				left:0;
-				width: 100%;
-			}
-		}
-	}
-}
+#header-background-image {
+	position: relative;
+	display: block;
 	
+	@include screen(tablet) {
+		display: none;
+    }
+}
+
+.header-container {
+	text-align: center;
+	position: absolute;
+	z-index: 10;
+	height: 100px;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: $plain-white;
+
+	&-logo {
+		margin-top: 10px;
+		width: 65%;
+		margin-left: auto;
+		margin-right: auto;
+		@include screen(tablet) {
+			width: 12em;
+    		margin-top: 24px;
+			display: inline-block;
+			float: left;
+		}
+	}
+
+	&-name {
+		float:left;
+		text-indent: -9999999px;
+	}
+}
+
+.key-messages {
+	position:absolute;
+	top: 35%;
+	left: 0;
+	right: 1em;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	z-index: 200;
+	color: $plain-white;
+	
+	@include screen(tablet) {
+	 	top: 22.5%;
+	}
+	
+	@include screen(desktop) {
+	 	width: 65%;
+	}
+
+	&-title {
+		margin: 0;
+		animation: key-messages-grow .5s ease backwards;
+	}
+
+	&-content {
+		width: 90%;
+		margin-top: 15px;
+	    margin-left: auto;
+    	margin-right: auto;
+		animation: key-messages-grow  .1s .5s ease backwards;
+
+		@include screen(tablet) {
+	 		margin-top: 30px;
+	 		width: 80%;
+		}
+		
+		&-text{
+		display: inline;
+		color: $light-yellow;
+		}
+    	
+    	&-rotating-words {
+    		color: $lime;
+    		display:inline-block;
+    		width: 120px;
+    		padding-right: 3px;
+    		text-align: right;
+    		@include screen(tablet) {
+	 			width: 185px;
+			}
+    	}
+	}
+
+	&-subtitle {
+		color: $intensive-yellow;
+		animation: key-messages-grow  .3s .5s ease backwards;
+	}
+}
+
+
+@keyframes key-messages-grow {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	10% {
+		opacity: 1;
+		transform: scale(0.8);
+	}
+	100%{
+		transform: scale(1);
+	}
+}

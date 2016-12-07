@@ -1,5 +1,10 @@
 // Color variables
-$navigation-color		: #fff;
+$plain-white			: #fff;
+$lime					: #42B574;
+$light-yellow			: #fffef2;
+$plain-black			: #000;
+$dark-layer				: rgba(25, 25, 25, 0.6);
+$intensive-yellow		: #ffd454;
 
 
 // Font stacks
@@ -9,7 +14,7 @@ $stack-poppins			:	'Poppins', Helvetica, Arial, sans-serif;
 
 
 // Media queries break points
-$break-small			:	768px;
+$break-small			:	766px;
 $break-wide				:	1023px;
 
 $boxWdith				:	100%;

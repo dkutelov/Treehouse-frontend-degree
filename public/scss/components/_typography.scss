@@ -4,26 +4,51 @@ body {
 	font-weight: 400;
 }
 
-header {
-	#navigation-bar {
-		font-family: $stack-lato;
-		font-size: 1.15em;
-		font-weight: 900;
-	}
-	#key-messages {
-		font-family: $stack-poppins;
-		h2 {
-			text-transform: uppercase;
-			font-size: 5em;
-			font-weight: 700;
-			letter-spacing: -0.025em;
+.header-container {
+	font-family: $stack-lato;
+	font-size: 1.1em;
+	font-weight: 900;
+}
+
+
+.key-messages {
+	font-family: $stack-poppins;
+	&-title {
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		
+		@include screen(tablet) {
+			font-size: 3em;
 		}
-		p {
+		
+		@include screen(desktop) {
+			font-size: 5em;
+		}
+	}
+	&-content-text {
+		font-size: 1em;
+		line-height: 1.5;
+		
+		@include screen(tablet) {
 			font-size: 1.8em;
 		}
-		p:nth-of-type(2) {
+	}
+
+	&-content-rotating-words {
+		font-size: 1.3em;
+		font-weight: 700;
+		
+		@include screen(tablet) {
+			font-size: 2em;
+		}
+	}
+
+	&-subtitle {
+		font-size: 1.2em;
+		@include screen(tablet) {
 			font-size: 2.4em;
 		}
-
 	}
+
 }
