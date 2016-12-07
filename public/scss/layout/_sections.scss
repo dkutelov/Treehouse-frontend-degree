@@ -14,6 +14,9 @@
 
 	&--background-grey {
 		background: $light-grey;
+		background: -webkit-linear-gradient($plain-white, $light-grey); 
+    	background: -o-linear-gradient($plain-white, $light-grey);
+    	background: -moz-linear-gradient($plain-white, $light-grey);
 		background: linear-gradient($plain-white, $light-grey);
 	}
 
