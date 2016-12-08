@@ -1,0 +1,9 @@
+.columns {
+	@include clearfix;
+	&--x2-equal-width {
+		@include screen(tablet){
+			float: left;
+			width: 50%;
+		}
+	}
+}

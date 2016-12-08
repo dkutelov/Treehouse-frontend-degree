@@ -10,3 +10,12 @@
     @media screen and (min-width: $break-wide) {@content;}
   }
 }
+
+// Clearfix
+@mixin clearfix {
+	&::after {
+			content: "";
+			clear:both;
+			display: table;
+		}
+}

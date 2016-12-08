@@ -10,7 +10,6 @@ body {
 	font-weight: 900;
 }
 
-
 .key-messages {
 	font-family: $stack-poppins;
 	&-title {
@@ -60,12 +59,19 @@ body {
 		text-align: center;
 		text-transform: uppercase;
 		font-weight: 300;
-		font-size:2em;
+		font-size: 1.5em;
+		@include screen(tablet){
+			font-size: 2em;
+		}
 	}
 
 	&--subheading {
 		font-family: $stack-poppins;
 		font-weight: 400;
 		text-transform: capitalize;
+		font-size: 1.05em;
+		@include screen(tablet){
+			font-size: 1.35em;
+		}
 	}
 }
