@@ -75,3 +75,22 @@ body {
 		}
 	}
 }
+
+.feature {
+	&--heading-typo {
+		font-weight: 700;
+		font-size: 1.25em;
+		@include screen(tablet){
+			font-size: 1.5em;
+		}
+	}
+	&--description-typo {
+		line-height: 1.3;
+		font-size: 1em;
+		@include screen(tablet){
+			font-size: 1.1em;
+			line-height: 1.4;
+		}
+	}
+
+}

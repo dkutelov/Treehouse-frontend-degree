@@ -51,25 +51,40 @@
 
 	&--icon {
 		@include screen(tablet) {
-			float:left;
+			display:inline-block;
+			width: 25%;
+			margin-right: -5px;
 		}
 	}
 
 	&--icon-svg {
-		width:80px;
-		height: 80px;
+		width: 60px;
+		height: 60px;
+		@include screen(tablet) {
+			width:80px;
+			height: 80px;
+		}
 	}
 
 	&--content {
 		@include screen(tablet) {
+			display: inline-block;
+			width:75%;
 			text-align: left;
-    		padding-left: 6em;
 		}
 	}
 	&--heading {
 		position: relative;
 		text-transform: uppercase;
 		margin-top: 5px;
+		margin-bottom: 10px;
+		@include screen(tablet) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&--description {
+		margin-top: 0;
 	}
 
 }

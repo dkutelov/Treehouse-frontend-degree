@@ -6,4 +6,11 @@
 			width: 50%;
 		}
 	}
+	&--x2-equal-width-gutter {
+		@include screen(tablet){
+			box-sizing: border-box;
+    		padding-right: 1em;
+    		padding-left: 1em;
+		}
+	}
 }
