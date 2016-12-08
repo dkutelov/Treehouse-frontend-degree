@@ -50,11 +50,14 @@
 	}
 
 	&--icon {
-		width:80px;
-		height: 80px;
 		@include screen(tablet) {
 			float:left;
 		}
+	}
+
+	&--icon-svg {
+		width:80px;
+		height: 80px;
 	}
 
 	&--content {
