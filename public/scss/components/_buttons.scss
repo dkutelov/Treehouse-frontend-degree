@@ -6,17 +6,30 @@
 	background: transparent;
 	border: 2px solid $lime;
 	transition: .3s all ease;
+	
 	&:hover {
 		color: $light-yellow;
 		background: $lime;
 		cursor: pointer;
 	}
+	
 	&-lime {
 		color: $lime;
 		border: 2px solid $lime;
 		&:hover {
 			color: $light-yellow;
 			background: $lime;
+		}
+	}
+
+	&-grey {
+		color: $very-dark-grey;
+		border: 2px solid $light-yellow;
+		background: $light-yellow;
+		&:hover {
+			color: $light-yellow;
+			background: $dark-grey;
+			border: 2px solid $dark-grey;
 		}
 	}
 

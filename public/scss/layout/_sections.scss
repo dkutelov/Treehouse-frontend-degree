@@ -20,15 +20,41 @@
 		background: linear-gradient($plain-white, $light-grey);
 	}
 
+	&--background-white {
+		background: $plain-white;
+	}
+
+	&--background-dark-grey {
+		background: $dark-grey;
+	}
+
 	&--main-heading {
 		display: inline-block;
 		position: relative;
 		text-transform: uppercase;
+		
 		&:after {
 			@extend %Underline;
 			left: 0;
 			width: 100%;
 		}
+
+		&--red:after {
+			background: linear-gradient(90deg, $dark-red 0%, $lighter-red 100%);
+		}
+
+		&--yellow:after {
+			background: linear-gradient(90deg, $intensive-yellow 0%, $lighter-yellow 100%);
+		}
+
+		&--white {
+			color: $light-grey;
+		}
+
+		&--white:after {
+			background: linear-gradient(90deg, $plain-white 0%, $light-grey 100%);
+		}
+
 	}
 
 	&--subheading {
@@ -36,10 +62,14 @@
 		margin-top: 0;
 		width: 80%;
     	margin: 0 auto;
+		
 		@include screen(tablet){
 			margin-top:0.5em;
 			width: 40%;
  		}
+ 		&-white {
+			color: $light-grey;
+		}
 	}
 }
 

@@ -1,0 +1,14 @@
+.footer {
+	height: 50px;
+	background: $very-dark-grey;
+	color: white;
+
+	&__frights-claim {
+		display: inline-block;
+		margin-top: 20px;
+	}
+
+	&__frights-claim > p {
+		margin: 0;
+	}
+}

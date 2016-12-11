@@ -67,9 +67,9 @@ body {
 
 	&--subheading {
 		font-family: $stack-poppins;
-		font-weight: 400;
+		font-weight: 300;
 		text-transform: capitalize;
-		font-size: 1.05em;
+		font-size: 1.05em;		
 		@include screen(tablet){
 			font-size: 1.35em;
 		}
@@ -93,4 +93,11 @@ body {
 		}
 	}
 
+}
+
+.footer {
+	&__frights-claim > p {
+		font-size: 12px;
+		font-weight: 100;
+	}
 }
