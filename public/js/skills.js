@@ -3,7 +3,7 @@ var skills = [
 	{
 		name		: "HTML5",
 		className	: "icon-html",
-		borderColor	: "#4975FB", 
+		borderColor	: "#4975FB" 
 	},
 	{
 		name		: "JavaScript",
@@ -63,7 +63,6 @@ var skills = [
 ]
 
 var skillsToShow = "all";
-
 
 // Generate Html for Skills section
 function skillsHTML(skillsToShow) {

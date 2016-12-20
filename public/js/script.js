@@ -2,8 +2,6 @@
 var $rotatingWords = $('.key-messages-content-rotating-words');
 var rotatingWordsContent = ['modern', 'responsive', 'super fast'];
 var wordIndex = 1;
-// Selects skills container
-var $skillsCircle = $('.skills__outer-circle');
 // Variables for function checking if elements is in view
 var $animationElement = $('.js-animation');
 var $window = $(window);
@@ -63,6 +61,9 @@ setInterval(function(){
 // Build HTML for each skill in skills section
 $(".js-skills").append(skillsHTML(skillsToShow));
 
+
+// Selects skills container
+var $skillsCircle = $('.skills__outer-circle');
 // Sets color of border for each skill
 $.each($skillsCircle, function(i, item){
 	$(this).css({border: '3px solid ' + skills[i].borderColor});
