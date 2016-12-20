@@ -1,0 +1,97 @@
+.skills {
+	&__outer-circle {
+		display: inline-block;
+		position: relative;
+		width: 124px;
+		height: 124px;
+		border: 5px solid transparent;
+		border-radius: 50%;
+		// background: $light-grey;
+		background: $plain-white;
+		margin: 1em;
+		box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+		transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+	}
+	&__inner-circle {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background: $plain-white;
+		position: relative;
+		top: 6%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+	
+	&__icon {
+		position: absolute;
+		top: 15%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+	
+	&__name {
+		position: absolute;
+		top: 65%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}
+
+.icon-html, .icon-css, .icon-js, .icon-jq, .icon-ajax, .icon-git, .icon-sass, .icon-postcss, .icon-gulp, .icon-node, .icon-npm, .icon-svg{
+	background: url('img/icons/sprites.png') no-repeat;
+	background-size: 300px 100px;
+	width: 50px;
+	height: 50px
+}
+
+.icon-html{
+	background-position: 0 0;
+}
+
+.icon-css{
+	background-position: -50px 0;
+}
+
+.icon-js{
+	background-position: -97px 0;
+}
+
+.icon-jq{
+	background-position: -146px 0;
+}
+
+.icon-ajax{
+	background-position: -196px 0;
+}
+
+.icon-git{
+	background-position: -247px 0;
+}
+
+.icon-sass{
+	background-position: 1px -50px ;
+}
+
+.icon-postcss{
+	background-position: -50px -50px ;
+}
+
+.icon-gulp{
+	background-position: -99px -50px ;
+}
+
+.icon-node{
+	background-position: -148px -50px ;
+}
+
+.icon-npm{
+	background-position: -199px -50px ;
+}
+
+.icon-svg{
+	background-position: -251px -50px ;
+}

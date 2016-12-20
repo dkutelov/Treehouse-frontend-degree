@@ -103,6 +103,7 @@ header {
 	&-title {
 		margin: 0;
 		animation: key-messages-grow .5s ease backwards;
+		color: $light-yellow;
 	}
 
 	&-content {

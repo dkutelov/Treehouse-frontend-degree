@@ -1,0 +1,12 @@
+.skills {
+	&__container {
+		@include screen(tablet){
+			max-width: 80%;
+			margin: 2.5em auto;
+		}
+		@include screen(desktop){
+			max-width: 80%;
+			margin: 2.5em auto;
+		}
+	}
+}

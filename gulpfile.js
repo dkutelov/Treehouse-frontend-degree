@@ -14,7 +14,7 @@ var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 
 // File paths
 var DIST_PATH = 'public/dist';
-var SCRIPTS_PATH = ['public/js/jquery-3.1.1.min.js','public/js/script.js'];
+var SCRIPTS_PATH = ['public/js/jquery-3.1.1.min.js', 'public/js/skills.js', 'public/js/projects.js', 'public/js/script.js'];
 var SCSS_PATH = 'public/scss/application.scss';
 var IMAGES_PATH = 'public/img/**/*.{png,jpeg,jpg,svg,gif}';
 // var IMAGES_PATH = 'public/images/**/*.{png,jpeg,jpg,svg,gif}';

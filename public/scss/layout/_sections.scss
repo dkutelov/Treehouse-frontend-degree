@@ -1,6 +1,11 @@
 .section {
-	&--features {
+	&--features,
+	&--projects {
 		text-align: center;
+	}
+
+	&--projects-extra-b-margin {
+		margin-bottom: 1.5em;
 	}
 
 	&--tb-padding {
@@ -67,8 +72,16 @@
 			margin-top:0.5em;
 			width: 40%;
  		}
+ 		@include screen(desktop){
+			margin-top:0.5em;
+			width: 50%;
+ 		}
+
  		&-white {
 			color: $light-grey;
+		}
+		&-extra-b-margin {
+			margin-bottom: 1em;
 		}
 	}
 }
@@ -117,4 +130,15 @@
 		margin-top: 0;
 	}
 
+	&--slide-up {
+		transform: translateY(150px);
+  		animation: move-up 0.8s ease forwards;
+	}
+
 }
+
+@keyframes move-up {
+  to { transform: translateY(0); }
+}
+
+

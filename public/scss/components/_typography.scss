@@ -14,7 +14,7 @@ body {
 	font-family: $stack-poppins;
 	&-title {
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: 400;
 		letter-spacing: -0.025em;
 		
 		@include screen(tablet) {
@@ -94,6 +94,22 @@ body {
 	}
 
 }
+
+.projects {
+	&__picture-title {
+		font-size: 1.3em;
+		font-weight: 300;
+	}
+
+}
+
+.skills {
+	&__name {
+		font-family: $stack-lato;
+		font-weight: 300;
+	}
+}
+
 
 .footer {
 	&__frights-claim > p {

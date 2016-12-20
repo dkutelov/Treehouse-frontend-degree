@@ -1,11 +1,14 @@
 .columns {
+
 	@include clearfix;
+
 	&--x2-equal-width {
 		@include screen(tablet){
 			float: left;
 			width: 50%;
 		}
 	}
+
 	&--x2-equal-width-gutter {
 		@include screen(tablet){
 			box-sizing: border-box;
@@ -13,4 +16,32 @@
     		padding-left: 1em;
 		}
 	}
+
+	&--x3-equal-width {
+		margin-top: 1.15em;
+		margin-bottom: 1.15em;
+
+		@include screen(tablet){
+			float: left;
+			width: 50%;
+		}
+
+		@include screen(desktop){
+			float: left;
+			width: 33.33%;
+		}
+	}
+
+	&--x3-equal-width-gutter {
+		box-sizing: border-box;
+		@include screen(tablet){
+    		padding-right: 1em;
+    		padding-left: 1em;
+		}
+	}
+
+	&--x3-equal-width-overfow {
+		overflow: hidden;
+	}
+
 }
