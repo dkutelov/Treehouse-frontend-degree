@@ -117,3 +117,20 @@ body {
 		font-weight: 100;
 	}
 }
+
+.overlay {
+	&__info-heading {
+		font-family: $stack-poppins;
+		font-weight: 400;
+		text-transform: capitalize;
+	}
+
+	&__info-text {
+		// font-family: $stack-poppins;
+		font-family: $stack-lato;
+		font-size: 1.35em;
+		line-height: 1.5;
+		font-weight: 300;
+	}
+}
+

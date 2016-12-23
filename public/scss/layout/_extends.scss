@@ -8,3 +8,8 @@
 	background: linear-gradient(90deg, #42b574 0%, #84c450 100%);
 	transition: .3s all ease;
 }
+
+%animationSlideDown {
+	animation: slideDown .75s linear backwards;
+	-webkit-animation: slideDown .75s linear backwards;
+}

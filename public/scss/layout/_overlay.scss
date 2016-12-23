@@ -1,0 +1,145 @@
+.overlay {
+	// display: none;
+	background-color: rgba(0,0,0,.9);
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	color: #FEFFFE;
+
+	&__main-image {
+		display: block;
+		width: 80%;
+		padding: 2.5em;
+	}
+
+	&__info {
+		position: absolute;
+		top: 2.5%;
+		left: 60%;
+		right: 2.5em;
+		background: rgba(255,255,255,.5);
+	}
+
+	&__info-heading {
+		background: rgba(0,0,0,.7);
+		margin: 10px;
+		padding: 7px;
+	}
+
+	&__info-subheading {
+
+	}
+
+	&__info-text {
+		text-align: center;
+		margin: 0 1em;
+		padding: 5px 0;
+		background: rgba(0,0,0,.7);
+		
+		&-row-container {
+			overflow: hidden;
+			padding: 0;
+			margin: 0.5em 0;
+		}
+		
+		&-line1 {
+			@extend %animationSlideDown;
+
+			animation-delay: .5s;
+			-webkit-animation-delay: .5s;	
+		}
+		
+		&-line2 {
+			@extend %animationSlideDown;
+
+			animation-delay: 1s;
+			-webkit-animation-delay: 1s;
+		}
+		&-line3 {
+			@extend %animationSlideDown;	
+			animation-delay: 1.5s;
+			-webkit-animation-delay: 1.5s;
+		}
+		&-line4 {
+			@extend %animationSlideDown;	
+
+			animation-delay: 2s;
+			-webkit-animation-delay: 2s;
+		}
+		&-line5 {
+			@extend %animationSlideDown;
+
+			animation-delay: 2.5s;
+			-webkit-animation-delay: 2.5s;
+		}
+	}
+
+	&__info-skills {
+		color: $very-dark-grey;
+	}
+}
+
+.reposiveLabel {
+	position: absolute;
+	left: -70px;
+	top: 0;
+	background: #EF5252;
+	width: 300px;
+	height: 40px;
+	 -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    text-align: center;
+    span {
+    	display: inline-block;
+    	margin-top: 0.625em;
+    	margin-left: -5em;
+    	text-transform: uppercase;
+    }
+}
+
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(6%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(6%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}			
+}

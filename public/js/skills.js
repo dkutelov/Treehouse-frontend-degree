@@ -62,7 +62,7 @@ var skills = [
 	}
 ]
 
-var skillsToShow = "all";
+var skillsToShow = "all"; 
 
 // Generate Html for Skills section
 function skillsHTML(skillsToShow) {
@@ -73,6 +73,14 @@ function skillsHTML(skillsToShow) {
 			skillsHTML += '<div class="skills__inner-circle">';
 			skillsHTML += '<div class="skills__icon ' + skills[i].className +'"></div>';
 			skillsHTML += '<h4 class="skills__name">' + skills[i].name + '</h4></div></div>';
+		}
+	} else {
+		for (var i = 0; i < skillsToShow.length; ++i) {
+  			skillsHTML += '<div class="skills__outer-circle skills__outer-circle--project-page">';
+			skillsHTML += '<div class="skills__inner-circle skills__inner-circle--project-page">';
+			skillsHTML += '<div class="skills__icon ' + skills[skillsToShow[i]].className +'"></div>';
+			// skillsHTML += '<h4 class="skills__name">' + skills[skillsToShow[i]].name + '</h4>';
+			skillsHTML += '</div></div>';
 		}
 	}
 	return skillsHTML;
