@@ -1,0 +1,100 @@
+// Project pop up - animation of description text
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	50%{
+		transform: translateY(-8%);
+		opacity: 0.5;
+	}
+	65%{
+		transform: translateY(-6%);
+		opacity: 0.8;
+	}
+	80%{
+		transform: translateY(-4%);
+		opacity: 0.90;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}		
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	50%{
+		transform: translateY(-8%);
+		opacity: 0.5;
+	}
+	65%{
+		transform: translateY(-6%);
+		opacity: 0.8;
+	}
+	80%{
+		transform: translateY(-4%);
+		opacity: 0.90;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}		
+}
+
+@keyframes slideDownDisappear {
+	0% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+	50%{
+		transform: translateY(92%);
+		opacity: 0.5;
+	}
+	65%{
+		transform: translateY(94%);
+		opacity: 0.35;
+	}
+	80%{
+		transform: translateY(96%);
+		opacity: 0.2;
+	}
+	95%{
+		transform: translateY(100%);
+		opacity: 0.05;
+	}			
+	100% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes slideDownDisappear {
+	0% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+	50%{
+		transform: translateY(92%);
+		opacity: 0.5;
+	}
+	65%{
+		transform: translateY(94%);
+		opacity: 0.35;
+	}
+	80%{
+		transform: translateY(96%);
+		opacity: 0.2;
+	}
+	95%{
+		transform: translateY(100%);
+		opacity: 0.05;
+	}			
+	100% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+}

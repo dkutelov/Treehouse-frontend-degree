@@ -73,3 +73,9 @@ $.each($skillsCircle, function(i, item){
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
+$(document).on('click', '.js-project', function() {
+  $('html, body').css({'overflow': 'hidden', 'height': '100%'});
+  var index = $('.js-project').index(this);
+  $('.overlay').fadeIn("fast");
+  showProject(index);
+});

@@ -125,6 +125,12 @@ body {
 		text-transform: capitalize;
 	}
 
+	&__info-subheading {
+		font-family: $stack-poppins;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
 	&__info-text {
 		// font-family: $stack-poppins;
 		font-family: $stack-lato;

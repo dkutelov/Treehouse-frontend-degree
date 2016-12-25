@@ -16,6 +16,12 @@
 	-webkit-animation: slideDown .75s linear backwards;
 }
 
+%animationSlideDownDisappear {
+	animation: slideDownDisappear .75s linear forwards;
+	-webkit-animation: slideDownDisappear .75s linear forwards;
+}
+
+
 // Previous - Next Swipe Buttons on project pop up
 
 %swipeBefore {

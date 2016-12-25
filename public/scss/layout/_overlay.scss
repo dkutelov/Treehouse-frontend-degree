@@ -1,13 +1,15 @@
 .overlay {
-	// display: none;
+	display: none;
 	background-color: rgba(0,0,0,.9);
 	width: 100%;
-	height: auto;
+	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
 	text-align: center;
 	color: #FEFFFE;
+	overflow: hidden;
+	z-index: 1000;
 
 	&__main-image {
 		display: block;
@@ -30,7 +32,18 @@
 	}
 
 	&__info-subheading {
+		text-align: left;
+		margin: .75em 1em 0.25em;
+	}
 
+	&__info-subheading-preview {
+		background: $medium-red;
+		line-height: .8;
+		padding: 12.5px 0;
+		width: 40%;
+		margin: 0 auto;
+		text-align: center;
+		border-radius: 15px;
 	}
 
 	&__info-text {
@@ -47,6 +60,13 @@
 		
 		&-line1 {
 			@extend %animationSlideDown;
+
+			animation-delay: .5s;
+			-webkit-animation-delay: .5s;	
+		}
+
+		&-line-disappear {
+			@extend %animationSlideDownDisappear;
 
 			animation-delay: .5s;
 			-webkit-animation-delay: .5s;	
@@ -86,7 +106,7 @@
 	position: absolute;
 	left: -70px;
 	top: 0;
-	background: #EF5252;
+	background: $medium-red;
 	width: 300px;
 	height: 40px;
 	 -ms-transform: rotate(-45deg); /* IE 9 */
@@ -101,45 +121,3 @@
     }
 }
 
-
-@keyframes slideDown {
-	0% {
-		transform: translateY(-100%);
-	}
-	50%{
-		transform: translateY(8%);
-	}
-	65%{
-		transform: translateY(6%);
-	}
-	80%{
-		transform: translateY(4%);
-	}
-	95%{
-		transform: translateY(2%);
-	}			
-	100% {
-		transform: translateY(0%);
-	}		
-}
-
-@-webkit-keyframes slideDown {
-	0% {
-		transform: translateY(-100%);
-	}
-	50%{
-		transform: translateY(8%);
-	}
-	65%{
-		transform: translateY(6%);
-	}
-	80%{
-		transform: translateY(4%);
-	}
-	95%{
-		transform: translateY(2%);
-	}			
-	100% {
-		transform: translateY(0%);
-	}			
-}
