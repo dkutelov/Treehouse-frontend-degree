@@ -69,19 +69,40 @@ var $projectName = '<h1 class="overlay__info-heading"></h1>';
 var $mainImage = '<img>';
 var $projectSubheading = '<h2 class="overlay__info-subheading">Project Description:</h2>';
 var $projectSkills = '<h2 class="overlay__info-subheading">Tech Skills:</h2><div class="overlay__info-skills"></div>';
+var $descritionContainer = '<div class="overlay__desciption-container"></div>' 
 var $descriptionContent = '<div class="desc-content"></div>'
+var $descriptionContentOne = '<div class="desc-content-one"></div>'
+var $descriptionContentTwo = '<div class="desc-content-two"></div>'
 
 function projectDescriptionHtml(projectIndex, batch) {
 	var descritpionHTML = '';
 	for (var i = 0; i < 5; i++) {
 		var y = batch + i;
 		descritpionHTML += '<div class="overlay__info-text-row-container">';
-		descritpionHTML += '<p class="overlay__info-text overlay__info-text-line' + (i+1) + '">';
+		// descritpionHTML += '<p class="overlay__info-text overlay__info-text-line' + (i+1) + '">';
+			descritpionHTML += '<p class="overlay__info-text">';
 		descritpionHTML += projects[projectIndex].description[y];
 		descritpionHTML += '</p></div>'
 	}
 
 	return descritpionHTML; 
+}
+
+function animateDescriptionText(selector, last){
+	var $contentDesc = $(selector).find('p');
+	if ( last ) {
+	$contentDesc
+		.delay(100)
+		.slideDown("fast");
+	} else {
+		$contentDesc
+		.delay(100)
+		.slideDown("fast")
+		.delay(5000)
+		.animate({
+			opacity: 0
+		}, 500);
+	}
 }
 
 function showProject(index) {
@@ -93,32 +114,56 @@ function showProject(index) {
 	$('.overlay__main-image').append($mainImage);
 	$('.overlay__main-image img').attr('src', projects[index].imageLargeUrl);
 
-	$('.overlay__info').append($projectName, $projectSubheading, $descriptionContent, $projectSkills);
+	$('.overlay__info').append($projectName, $projectSubheading, $descritionContainer, $projectSkills);
+	$('.overlay__desciption-container').append($descriptionContent, $descriptionContentOne, $descriptionContentTwo);
+
 	$('.overlay__info-heading').text(projects[index].name);
 
-	var batch = 0;
-	for (var i = 0; i < 3; i++) {
-		// $('.desc-content').empty();
-		// $('.desc-content').find('p').removeClass('overlay__info-text-line-disappear');
-		var descHTML = projectDescriptionHtml(index, batch);
-	// batch 1 stay for 5sec
-	// apply slide down animation
-
-	// load batch 2
-	// repeat this times project.description.length / 5
-	// if last batch has less than 5 elements
-		$('.desc-content').html(descHTML).delay(3000).queue(function(){
-    		$(this).find('p').addClass('overlay__info-text-line-disappear');
-		});
-
-		// setInterval(function(){ 
-		// 	$('.desc-content').find('p').addClass('overlay__info-text-line-disappear');
-		// }, 5000);
 	
-		// $('.desc-content').dalay(1000).find('p').addClass('overlay__info-text-line-disappear');
+	var descHTML = projectDescriptionHtml(index, 0);
+	var descHTMLOne = projectDescriptionHtml(index, 5);
+	var descHTMLTwo = projectDescriptionHtml(index, 10);
 
-		batch += 5;
+	$('.desc-content').html(descHTML);
+	$('.desc-content-one').html(descHTMLOne);
+	$('.desc-content-two').html(descHTMLTwo);
+	
+
+	$(function(){
+	    rotateDescText().done();
+	});
+
+	function rotateDescText(){
+	    var dfrd1 = $.Deferred();
+	    var dfrd2= $.Deferred();
+	    var dfrd3= $.Deferred();
+	    
+	    setTimeout(function(){
+	    	var last = false;
+	    	animateDescriptionText('.desc-content', last);
+	        dfrd1.resolve();
+	    }, 100);
+	    
+	    setTimeout(function(){
+	    	var last = false;
+	        animateDescriptionText('.desc-content-one', last);
+	        console.log('task 2 in function1 is done!');
+	        dfrd2.resolve();
+	    }, 6500);
+
+	    setTimeout(function(){
+	    	var last = true;
+	        animateDescriptionText('.desc-content-two', last);
+	        console.log('task 2 in function1 is done!');
+	        dfrd3.resolve();
+	    }, 14000);
+	    
+	    return $.when(dfrd1, dfrd2, dfrd3).done(function(){
+	        console.log('all tasks in function1 are done');
+	        // Both asyncs tasks are done
+	    }).promise();
 	}
+
 
 	$('.overlay__info-skills').html($projectSkillsHTML);
 	var skillsToShow = "all";
