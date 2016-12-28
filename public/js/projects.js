@@ -20,42 +20,134 @@ var projects = [
 			'reposnsive CSS design for mobile, tablet',
 			'and desktop sreen sizes.'
 		],
-		skills: [ 0, 1, 2, 3]
+		skills: [ 0, 1, 2, 3, 6]
 	},
 	{
-		name: "Web Api - Spotify Music Album Search",
-		imageLargeUrl	: "",
+		name: "Interactive Video Player",
+		imageLargeUrl	: "dist/img/projects/video-player-large.jpg",
 		imageSmallUrl	: "", 
-		description: "",
-		skills: [1,2,3]
+		description: [
+			'A HTML5 video player built by using',
+			'JavaScript and the HTML5 Video API. The',
+			'project is developed by using supplied',
+			'mockups, video file and transcripts.',
+			'Standard video cotrols are switched off.',
+
+			'The following buttons where created and',
+			'functionally implemented: play and pause,',
+			'sound volume control, sound on and off,',
+			'full screen, fast play, subtitles on and',
+			'off as well as time played and total time.',
+
+			'Playback controls show buffering progress.',
+			'As the playback time changes, sentences in',
+			'the transcript highlight. When a sentence',
+			'in the transcript is clicked, the player',
+			'jumps to the appropriate time in the video.'
+		],
+		skills: [0,1,6]
 	},
 	{
-		name: "",
-		imageLargeUrl	: "",
+		name: "Web APP Dashboard",
+		imageLargeUrl	: "dist/img/projects/web-app-large.jpg",
 		imageSmallUrl	: "", 
-		description: "",
-		skills: [1,2,3]
+		description: [
+			'A beautiful, web app dashboard completed',
+			'with JavaScript-driven charts and graphs.',
+			'Mockups and icons were provided to build',
+			'resposnive design with HTML, CSS and JS.',
+			'Chartjs.org library used for the charts.',
+
+			'The traffic chart was made interactive by',
+			'jQuery based navigation that is showing a',
+			'different chart depending on the selected',
+			'period. SVG icon based navigation and alert',
+			'bell icon for incoming messages created.',
+
+			'Bold social stats widget with animated',
+			'SVG icons. Message user widget with search',
+			'functionality, autocomplete and success',
+			'confirmation message. Animated settings on/',
+			'off buttons and settings local storage.'
+		],
+
+		skills: [0,1,2,5,6,7]
 	},
 	{
-		name: "",
-		imageLargeUrl	: "",
+		name: "Online Registration Form",
+		imageLargeUrl	: "dist/img/projects/form-large.jpg",
 		imageSmallUrl	: "", 
-		description: "",
-		skills: [1,2,3]
+		description: [
+			'A responsive, mobile-friendly registration ',
+			'form using a wide variety of HTML form',
+			'input types and attributes. Mobile and',
+			'desktop versions built by using provided',
+			'mockups and a "mobile-first" approach.',
+
+			'Text, email and telephone input fields,',
+			'select menu, checkboxes, radio buttons,',
+			'textfields and a submit button created.',
+			'Different styling added for focus and',
+			'active state of each input field.',
+
+			'Default formating of checkboxes and radio',
+			'buttons were removed and recreated again',
+			'with CSS for customized coloring and style.',
+			'Extra layout for tablet size was developed.',
+			'Placeholder texts for text fields added.'
+														  // max length
+		],
+		skills: [0, 6]
 	},
 	{
-		name: "",
-		imageLargeUrl	: "",
+		name: "Interactive Image Gallery",
+		imageLargeUrl	: "dist/img/projects/gallery-large.jpg",
 		imageSmallUrl	: "", 
-		description: "",
-		skills: [1,2,3]
+		description: [
+			'An interactive photo gallery created using',
+			'JavaScript and jQuery, and based on provided',
+			'mockups, images and thumbnails. Search area',
+			'on the top where photos hide and show',
+			'depending on user text characters input.',
+
+			'When the user clicks on a thumbnail the',
+			'photo displays in a lightbox with back and',
+			'previous buttons to cycle through photos.',
+			'Nice CSS transitions added to the',
+			'thumbnail images on mouse hover.',
+
+			'Photo browsing enhanced by adding key-',
+			'board navigation. Two additional media',
+			'types included in the gallery - youTube',
+			'and Facebook videos. Smooth transition',
+			'jQuery effects when filtering the photos.'
+		],
+		skills: [0, 1, 2, 6]
 	},
 		{
-		name: "",
-		imageLargeUrl	: "",
+		name: "SVG site update",
+		imageLargeUrl	: "dist/img/projects/svg-update-large.jpg",
 		imageSmallUrl	: "", 
-		description: "",
-		skills: [1,2,3]
+		description: [
+			'The project challange was to optimize',
+			'ready and functioning site by replacing ',
+			'all images with Scalable Vector Graphics.',
+			'The completed web site was provided using',
+			'png images and icons with no amimations.',
+
+			'Background image, logo, navigation icons',
+			'and dogs images were replaced with SVGs.',
+			'Eye catching animations for the logo on',
+			'site loading as well for navigation icons',
+			'and logo on mouse hover were creaded.',
+
+			'Dog images were animated on mouse',
+			'hover with CSS keyframe animation so',
+			'the main image rotates as well as its',
+			'inner elements - the eye and eyebrow - ',
+			'to create original eye blinking effect.'
+		],
+		skills: [0,5,6]
 	}
 ];
 
@@ -98,10 +190,10 @@ function animateDescriptionText(selector, last){
 		$contentDesc
 		.delay(100)
 		.slideDown("fast")
-		.delay(5000)
+		.delay(9000)
 		.animate({
 			opacity: 0
-		}, 500);
+		}, 200);
 	}
 }
 
@@ -149,14 +241,14 @@ function showProject(index) {
 	        animateDescriptionText('.desc-content-one', last);
 	        console.log('task 2 in function1 is done!');
 	        dfrd2.resolve();
-	    }, 6500);
+	    }, 9500);
 
 	    setTimeout(function(){
 	    	var last = true;
 	        animateDescriptionText('.desc-content-two', last);
 	        console.log('task 2 in function1 is done!');
 	        dfrd3.resolve();
-	    }, 14000);
+	    }, 19000);
 	    
 	    return $.when(dfrd1, dfrd2, dfrd3).done(function(){
 	        console.log('all tasks in function1 are done');

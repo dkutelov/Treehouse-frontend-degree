@@ -62,3 +62,10 @@
 	-webkit-transform: translateX(0%);
 	transform: translateX(0%);
 }
+
+%subtitilesOnPopUp {
+    color: $dark-red;
+    background: rgba(255,255,255,.9);
+    padding: 0.25em 0.5em;
+    text-shadow: .5px .5px $lighter-red;
+}
