@@ -2,19 +2,21 @@ var projects = [
 	{
 		name: "Web API - Spotify Music Album Search",
 		imageLargeUrl	: "dist/img/projects/music-search-large.jpg",
-		imageSmallUrl	: "", 
+		imageSmallUrl	: "dist/img/projects/music-search1-low-res.jpg", 
 		description: [
 			'The project uses Spotify public APIs and',
 			'AJAX requests to create listing of music',
 			'albums of a favoire artist. Sorting of',
 			'albums by year, popularity and name was',
 			'added by employing JavaScript.',
+
 			'A list with all tracks and sample 30sec',
 			'play of each track are popping up on',
 			'click of each album as well as relevant',
-			'photos from Flickr are pooled with second',
-			'AJAX request and displayed. JavaScript',
-			'and jQuery navigation allows you to move',
+			'photos from Flickr are pooled by second',
+			'AJAX request and displayed.',
+			
+			'jQuery navigation allows you to move',
 			'in the pop up window to the next or', 
 			'previuos album. The web site uses',
 			'reposnsive CSS design for mobile, tablet',
@@ -25,44 +27,44 @@ var projects = [
 	{
 		name: "Interactive Video Player",
 		imageLargeUrl	: "dist/img/projects/video-player-large.jpg",
-		imageSmallUrl	: "", 
+		imageSmallUrl	: "dist/img/projects/video1-low-res.jpg", 
 		description: [
 			'A HTML5 video player built by using',
-			'JavaScript and the HTML5 Video API. The',
-			'project is developed by using supplied',
+			'JavaScript and HTML5 Video API. The',
+			'project is developed using supplied',
 			'mockups, video file and transcripts.',
 			'Standard video cotrols are switched off.',
 
 			'The following buttons where created and',
-			'functionally implemented: play and pause,',
+			'functionally implemented: play - pause,',
 			'sound volume control, sound on and off,',
 			'full screen, fast play, subtitles on and',
 			'off as well as time played and total time.',
 
-			'Playback controls show buffering progress.',
-			'As the playback time changes, sentences in',
-			'the transcript highlight. When a sentence',
-			'in the transcript is clicked, the player',
-			'jumps to the appropriate time in the video.'
+			'Playback controls show buffering',
+			'progress. As the playback time changes,',
+			'sentences in transcript highlight. When',
+			'a sentence is clicked, the player jumps',
+			'to the appropriate time in the video.'
 		],
 		skills: [0,1,6]
 	},
 	{
 		name: "Web APP Dashboard",
 		imageLargeUrl	: "dist/img/projects/web-app-large.jpg",
-		imageSmallUrl	: "", 
+		imageSmallUrl	: "dist/img/projects/web-app1-low-res.jpg", 
 		description: [
-			'A beautiful, web app dashboard completed',
+			'A beautiful, web app dashboard created',
 			'with JavaScript-driven charts and graphs.',
-			'Mockups and icons were provided to build',
-			'resposnive design with HTML, CSS and JS.',
+			'Mockups and icons were provided to',
+			'build resposnive design.',
 			'Chartjs.org library used for the charts.',
 
-			'The traffic chart was made interactive by',
-			'jQuery based navigation that is showing a',
-			'different chart depending on the selected',
-			'period. SVG icon based navigation and alert',
-			'bell icon for incoming messages created.',
+			'The traffic chart is interactive by',
+			'jQuery based navigation that shows a',
+			'different chart when period selected.',
+			'SVG icon based navigation and alert bell',
+			'icon for incoming messages created.',
 
 			'Bold social stats widget with animated',
 			'SVG icons. Message user widget with search',
@@ -76,7 +78,7 @@ var projects = [
 	{
 		name: "Online Registration Form",
 		imageLargeUrl	: "dist/img/projects/form-large.jpg",
-		imageSmallUrl	: "", 
+		imageSmallUrl	: "dist/img/projects/form1-low-res.jpg", 
 		description: [
 			'A responsive, mobile-friendly registration ',
 			'form using a wide variety of HTML form',
@@ -93,7 +95,7 @@ var projects = [
 			'Default formating of checkboxes and radio',
 			'buttons were removed and recreated again',
 			'with CSS for customized coloring and style.',
-			'Extra layout for tablet size was developed.',
+			'Extra layout for tablet size developed.',
 			'Placeholder texts for text fields added.'
 														  // max length
 		],
@@ -102,18 +104,18 @@ var projects = [
 	{
 		name: "Interactive Image Gallery",
 		imageLargeUrl	: "dist/img/projects/gallery-large.jpg",
-		imageSmallUrl	: "", 
+		imageSmallUrl	: "dist/img/projects/gallery1-low-res.jpg", 
 		description: [
-			'An interactive photo gallery created using',
+			'An interactive photo gallery created with',
 			'JavaScript and jQuery, and based on provided',
-			'mockups, images and thumbnails. Search area',
-			'on the top where photos hide and show',
+			'mockups and images. Search area on',
+			'the top where photos hide and show',
 			'depending on user text characters input.',
 
 			'When the user clicks on a thumbnail the',
-			'photo displays in a lightbox with back and',
-			'previous buttons to cycle through photos.',
-			'Nice CSS transitions added to the',
+			'photo displays in a lightbox with back',
+			'and previous buttons to cycle through',
+			'photos. CSS transitions added to the',
 			'thumbnail images on mouse hover.',
 
 			'Photo browsing enhanced by adding key-',
@@ -127,7 +129,7 @@ var projects = [
 		{
 		name: "SVG site update",
 		imageLargeUrl	: "dist/img/projects/svg-update-large.jpg",
-		imageSmallUrl	: "", 
+		imageSmallUrl	: "dist/img/projects/svg-update1-low-res.jpg", 
 		description: [
 			'The project challange was to optimize',
 			'ready and functioning site by replacing ',
@@ -151,8 +153,7 @@ var projects = [
 	}
 ];
 
-var $overlay = $('.overlay'); // change to create dynamically
-
+var $overlay = $('.overlay');
 var $overlaySkills = '<div class="overlay__info-skills"></div>';
 var $overlayMainImage = '<div class="overlay__main-image"></div>';
 var $responsiveLabel = '<div class="reposiveLabel"><span>Responsive</span></div>';
@@ -161,10 +162,13 @@ var $projectName = '<h1 class="overlay__info-heading"></h1>';
 var $mainImage = '<img>';
 var $projectSubheading = '<h2 class="overlay__info-subheading">Project Description:</h2>';
 var $projectSkills = '<h2 class="overlay__info-subheading">Tech Skills:</h2><div class="overlay__info-skills"></div>';
-var $descritionContainer = '<div class="overlay__desciption-container"></div>' 
-var $descriptionContent = '<div class="desc-content"></div>'
-var $descriptionContentOne = '<div class="desc-content-one"></div>'
-var $descriptionContentTwo = '<div class="desc-content-two"></div>'
+var $descritionContainer = '<div class="overlay__desciption-container"></div>';
+var $descriptionContent = '<div class="desc-content"></div>';
+var $descriptionContentOne = '<div class="desc-content-one"></div>';
+var $descriptionContentTwo = '<div class="desc-content-two"></div>';
+var $prevButton = '<div class="swipe-button swipe-button--previous js-prev"><div class="swipe-button__preview-prev"></div></div>';
+var $nextButton = '<div class="swipe-button swipe-button--next js-next"><div class="swipe-button__preview-next"></div></div>';
+var $closeIcon = '<div class="project--close js-close"><svg class="project--close-svg"><use xlink:href="#project-exit" x="0" y="0"/></svg></div>';
 
 function projectDescriptionHtml(projectIndex, batch) {
 	var descritpionHTML = '';
@@ -201,16 +205,14 @@ function showProject(index) {
 	var skillsToShow = projects[index].skills;
 	var $projectSkillsHTML = skillsHTML(skillsToShow);
 
-	$overlay.append($responsiveLabel, $overlayMainImage, $overlayInfoBlock);
+	$overlay.append($responsiveLabel, $overlayMainImage, $overlayInfoBlock, $prevButton, $nextButton, $closeIcon);
 	// check if resposnive is true
 	$('.overlay__main-image').append($mainImage);
 	$('.overlay__main-image img').attr('src', projects[index].imageLargeUrl);
 
 	$('.overlay__info').append($projectName, $projectSubheading, $descritionContainer, $projectSkills);
 	$('.overlay__desciption-container').append($descriptionContent, $descriptionContentOne, $descriptionContentTwo);
-
 	$('.overlay__info-heading').text(projects[index].name);
-
 	
 	var descHTML = projectDescriptionHtml(index, 0);
 	var descHTMLOne = projectDescriptionHtml(index, 5);
@@ -220,7 +222,6 @@ function showProject(index) {
 	$('.desc-content-one').html(descHTMLOne);
 	$('.desc-content-two').html(descHTMLTwo);
 	
-
 	$(function(){
 	    rotateDescText().done();
 	});
@@ -230,37 +231,49 @@ function showProject(index) {
 	    var dfrd2= $.Deferred();
 	    var dfrd3= $.Deferred();
 	    
-	    setTimeout(function(){
+	    var showDesciptionOne = setTimeout(function(){
 	    	var last = false;
 	    	animateDescriptionText('.desc-content', last);
-	        dfrd1.resolve();
+	    	console.log('task 1 is done!');
+	        dfrd1.resolve(); 
 	    }, 100);
-	    
-	    setTimeout(function(){
+
+	    var showDesciptionTwo = setTimeout(function(){
 	    	var last = false;
 	        animateDescriptionText('.desc-content-one', last);
-	        console.log('task 2 in function1 is done!');
+	        console.log('task 2 is done!');
 	        dfrd2.resolve();
 	    }, 9500);
 
-	    setTimeout(function(){
+	    var showDesciptionThree = setTimeout(function(){
 	    	var last = true;
 	        animateDescriptionText('.desc-content-two', last);
-	        console.log('task 2 in function1 is done!');
+	        console.log('task 3 is done!');
 	        dfrd3.resolve();
 	    }, 19000);
 	    
 	    return $.when(dfrd1, dfrd2, dfrd3).done(function(){
-	        console.log('all tasks in function1 are done');
-	        // Both asyncs tasks are done
+	        console.log('all tasks are done');
+	     //    if (cancel) {
+	    	// 	clearTimeout(showDesciptionOne);
+	    	// 	clearTimeout(showDesciptionTwo);
+	    	// 	clearTimeout(showDesciptionThree);
+	    	// 	cancel = false;
+	    	// 	console.log('task1 cleared');
+	    	// }
 	    }).promise();
 	}
 
-
 	$('.overlay__info-skills').html($projectSkillsHTML);
 	var skillsToShow = "all";
+
+	// set image for previuos arrow
+	var prev = index - 1;
+	prev = adjustProjectIndex(prev);
+	$('.swipe-button__preview-prev').css('background-image', 'url(' + projects[prev].imageSmallUrl + ')');
+
+	// set image for next arrow
+	var next = index + 1;
+	next = adjustProjectIndex(next);	
+	$('.swipe-button__preview-next').css('background-image', 'url(' + projects[next].imageSmallUrl + ')');
 }
-
-
-
-

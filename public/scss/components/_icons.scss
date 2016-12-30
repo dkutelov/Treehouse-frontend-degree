@@ -15,7 +15,7 @@
 		&--project-page {
 			width: 80px;
 			height: 80px;
-			margin: 0 .5em;
+			margin: .25em .5em;
 		}
 	}
 	&__inner-circle {
@@ -106,4 +106,18 @@
 
 .icon-svg{
 	background-position: -251px -50px ;
+}
+
+// project close icon
+.project--close {
+	position: absolute;
+	z-index: 1500;
+	top: 1em;
+	right: .5em;
+	cursor: pointer;
+	
+	&-svg {
+		width: 25px;
+		height: 25px;
+	}
 }

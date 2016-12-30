@@ -22,7 +22,8 @@
 		top: 2.5%;
 		left: 60%;
 		right: 2.5em;
-		background: rgba(255,255,255,.5);
+		border: 10px solid $light-grey;
+		background: rgba(255,255,255,.7);
 	}
 
 	&__info-heading {
@@ -65,49 +66,11 @@
 			margin: 0.5em 0;
 			height: 42px;
 		}
-		
-		// &-line1 {
-		// 	@extend %animationSlideDown;
-
-		// 	animation-delay: .5s;
-		// 	-webkit-animation-delay: .5s;	
-		// }
-
-		// &-line-disappear {
-		// 	@extend %animationSlideDownDisappear;
-
-		// 	animation-delay: .5s;
-		// 	-webkit-animation-delay: .5s;	
-		// }
-		
-		// &-line2 {
-		// 	@extend %animationSlideDown;
-
-		// 	animation-delay: 1s;
-		// 	-webkit-animation-delay: 1s;
-		// }
-		// &-line3 {
-		// 	@extend %animationSlideDown;	
-		// 	animation-delay: 1.5s;
-		// 	-webkit-animation-delay: 1.5s;
-		// }
-		// &-line4 {
-		// 	@extend %animationSlideDown;	
-
-		// 	animation-delay: 2s;
-		// 	-webkit-animation-delay: 2s;
-		// }
-		// &-line5 {
-		// 	@extend %animationSlideDown;
-
-		// 	animation-delay: 2.5s;
-		// 	-webkit-animation-delay: 2.5s;
-		// }
 	}
 
 	&__info-skills {
 		color: $very-dark-grey;
-		margin: 1.5em 3em;
+		margin: 1em 3em;
 	}
 }
 
@@ -140,3 +103,13 @@
     }
 }
 
+.overlay-background {
+	display: none;
+	background-color: rgba(0,0,0,1);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 950;
+}

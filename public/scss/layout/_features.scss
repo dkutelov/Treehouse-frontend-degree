@@ -1,0 +1,55 @@
+.feature {
+	&--tb-margin {
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+	}
+
+	&--icon {
+		@include screen(tablet) {
+			// display:inline-block;
+			width: 25%;
+			float: left;
+			margin-top: 1.45em;
+			// margin-right: -5px;
+		}
+	}
+
+	&--icon-svg {
+		width: 60px;
+		height: 60px;
+		@include screen(tablet) {
+			width: 75px;
+			height: 75px;
+		}
+	}
+
+	&--content {
+		@include screen(tablet) {
+			display: inline-block;
+			width:75%;
+			text-align: left;
+		}
+	}
+	&--heading {
+		position: relative;
+		text-transform: uppercase;
+		margin-top: 5px;
+		margin-bottom: 10px;
+		@include screen(tablet) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&--description {
+		margin-top: 0;
+	}
+
+	&--slide-up {
+		transform: translateY(50px);
+  		animation: move-up 0.8s ease forwards;
+	}
+}
+
+@keyframes move-up {
+  to { transform: translateY(0); }
+}

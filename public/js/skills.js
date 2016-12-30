@@ -1,4 +1,4 @@
-
+// Skills definition object
 var skills = [
 	{
 		name		: "HTML5",
@@ -76,16 +76,14 @@ function skillsHTML(skillsToShow) {
 		}
 	} else {
 		for (var i = 0; i < skillsToShow.length; ++i) {
-  			skillsHTML += '<div class="skills__outer-circle skills__outer-circle--project-page">';
+  			skillsHTML += '<div class="skills__outer-circle skills__outer-circle--project-page" style="border: 2px solid' + skills[skillsToShow[i]].borderColor +'">';
 			skillsHTML += '<div class="skills__inner-circle skills__inner-circle--project-page">';
 			skillsHTML += '<div class="skills__icon ' + skills[skillsToShow[i]].className +'"></div>';
-			// skillsHTML += '<h4 class="skills__name">' + skills[skillsToShow[i]].name + '</h4>';
 			skillsHTML += '</div></div>';
 		}
 	}
 	return skillsHTML;
 }
-
 
 // Animation of skills icons
 $(document).on('mousemove', '.skills__outer-circle', function(e) {
@@ -99,4 +97,3 @@ $(document).on('mousemove', '.skills__outer-circle', function(e) {
 $(document).on('mouseout', '.skills__outer-circle', function(e) {
 	$(this).css({transform:'perspective(300px) rotateX(0deg) rotateY(0deg)'})
 });
-

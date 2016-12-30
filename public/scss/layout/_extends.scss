@@ -48,7 +48,10 @@
     left: 0;
     margin: 20px 0 0;
     width: 100%;
-    color: $intensive-yellow;
+    color: $medium-red;
+    font-family: $stack-open-sans;
+    // text-shadow: .3px .3px $plain-white;
+    font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
     font-size: 13px;
@@ -65,7 +68,7 @@
 
 %subtitilesOnPopUp {
     color: $dark-red;
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.8);
     padding: 0.25em 0.5em;
     text-shadow: .5px .5px $lighter-red;
 }
