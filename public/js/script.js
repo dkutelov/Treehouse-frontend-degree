@@ -137,6 +137,7 @@ $(document).on('click', '.js-prev', function() {
 $(document).on('click', '.js-close', function() {
   $('.overlay-background').hide();
   $overlay.fadeOut("fast");
+  $('.overlay').empty();
   $('html, body').css({'overflow': 'auto', 'height': 'auto'});
   $(document).scrollTop(distanceToTop);
 });
@@ -150,6 +151,7 @@ $(document).keydown(function(e) {
   } else if ( e.which === 27 ) {
     $('.overlay-background').hide();
     $overlay.fadeOut("fast");
+    $('.overlay').empty();
     $('html, body').css({'overflow': 'auto', 'height': 'auto'});
     $(document).scrollTop(distanceToTop);
   }
@@ -172,5 +174,4 @@ $(document).on('click', '.js-top', function() {
   $('html, body').animate({ scrollTop: 0 }, 'slow');
   return false;
 });
-
 

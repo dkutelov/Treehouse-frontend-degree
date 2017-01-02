@@ -138,5 +138,15 @@ body {
 		line-height: 1.5;
 		font-weight: 300;
 	}
+
+	&__live-preview {
+		h1 {
+			color: $medium-red;
+			font-family: $stack-lato;
+			font-size: 2em;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
 }
 

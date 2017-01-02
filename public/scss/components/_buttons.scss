@@ -56,7 +56,7 @@
     	top: calc(50% - 1px);
     	width: 15px;
     	height: 2px;
-    	background: linear-gradient(90deg, $intensive-yellow 0%, #fff2cb 100%);
+    	background: linear-gradient(90deg, $medium-red 0%, #f48888 100%);
     	content: '';
     	-webkit-transition: width 0.3s 0.2s;
     	transition: width 0.3s 0.2s;
@@ -75,7 +75,7 @@
 		&::before {
 			@extend %swipeBefore;
     		border-width: 8px 13px 8px 0;
-    		border-color: transparent $intensive-yellow transparent transparent;
+    		border-color: transparent $medium-red transparent transparent;
     		left: 0;
 		}
 
@@ -90,13 +90,13 @@
 		&::before {
 			@extend %swipeBefore;
 		    border-width: 8px 0 8px 13px;
-		    border-color: transparent transparent transparent $intensive-yellow;
+		    border-color: transparent transparent transparent $medium-red;
 		    right: 0;
 		}
 
 		&::after {
 			right: 13px;
-			background: linear-gradient(90deg, #fff2cb 0%, $intensive-yellow 100%);
+			background: linear-gradient(90deg, #f48888 0%, $medium-red 100%);
 		}
 	}
 
@@ -150,4 +150,47 @@
 		height: 40px;
 	}
 }
+
+.preview-mobile,
+.preview-tablet,
+.preview-desktop,
+.preview-overlay-close {
+	display: inline-block;
+	position: relative;
+	width: 55px;
+	height: 55px;
+	background: $plain-white;
+	padding: 0.9em;
+	border: 3px solid $dark-grey;
+	border-radius: 50%;
+	margin: .5em;
+	cursor: pointer;
+	transition: all .3s ease-in;
+
+	&:hover {
+		background: #dedede;
+		border: 3px solid #dedede;
+	}
+
+	&:hover svg {
+		transform: scale(1.2);
+	}
+
+	svg {
+		width: 30px;
+		height: 30px;
+		position:absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		margin: auto;
+		transition: all .3s ease-in;
+	}
+}
+
+.preview-overlay-close svg {
+	width: 25px;
+	height: 25px;
+}
+
+
+
 

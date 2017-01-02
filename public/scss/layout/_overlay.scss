@@ -22,8 +22,7 @@
 		top: 2.5%;
 		left: 60%;
 		right: 2.5em;
-		border: 10px solid $light-grey;
-		background: rgba(255,255,255,.7);
+		@extend %overlayContentBox;
 	}
 
 	&__info-heading {
@@ -72,6 +71,21 @@
 		color: $very-dark-grey;
 		margin: 1em 3em;
 	}
+
+	&__live-preview {
+		@extend %overlayContentBox;
+		position: absolute;
+		left: 1em;
+		bottom: 1em;
+		width: 16em;
+		height: 9em;
+		h1 {
+			margin: .25em;
+			background: rgba(255,255,255,0.8);
+		}
+	}
+
+
 }
 
 .desc-content,

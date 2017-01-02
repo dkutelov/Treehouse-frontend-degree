@@ -2,7 +2,8 @@ var projects = [
 	{
 		name: "Web API - Spotify Music Album Search",
 		imageLargeUrl	: "dist/img/projects/music-search-large.jpg",
-		imageSmallUrl	: "dist/img/projects/music-search1-low-res.jpg", 
+		imageSmallUrl	: "dist/img/projects/music-search1-low-res.jpg",
+		previewUrl		: "http://kutelov.com/webapi",  
 		description: [
 			'The project uses Spotify public APIs and',
 			'AJAX requests to create listing of music',
@@ -27,7 +28,8 @@ var projects = [
 	{
 		name: "Interactive Video Player",
 		imageLargeUrl	: "dist/img/projects/video-player-large.jpg",
-		imageSmallUrl	: "dist/img/projects/video1-low-res.jpg", 
+		imageSmallUrl	: "dist/img/projects/video1-low-res.jpg",
+		previewUrl		: "http://kutelov.com/videoplayer",
 		description: [
 			'A HTML5 video player built by using',
 			'JavaScript and HTML5 Video API. The',
@@ -52,7 +54,8 @@ var projects = [
 	{
 		name: "Web APP Dashboard",
 		imageLargeUrl	: "dist/img/projects/web-app-large.jpg",
-		imageSmallUrl	: "dist/img/projects/web-app1-low-res.jpg", 
+		imageSmallUrl	: "dist/img/projects/web-app1-low-res.jpg",
+		previewUrl		: "http://kutelov.com/webapp",
 		description: [
 			'A beautiful, web app dashboard created',
 			'with JavaScript-driven charts and graphs.',
@@ -78,7 +81,8 @@ var projects = [
 	{
 		name: "Online Registration Form",
 		imageLargeUrl	: "dist/img/projects/form-large.jpg",
-		imageSmallUrl	: "dist/img/projects/form1-low-res.jpg", 
+		imageSmallUrl	: "dist/img/projects/form1-low-res.jpg",
+		previewUrl		: "http://kutelov.com/regform", 
 		description: [
 			'A responsive, mobile-friendly registration ',
 			'form using a wide variety of HTML form',
@@ -104,7 +108,8 @@ var projects = [
 	{
 		name: "Interactive Image Gallery",
 		imageLargeUrl	: "dist/img/projects/gallery-large.jpg",
-		imageSmallUrl	: "dist/img/projects/gallery1-low-res.jpg", 
+		imageSmallUrl	: "dist/img/projects/gallery1-low-res.jpg",
+		previewUrl		: "http://kutelov.com/imggal",  
 		description: [
 			'An interactive photo gallery created with',
 			'JavaScript and jQuery, and based on provided',
@@ -130,6 +135,7 @@ var projects = [
 		name: "SVG site update",
 		imageLargeUrl	: "dist/img/projects/svg-update-large.jpg",
 		imageSmallUrl	: "dist/img/projects/svg-update1-low-res.jpg", 
+		previewUrl		: "http://kutelov.com/svgupdate",
 		description: [
 			'The project challange was to optimize',
 			'ready and functioning site by replacing ',
@@ -169,6 +175,11 @@ var $descriptionContentTwo = '<div class="desc-content-two"></div>';
 var $prevButton = '<div class="swipe-button swipe-button--previous js-prev"><div class="swipe-button__preview-prev"></div></div>';
 var $nextButton = '<div class="swipe-button swipe-button--next js-next"><div class="swipe-button__preview-next"></div></div>';
 var $closeIcon = '<div class="project--close js-close"><svg class="project--close-svg"><use xlink:href="#project-exit" x="0" y="0"/></svg></div>';
+var $livePreviewBox = '<div class="overlay__live-preview"><h1>Live Preview</h1></div>';
+var $mobilePreviewIcon = '<div class="preview-mobile js-preview-mobile"><svg><use xlink:href="#project-preview-mobile" x="0" y="0"/></svg></div>';
+var $tabletPreviewIcon = '<div class="preview-tablet js-preview-tablet"><svg><use xlink:href="#project-preview-tablet" x="0" y="0"/></svg></div>';
+var $desktopPreviewIcon = '<div class="preview-desktop js-preview-desktop"><svg><use xlink:href="#project-preview-desktop" x="0" y="0"/></svg></div>';
+var $visitSiteButton = '<div class="overlay__info-visit-site"><a class="js-visit-site" target="_blank" href="#">Visit Site</a></div>';
 
 function projectDescriptionHtml(projectIndex, batch) {
 	var descritpionHTML = '';
@@ -205,12 +216,25 @@ function showProject(index) {
 	var skillsToShow = projects[index].skills;
 	var $projectSkillsHTML = skillsHTML(skillsToShow);
 
-	$overlay.append($responsiveLabel, $overlayMainImage, $overlayInfoBlock, $prevButton, $nextButton, $closeIcon);
+	$overlay.append(
+		$responsiveLabel,
+		$overlayMainImage,
+		$overlayInfoBlock,
+		$prevButton,
+		$nextButton,
+		$closeIcon,
+		$livePreviewBox);
+
+	$('.overlay__live-preview').append(
+		$mobilePreviewIcon,
+		$tabletPreviewIcon,
+		$desktopPreviewIcon);
+
 	// check if resposnive is true
 	$('.overlay__main-image').append($mainImage);
 	$('.overlay__main-image img').attr('src', projects[index].imageLargeUrl);
 
-	$('.overlay__info').append($projectName, $projectSubheading, $descritionContainer, $projectSkills);
+	$('.overlay__info').append($projectName, $projectSubheading, $descritionContainer, $projectSkills, $visitSiteButton);
 	$('.overlay__desciption-container').append($descriptionContent, $descriptionContentOne, $descriptionContentTwo);
 	$('.overlay__info-heading').text(projects[index].name);
 	
@@ -236,7 +260,7 @@ function showProject(index) {
 	    	animateDescriptionText('.desc-content', last);
 	    	console.log('task 1 is done!');
 	        dfrd1.resolve(); 
-	    }, 100);
+	    }, 200);
 
 	    var showDesciptionTwo = setTimeout(function(){
 	    	var last = false;
@@ -264,8 +288,12 @@ function showProject(index) {
 	    }).promise();
 	}
 
+	//  Insert Skills section html
 	$('.overlay__info-skills').html($projectSkillsHTML);
 	var skillsToShow = "all";
+
+	// Set link for visit site button
+	$('.js-visit-site').attr('href', projects[index].previewUrl);
 
 	// set image for previuos arrow
 	var prev = index - 1;
@@ -276,4 +304,19 @@ function showProject(index) {
 	var next = index + 1;
 	next = adjustProjectIndex(next);	
 	$('.swipe-button__preview-next').css('background-image', 'url(' + projects[next].imageSmallUrl + ')');
+
+	$(document).on('click', '.js-preview-mobile', function() {
+  		var element = "mobile";
+  		livePreview(element, index);
+	});	
+
+	$(document).on('click', '.js-preview-tablet', function() {
+  		var element = "tablet";
+  		livePreview(element, index);
+	});
+
+	$(document).on('click', '.js-preview-desktop', function() {
+  		var element = "desktop";
+  		livePreview(element, index);
+	});
 }

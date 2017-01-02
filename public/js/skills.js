@@ -1,7 +1,7 @@
 // Skills definition object
 var skills = [
 	{
-		name		: "HTML5",
+		name		: "HTML4.9",
 		className	: "icon-html",
 		borderColor	: "#4975FB" 
 	},

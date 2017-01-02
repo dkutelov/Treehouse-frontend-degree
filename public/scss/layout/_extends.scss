@@ -72,3 +72,9 @@
     padding: 0.25em 0.5em;
     text-shadow: .5px .5px $lighter-red;
 }
+
+// Border and background of content box on the overlay
+%overlayContentBox {
+    border: 10px solid #f7f7f7;
+    background: rgba(255,255,255,0.7);
+}
