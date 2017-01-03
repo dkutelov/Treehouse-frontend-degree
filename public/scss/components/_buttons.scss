@@ -191,6 +191,27 @@
 	height: 25px;
 }
 
+.more-button {
+	width: 20%;
+	position: absolute;
+	right: 1.35em;
+	// left: 0;
+	// right: 0;
+	bottom: -.85em;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	color: $plain-white;
+	// background: rgba(0,0,0,.7);
+	background: $medium-grey;
+	border: none;
+	padding-bottom: 2px;
+	border-radius: 5px;
+	&:hover {
+		color: $very-dark-grey;
+		background: $plain-white;
+	}
+}
 
 
 

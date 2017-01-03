@@ -180,7 +180,9 @@ var $mobilePreviewIcon = '<div class="preview-mobile js-preview-mobile"><svg><us
 var $tabletPreviewIcon = '<div class="preview-tablet js-preview-tablet"><svg><use xlink:href="#project-preview-tablet" x="0" y="0"/></svg></div>';
 var $desktopPreviewIcon = '<div class="preview-desktop js-preview-desktop"><svg><use xlink:href="#project-preview-desktop" x="0" y="0"/></svg></div>';
 var $visitSiteButton = '<div class="overlay__info-visit-site"><a class="js-visit-site" target="_blank" href="#">Visit Site</a></div>';
+var $moreButton = '<div class="button button-lime more-button js-more">more</div>'
 
+// - - - F U N C T I O N S
 function projectDescriptionHtml(projectIndex, batch) {
 	var descritpionHTML = '';
 	for (var i = 0; i < 5; i++) {
@@ -195,21 +197,11 @@ function projectDescriptionHtml(projectIndex, batch) {
 	return descritpionHTML; 
 }
 
-function animateDescriptionText(selector, last){
+function animateDescriptionText(selector){
 	var $contentDesc = $(selector).find('p');
-	if ( last ) {
 	$contentDesc
-		.delay(100)
+		.delay(300)
 		.slideDown("fast");
-	} else {
-		$contentDesc
-		.delay(100)
-		.slideDown("fast")
-		.delay(9000)
-		.animate({
-			opacity: 0
-		}, 200);
-	}
 }
 
 function showProject(index) {
@@ -231,62 +223,22 @@ function showProject(index) {
 		$desktopPreviewIcon);
 
 	// check if resposnive is true
+	
+	// Appends project image
 	$('.overlay__main-image').append($mainImage);
 	$('.overlay__main-image img').attr('src', projects[index].imageLargeUrl);
 
+	// Appends project name, descriptio and skills
 	$('.overlay__info').append($projectName, $projectSubheading, $descritionContainer, $projectSkills, $visitSiteButton);
-	$('.overlay__desciption-container').append($descriptionContent, $descriptionContentOne, $descriptionContentTwo);
+	$('.overlay__desciption-container').append($descriptionContent, $moreButton);
 	$('.overlay__info-heading').text(projects[index].name);
 	
-	var descHTML = projectDescriptionHtml(index, 0);
-	var descHTMLOne = projectDescriptionHtml(index, 5);
-	var descHTMLTwo = projectDescriptionHtml(index, 10);
-
+	// Inserts text in the description area
+	var batch = 0;
+	var descHTML = projectDescriptionHtml(index, batch);	
 	$('.desc-content').html(descHTML);
-	$('.desc-content-one').html(descHTMLOne);
-	$('.desc-content-two').html(descHTMLTwo);
-	
-	$(function(){
-	    rotateDescText().done();
-	});
+	animateDescriptionText('.desc-content');
 
-	function rotateDescText(){
-	    var dfrd1 = $.Deferred();
-	    var dfrd2= $.Deferred();
-	    var dfrd3= $.Deferred();
-	    
-	    var showDesciptionOne = setTimeout(function(){
-	    	var last = false;
-	    	animateDescriptionText('.desc-content', last);
-	    	console.log('task 1 is done!');
-	        dfrd1.resolve(); 
-	    }, 200);
-
-	    var showDesciptionTwo = setTimeout(function(){
-	    	var last = false;
-	        animateDescriptionText('.desc-content-one', last);
-	        console.log('task 2 is done!');
-	        dfrd2.resolve();
-	    }, 9500);
-
-	    var showDesciptionThree = setTimeout(function(){
-	    	var last = true;
-	        animateDescriptionText('.desc-content-two', last);
-	        console.log('task 3 is done!');
-	        dfrd3.resolve();
-	    }, 19000);
-	    
-	    return $.when(dfrd1, dfrd2, dfrd3).done(function(){
-	        console.log('all tasks are done');
-	     //    if (cancel) {
-	    	// 	clearTimeout(showDesciptionOne);
-	    	// 	clearTimeout(showDesciptionTwo);
-	    	// 	clearTimeout(showDesciptionThree);
-	    	// 	cancel = false;
-	    	// 	console.log('task1 cleared');
-	    	// }
-	    }).promise();
-	}
 
 	//  Insert Skills section html
 	$('.overlay__info-skills').html($projectSkillsHTML);
@@ -318,5 +270,19 @@ function showProject(index) {
 	$(document).on('click', '.js-preview-desktop', function() {
   		var element = "desktop";
   		livePreview(element, index);
+	});
+
+	$(document).on('click', '.js-more', function() {
+  		batch += 5;
+  		if ( batch < projects[index].description.length ) {
+	  		var descHTML = projectDescriptionHtml(index, batch);
+	  		$('.desc-content').html(descHTML);
+			animateDescriptionText('.desc-content');
+		} else {
+			$('.js-more')
+				.css('background', '#fff')
+				.text('end')
+				.css('color', '#EF5252');
+		}
 	});
 }
