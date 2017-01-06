@@ -26,10 +26,32 @@
 		color: $very-dark-grey;
 		border: 2px solid $light-yellow;
 		background: $light-yellow;
+
 		&:hover {
 			color: $light-yellow;
 			background: $dark-grey;
 			border: 2px solid $dark-grey;
+		}
+	}
+
+	&-yellow {
+		width: 16em;
+		color: $very-dark-grey;
+		border: 2px solid $light-grey;
+		background: $intensive-yellow;
+		padding: 4.5px 0;
+		a {
+			color: $plain-white;
+			text-shadow: .5px .5px .5px $very-dark-grey;
+		}
+
+		&:hover {
+			color: $light-yellow;
+			background: $dark-grey;
+			border: 2px solid $light-yellow;
+			a {
+				color: $light-yellow;
+			}
 		}
 	}
 
@@ -141,8 +163,12 @@
 .back-to-top {
 	opacity: 0;
 	position: fixed;
-	right: 75px;
-	bottom: 50px;
+	right: 15px;
+	bottom: 80px;
+	@include screen(tablet) {
+		right: 65px;
+		bottom: 80px;
+	}
 	transition: all .5s linear;
 	cursor: pointer;
 	svg {
@@ -193,20 +219,22 @@
 
 .more-button {
 	width: 20%;
+	height: 25px;
+	@include screen(tablet) {
+		height: 18px;
+	}
 	position: absolute;
 	right: 1.35em;
-	// left: 0;
-	// right: 0;
 	bottom: -.85em;
 	margin: 0;
 	padding: 0;
 	font-weight: 400;
 	color: $plain-white;
-	// background: rgba(0,0,0,.7);
 	background: $medium-grey;
 	border: none;
 	padding-bottom: 2px;
 	border-radius: 5px;
+
 	&:hover {
 		color: $very-dark-grey;
 		background: $plain-white;

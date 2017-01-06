@@ -1,3 +1,4 @@
+// Circle skills icons styling
 .skills {
 	&__outer-circle {
 		display: inline-block;
@@ -6,16 +7,21 @@
 		height: 124px;
 		border: 5px solid transparent;
 		border-radius: 50%;
-		// background: $light-grey;
 		background: $plain-white;
 		margin: 1em;
 		box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 		transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
 		
 		&--project-page {
-			width: 80px;
-			height: 80px;
+			width: 40px;
+			height: 40px;
 			margin: .25em .5em;
+			
+			@include screen(tablet) {
+				width: 80px;
+				height: 80px;
+				margin: .25em .5em;
+			}
 		}
 	}
 	&__inner-circle {
@@ -121,3 +127,64 @@
 		height: 25px;
 	}
 }
+
+
+// Contacts icons
+.contacts {
+	&--icon {
+		display: block;
+		position:absolute;
+		left:0;
+		margin: 0 auto;
+		svg {
+			width: 3em;
+			height: 3em;
+			use {
+				fill: $medium-grey;
+				@extend %iconsTransition;
+			}
+		}
+	}
+}
+
+.contacts--contact-row:hover {
+	svg {
+			use {
+				fill: $plain-white;
+			}
+		}
+}
+
+// Social icons
+.footer__social-media-icon {
+	display: inline-block;
+	margin: 32px 1em 0;
+
+	svg {
+		width: 20px;
+		height: 20px;
+
+		@include screen(tablet) {
+			width: 15px;
+			height: 15px;
+		}
+		use {
+			fill: $plain-white;
+			@extend %iconsTransition;
+		}
+
+	}
+
+	&:hover {
+		svg {
+			use {
+				fill: $lime;
+			}
+		}
+	}
+}
+
+// .footer__social-media-icon:nth-of-type(2) svg,
+// .footer__social-media-icon:nth-of-type(3) svg {
+// 	margin-top: 3px;
+// }

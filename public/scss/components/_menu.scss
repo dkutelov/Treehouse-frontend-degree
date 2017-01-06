@@ -1,23 +1,35 @@
 .menu {
-	
+	position: absolute;
+	top: 134.5px;
+	left: -1em;
+	right: 20%;
+	z-index: 500;
+	transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+	transform: translateX(-500px);
+
 	@include screen(tablet) {
+		position: relative;
+		top: 0;
 		display: inline-block;
 		float: right;
 		margin: 45px 0 0 0;
+		transform: translateX(0);
 	}
 
 	&-mobile-line {
 		position:absolute;
-		top: 22%;
+		top: 92.5px;
 		left: 0%;
-		width: 30%;
+		width: 17.5%;
 		color: $plain-white;
 		background: $plain-black;
 		height: 45px;
 		margin: 0;
+
 		@include screen(tablet) {
 			display:none;
 		}
+
 		&-icon {
 			position: absolute;
 			z-index: 500;
@@ -26,35 +38,69 @@
 			height: 35px;
 			margin: 5px 15px;
 		}
-		&-text {
-			position: absolute;
-			z-index: 500;
-			top: -5%;
-			left: 50%;
-			display: inline-block;
-			text-transform: uppercase;
-		}
+
+		// &-text {
+		// 	position: absolute;
+		// 	z-index: 500;
+		// 	top: -5%;
+		// 	left: 50%;
+		// 	display: inline-block;
+		// 	text-transform: uppercase;
+		// }
 	}
 
 	&-item {
-		display: none;
+		display: block;
 		color: $plain-white;
 		text-decoration: none;
-		padding: 10px 0 3.5px 0;
+		padding: 10px 0 10px 0;
+		background: $plain-black;
+		border-bottom: 1px solid $light-yellow;
+		transition: all .1s ease-in-out;
+
+		&:hover {
+			color: $light-yellow;
+			background: $dark-grey;
+			@include screen(tablet){
+				background: transparent;
+			}
+		}
 		
+		&:focus {
+			background: $dark-grey;
+			@include screen(tablet){
+				background: transparent;
+			}
+		}
+
+
 		@include screen(tablet){
 			display: inline-block;
 			position: relative;
 			margin-left: 15px;
-			}
+			background: transparent;
+			padding: 10px 0 3.5px 0;
+			border-bottom: none;
+		}
+
 		&:after {
-			@extend %Underline;
+			@include screen(tablet){
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				width: 0;
+				height: 2px;
+				background: linear-gradient(90deg, #42b574 0%, #84c450 100%);
+				transition: .3s all ease;
+			}
 		}
 		
 		&:hover:after {
-			left:0;
-			width: 100%;
+			@include screen(tablet){
+				left:0;
+				width: 100%;
+			}
 		}
-
 	}
 }

@@ -78,3 +78,11 @@
     border: 10px solid #f7f7f7;
     background: rgba(255,255,255,0.7);
 }
+
+// Social and contact icons transitions 
+%iconsTransition {
+    -webkit-transition: all 200ms cubic-bezier(0.785,0.135,0.15,0.86),background-color 200ms cubic-bezier(0.785,0.135,0.15,0.86);
+    -moz-transition: all 200ms cubic-bezier(0.785,0.135,0.15,0.86),background-color 200ms cubic-bezier(0.785,0.135,0.15,0.86);
+    -o-transition: all 200ms cubic-bezier(0.785,0.135,0.15,0.86),background-color 200ms cubic-bezier(0.785,0.135,0.15,0.86);
+    transition: all 200ms cubic-bezier(0.785,0.135,0.15,0.86),background-color 200ms cubic-bezier(0.785,0.135,0.15,0.86);
+}

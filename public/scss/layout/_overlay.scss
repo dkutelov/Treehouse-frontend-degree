@@ -13,16 +13,27 @@
 
 	&__main-image {
 		display: block;
-		width: 80%;
-		padding: 2.5em;
+		width: 100%;
+		padding: 1em 3em;
+
+		@include screen(tablet) {
+			width: 80%;
+			padding: 2.5em;
+		}
 	}
 
 	&__info {
 		position: absolute;
-		top: 2.5%;
-		left: 60%;
-		right: 2.5em;
+		top: 25%;
+		left: 1em;
+		right: 1em;
 		@extend %overlayContentBox;
+
+		@include screen(tablet) {
+			top: 2.5%;
+			left: 60%;
+			right: 2.5em;
+    	}
 	}
 
 	&__info-heading {
@@ -49,7 +60,10 @@
 
 	&__desciption-container {
 		position: relative;
-		height: 16.25em;
+		height: 11.5em;
+		@include screen(tablet) {
+			height: 16.25em;
+		}
 	}
 
 	&__info-text {
@@ -62,8 +76,12 @@
 		&-row-container {
 			overflow: hidden;
 			padding: 0;
-			margin: 0.5em 0;
-			height: 42px;
+			margin: 0.25em 0;
+			height: 30px;
+			@include screen(tablet) {
+				margin: 0.5em 0;
+				height: 42px;
+			}
 		}
 	}
 
@@ -73,6 +91,12 @@
 	}
 
 	&__live-preview {
+		display: none;
+
+		@include screen(tablet) {
+			display: block;
+    	}
+
 		@extend %overlayContentBox;
 		position: absolute;
 		left: 1em;
@@ -84,7 +108,20 @@
 			background: rgba(255,255,255,0.8);
 		}
 	}
+	
+	&__visit-site {
+		position: absolute;
+		height: 3em;
+		left: 0;
+		right: 0;
+		bottom: 1em;
 
+		@include screen(tablet) {
+			left: 1em;
+			bottom: 10.5em;
+			margin: .25em;
+		}
+	}
 
 }
 
@@ -105,7 +142,7 @@
 	background: $medium-red;
 	width: 300px;
 	height: 40px;
-	 -ms-transform: rotate(-45deg); /* IE 9 */
+	-ms-transform: rotate(-45deg); /* IE 9 */
     -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
     transform: rotate(-45deg);
     text-align: center;

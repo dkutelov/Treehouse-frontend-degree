@@ -1,14 +1,35 @@
 .footer {
-	height: 50px;
+	height: 105px;
 	background: $very-dark-grey;
 	color: white;
+	text-align: center;
 
-	&__frights-claim {
-		display: inline-block;
-		margin-top: 20px;
+	@include screen(tablet) {
+		height: 75px;
 	}
 
-	&__frights-claim > p {
+	&__rights-claim {
+		display: inline-block;
+		margin-top: 25px;
+
+		@include screen(tablet) {
+			float: left;
+			text-align: left;
+			margin-top: 32px;
+		}
+	}
+
+	&__rights-claim > p {
 		margin: 0;
 	}
+
+	&__social-icons-container {
+		display: block;
+		text-align: center;
+		@include screen(tablet) {
+			float: right;
+			display: inline-block;
+		}
+	}
+
 }

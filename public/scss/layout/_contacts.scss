@@ -1,0 +1,29 @@
+.contacts {
+	&--contact-row {
+		display: block;
+		width: 70%;
+		margin: 2.5em auto;
+		position: relative;
+		padding: 0 1.5em;
+
+		@include screen(tablet) {
+			width: 30%;
+			display: inline-block;
+			margin: 3.5em auto;
+		}	
+
+		&:hover .contacts--contact-row-text {
+			color: $plain-white;
+			@extend %iconsTransition;
+		}
+
+		&-text {
+			display: inline-block;
+			padding-left: 30px;
+			margin-top: 14px;
+			color: $medium-grey;
+			text-align: left;
+			width: 270px;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 var projects = [
 	{
-		name: "Web API - Spotify Music Album Search",
+		name: "Web API - Music Search",
 		imageLargeUrl	: "dist/img/projects/music-search-large.jpg",
 		imageSmallUrl	: "dist/img/projects/music-search1-low-res.jpg",
 		previewUrl		: "http://kutelov.com/webapi",  
@@ -163,6 +163,7 @@ var $overlay = $('.overlay');
 var $overlaySkills = '<div class="overlay__info-skills"></div>';
 var $overlayMainImage = '<div class="overlay__main-image"></div>';
 var $responsiveLabel = '<div class="reposiveLabel"><span>Responsive</span></div>';
+// Project Details Block
 var $overlayInfoBlock = '<div class="overlay__info"></div>';
 var $projectName = '<h1 class="overlay__info-heading"></h1>';
 var $mainImage = '<img>';
@@ -170,16 +171,19 @@ var $projectSubheading = '<h2 class="overlay__info-subheading">Project Descripti
 var $projectSkills = '<h2 class="overlay__info-subheading">Tech Skills:</h2><div class="overlay__info-skills"></div>';
 var $descritionContainer = '<div class="overlay__desciption-container"></div>';
 var $descriptionContent = '<div class="desc-content"></div>';
-var $descriptionContentOne = '<div class="desc-content-one"></div>';
-var $descriptionContentTwo = '<div class="desc-content-two"></div>';
+// - - - 
+// var $descriptionContentOne = '<div class="desc-content-one"></div>';
+// var $descriptionContentTwo = '<div class="desc-content-two"></div>';
 var $prevButton = '<div class="swipe-button swipe-button--previous js-prev"><div class="swipe-button__preview-prev"></div></div>';
 var $nextButton = '<div class="swipe-button swipe-button--next js-next"><div class="swipe-button__preview-next"></div></div>';
 var $closeIcon = '<div class="project--close js-close"><svg class="project--close-svg"><use xlink:href="#project-exit" x="0" y="0"/></svg></div>';
+// Live preview box
 var $livePreviewBox = '<div class="overlay__live-preview"><h1>Live Preview</h1></div>';
 var $mobilePreviewIcon = '<div class="preview-mobile js-preview-mobile"><svg><use xlink:href="#project-preview-mobile" x="0" y="0"/></svg></div>';
 var $tabletPreviewIcon = '<div class="preview-tablet js-preview-tablet"><svg><use xlink:href="#project-preview-tablet" x="0" y="0"/></svg></div>';
 var $desktopPreviewIcon = '<div class="preview-desktop js-preview-desktop"><svg><use xlink:href="#project-preview-desktop" x="0" y="0"/></svg></div>';
-var $visitSiteButton = '<div class="overlay__info-visit-site"><a class="js-visit-site" target="_blank" href="#">Visit Site</a></div>';
+// - - - 
+var $visitSiteButton = '<div class="button button-yellow overlay__visit-site"><a class="js-visit-site" target="_blank" href="#">Visit Site</a></div>';
 var $moreButton = '<div class="button button-lime more-button js-more">more</div>'
 
 // - - - F U N C T I O N S
@@ -204,6 +208,7 @@ function animateDescriptionText(selector){
 		.slideDown("fast");
 }
 
+// Main function to build project pop up
 function showProject(index) {
 	var skillsToShow = projects[index].skills;
 	var $projectSkillsHTML = skillsHTML(skillsToShow);
@@ -215,7 +220,8 @@ function showProject(index) {
 		$prevButton,
 		$nextButton,
 		$closeIcon,
-		$livePreviewBox);
+		$livePreviewBox,
+		$visitSiteButton);
 
 	$('.overlay__live-preview').append(
 		$mobilePreviewIcon,
@@ -229,7 +235,7 @@ function showProject(index) {
 	$('.overlay__main-image img').attr('src', projects[index].imageLargeUrl);
 
 	// Appends project name, descriptio and skills
-	$('.overlay__info').append($projectName, $projectSubheading, $descritionContainer, $projectSkills, $visitSiteButton);
+	$('.overlay__info').append($projectName, $projectSubheading, $descritionContainer, $projectSkills);
 	$('.overlay__desciption-container').append($descriptionContent, $moreButton);
 	$('.overlay__info-heading').text(projects[index].name);
 	

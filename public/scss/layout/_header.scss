@@ -89,7 +89,7 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	z-index: 200;
+	z-index: 5;
 	color: $plain-white;
 	
 	@include screen(tablet) {

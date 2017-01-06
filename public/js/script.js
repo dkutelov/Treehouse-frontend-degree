@@ -9,6 +9,7 @@ var sreenHeight = $(window).height();
 var index = 0;
 var cancel= false;
 var distanceToTop = 0;
+var onOff = 0;
 
 // F U N C T I O N S
 //Changes words in key message on home page
@@ -92,6 +93,16 @@ function prevProject() {
 }
 
 // - - - end of functions
+
+$(document).on('click', '.js-menu-icon', function() {
+    if ( onOff === 0 ) {
+      $('.menu').css('transform', 'translateX(0)');
+      onOff = 1;
+    } else {
+      $('.menu').css('transform', 'translateX(-500px)');
+      onOff = 0;
+    }
+});
 
 //Call function on regular intervals to change word in key message on home page
 setInterval(function(){ 

@@ -10,6 +10,13 @@ body {
 	font-weight: 700;
 }
 
+.menu {
+	font-weight: 400;
+	@include screen(tablet) {
+		font-weight: 700;
+	}
+}
+
 .key-messages {
 	font-family: $stack-poppins;
 	&-title {
@@ -110,22 +117,22 @@ body {
 	}
 }
 
-
-.footer {
-	&__frights-claim > p {
-		font-size: 12px;
-		font-weight: 100;
-	}
-}
-
 .overlay {
 	&__info-heading {
+		font-size: 1.2em;
+		@include screen(tablet) {
+			font-size: 2em;
+		}
 		font-family: $stack-poppins;
 		font-weight: 400;
 		text-transform: capitalize;
 	}
 
 	&__info-subheading {
+		font-size: 1.1em;
+		@include screen(tablet) {
+			font-size: 1.5em;
+		}
 		font-family: $stack-poppins;
 		font-weight: 300;
 		text-transform: uppercase;
@@ -133,8 +140,11 @@ body {
 
 	&__info-text {
 		// font-family: $stack-poppins;
+		font-size: 1em;
+		@include screen(tablet) {
+			font-size: 1.35em;
+		}
 		font-family: $stack-lato;
-		font-size: 1.35em;
 		line-height: 1.5;
 		font-weight: 300;
 	}
@@ -148,5 +158,21 @@ body {
 			text-transform: uppercase;
 		}
 	}
+	
+	&__visit-site {
+		a{
+			color: $plain-white;
+			font-family: $stack-lato;
+			font-size: 2em;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
 }
 
+.footer {
+	&__rights-claim > p {
+		font-size: 12px;
+		font-weight: 100;
+	}
+}
