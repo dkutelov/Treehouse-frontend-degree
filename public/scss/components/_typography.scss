@@ -104,8 +104,11 @@ body {
 
 .projects {
 	&__picture-title {
-		font-size: 1.3em;
+		font-size: 1.1em;
 		font-weight: 300;
+		@include screen(tablet){
+		font-size: 1.3em;
+		}
 	}
 
 }
@@ -114,6 +117,15 @@ body {
 	&__name {
 		font-family: $stack-lato;
 		font-weight: 300;
+		font-size: 1em;
+	}
+	&__name-project-page {
+		font-family: $stack-lato;
+		font-weight: 300;
+		font-size: .5em;
+		@include screen(mobile) {
+			font-size: .7em;
+		}
 	}
 }
 
@@ -129,7 +141,7 @@ body {
 	}
 
 	&__info-subheading {
-		font-size: 1.1em;
+		font-size: 1em;
 		@include screen(tablet) {
 			font-size: 1.5em;
 		}
@@ -163,9 +175,12 @@ body {
 		a{
 			color: $plain-white;
 			font-family: $stack-lato;
-			font-size: 2em;
+			font-size: 1em;
 			font-weight: 600;
 			text-transform: uppercase;
+			@include screen(tablet) {
+				font-size: 2em;
+			}
 		}
 	}
 }

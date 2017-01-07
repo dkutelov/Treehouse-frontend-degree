@@ -1,3 +1,4 @@
+// General styling for button
 .button {
 	width: 25%;
 	margin: 0 auto;
@@ -57,6 +58,7 @@
 
 }
 
+// Left and right arrow buttons to swipe b/w projects in project overlay
 .swipe-button{
 	width: 60px;
     height: 100px;
@@ -177,6 +179,8 @@
 	}
 }
 
+
+// Buttons for live preview of a project
 .preview-mobile,
 .preview-tablet,
 .preview-desktop,
@@ -212,28 +216,34 @@
 	}
 }
 
+// Button to close project overlay
 .preview-overlay-close svg {
 	width: 25px;
 	height: 25px;
 }
 
+// Button for more description text on the project overlay
 .more-button {
-	width: 20%;
-	height: 25px;
-	@include screen(tablet) {
-		height: 18px;
-	}
 	position: absolute;
-	right: 1.35em;
-	bottom: -.85em;
+	width: 15%;
+	height: 25px;
+	right: 1.2em;
+	bottom: -1em;
+	@include screen(tablet) {
+		width: 10%;
+		height: 25px;
+		right: 1.6em;
+		bottom: -1.5em;
+	}
 	margin: 0;
-	padding: 0;
+	padding: 3px 0 0 0;
 	font-weight: 400;
 	color: $plain-white;
 	background: $medium-grey;
 	border: none;
 	padding-bottom: 2px;
-	border-radius: 5px;
+	// border-radius: 5px;
+	font-size: .85em;
 
 	&:hover {
 		color: $very-dark-grey;

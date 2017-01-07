@@ -8,14 +8,25 @@
 		border: 5px solid transparent;
 		border-radius: 50%;
 		background: $plain-white;
-		margin: 1em;
 		box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-		transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-		
+		transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);	
+		margin: .25em .25em;
+		@include screen(mobile) {
+			margin: .5em;
+		}
+		@include screen(tablet) {
+			margin: 1em;
+		}
 		&--project-page {
-			width: 40px;
-			height: 40px;
-			margin: .25em .5em;
+			width: 37.5px;
+			height: 37.5px;
+			margin: .25em .15em;
+
+			@include screen(mobile) {
+				width: 68px;
+				height: 68px;
+				margin: .25em .5em;
+			}
 			
 			@include screen(tablet) {
 				width: 80px;
@@ -37,12 +48,24 @@
 
 		&--project-page {
 			top: 9%;
-			width: 50px;
-			height: 50px;
+			width: 25px;
+			height: 25px;
+
+			@include screen(mobile) {
+				top: 9%;
+				width: 42.5px;
+				height: 42.5px;
+			}
+
+			@include screen(tablet) {
+				top: 9%;
+				width: 50px;
+				height: 50px;
+			}
 		}
 	}
 	
-	&__icon {
+	&__icon {	
 		position: absolute;
 		top: 15%;
 		left: 0;
@@ -52,10 +75,24 @@
 	
 	&__name {
 		position: absolute;
-		top: 65%;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
+		top: 65%;
+	}
+
+	&__name-project-page {
+		position: absolute;
+		top: 137%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		color: $dark-grey;
+		text-align: center;
+
+		@include screen(mobile) {
+			top: 95%;
+		}
 	}
 }
 
@@ -113,6 +150,139 @@
 .icon-svg{
 	background-position: -251px -50px ;
 }
+
+//Smaller size
+.icon-html-sm, .icon-css-sm, .icon-js-sm, .icon-jq-sm, .icon-ajax-sm, .icon-git-sm, .icon-sass-sm, .icon-postcss-sm, .icon-gulp-sm, .icon-node-sm, .icon-npm-sm, .icon-svg-sm{
+	background: url('img/icons/sprites.png') no-repeat;
+	background-size: 120px 40px;
+	width: 20px;
+	height: 20px;
+	@include screen(mobile) {
+		background-size: 180px 60px;
+		width: 30px;
+		height: 30px;
+	}
+	@include screen(tablet) {
+		background-size: 210px 70px;
+		width: 35px;
+		height: 35px;
+	}
+}
+
+.icon-html-sm{
+	background-position: 0 0;
+}
+
+.icon-css-sm{
+	background-position: -20px 0;
+	@include screen(mobile) {
+		background-position: -30px 0;
+	}
+	@include screen(tablet) {
+		background-position: -35px 0;
+	}
+}
+
+.icon-js-sm{
+	background-position: -39px 0;
+	@include screen(mobile) {
+		background-position: -59px 0;
+	}
+	@include screen(tablet) {
+		background-position: -69px 0;
+	}	
+}
+
+.icon-jq-sm{
+	background-position: -58px 0;
+	@include screen(mobile) {
+		background-position: -88px 0;
+	}
+	@include screen(tablet) {
+		background-position: -102px 0;
+	}
+}
+
+.icon-ajax-sm{
+	background-position: -78px 0;
+	@include screen(mobile) {
+		background-position: -118px 0;
+	}
+	@include screen(tablet) {
+		background-position: -137px 0;
+	}
+}
+
+.icon-git-sm{
+	background-position: -99px 0;
+	@include screen(mobile) {
+		background-position: -145px 0;
+	}
+	@include screen(tablet) {
+		background-position: -174px 0;
+	}
+}
+
+.icon-sass-sm{
+	background-position: 1px -20px;
+	@include screen(mobile) {
+		background-position: 1px -30px;
+	}
+	@include screen(tablet) {
+		background-position: 1px -35px;
+	}
+}
+
+.icon-postcss-sm{
+	background-position: -20px -20px;
+	@include screen(mobile) {
+		background-position: -30px -30px;
+	}
+	@include screen(tablet) {
+		background-position: -35px -35px;
+	}
+}
+
+.icon-gulp-sm{
+	background-position: -39px -20px;
+	@include screen(mobile) {
+		background-position: -59px -30px;
+	}
+	@include screen(tablet) {
+		background-position: -69px -35px;
+	}
+}
+
+.icon-node-sm{
+	background-position: -59px -20px;
+	@include screen(mobile) {
+		background-position: -89px -30px;
+	}
+	@include screen(tablet) {
+		background-position: -104px -35px;
+	}
+}
+
+.icon-npm-sm{
+	background-position: -78px -20px;
+	@include screen(mobile) {
+		background-position: -118px -30px;
+	}
+	@include screen(tablet) {
+		background-position: -138px -35px;
+	}
+}
+
+.icon-svg-sm{
+	background-position: -100px -20px;
+	@include screen(mobile) {
+		background-position: -150px -30px;
+	}
+	@include screen(tablet) {
+		background-position: -175px -35px;
+	}
+}
+
 
 // project close icon
 .project--close {
@@ -184,7 +354,4 @@
 	}
 }
 
-// .footer__social-media-icon:nth-of-type(2) svg,
-// .footer__social-media-icon:nth-of-type(3) svg {
-// 	margin-top: 3px;
-// }
+

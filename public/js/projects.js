@@ -167,8 +167,8 @@ var $responsiveLabel = '<div class="reposiveLabel"><span>Responsive</span></div>
 var $overlayInfoBlock = '<div class="overlay__info"></div>';
 var $projectName = '<h1 class="overlay__info-heading"></h1>';
 var $mainImage = '<img>';
-var $projectSubheading = '<h2 class="overlay__info-subheading">Project Description:</h2>';
-var $projectSkills = '<h2 class="overlay__info-subheading">Tech Skills:</h2><div class="overlay__info-skills"></div>';
+var $projectSubheading = '<h2 class="overlay__info-subheading">Project Description</h2>';
+var $projectSkills = '<h2 class="overlay__info-subheading overlay__info-subheading-mt">Tech Skills</h2><div class="overlay__info-skills"></div>';
 var $descritionContainer = '<div class="overlay__desciption-container"></div>';
 var $descriptionContent = '<div class="desc-content"></div>';
 // - - - 

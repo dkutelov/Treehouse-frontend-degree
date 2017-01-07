@@ -1,12 +1,12 @@
 // Skills definition object
 var skills = [
 	{
-		name		: "HTML4.9",
+		name		: "HTML",
 		className	: "icon-html",
 		borderColor	: "#4975FB" 
 	},
 	{
-		name		: "JavaScript",
+		name		: "JS",
 		className	: "icon-js",
 		borderColor	: "#EF5252"
 	},
@@ -78,7 +78,8 @@ function skillsHTML(skillsToShow) {
 		for (var i = 0; i < skillsToShow.length; ++i) {
   			skillsHTML += '<div class="skills__outer-circle skills__outer-circle--project-page" style="border: 2px solid' + skills[skillsToShow[i]].borderColor +'">';
 			skillsHTML += '<div class="skills__inner-circle skills__inner-circle--project-page">';
-			skillsHTML += '<div class="skills__icon ' + skills[skillsToShow[i]].className +'"></div>';
+			skillsHTML += '<div class="skills__icon ' + skills[skillsToShow[i]].className + '-sm' + '"></div>';
+			skillsHTML += '<h4 class="skills__name-project-page">' + skills[skillsToShow[i]].name + '</h4></div></div>';
 			skillsHTML += '</div></div>';
 		}
 	}

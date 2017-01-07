@@ -1,5 +1,6 @@
 .skills {
 	&__container {
+		margin: 1em auto;
 		@include screen(tablet){
 			max-width: 80%;
 			margin: 2.5em auto;

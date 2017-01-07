@@ -7,10 +7,19 @@
 			float: left;
 			width: 50%;
 		}
+		@include screen(desktop){
+			width: 50%;
+		}
 	}
 
 	&--x2-equal-width-gutter {
 		@include screen(tablet){
+			box-sizing: border-box;
+    		padding-right: .5em;
+    		padding-left: .5em;
+		}
+
+		@include screen(desktop){
 			box-sizing: border-box;
     		padding-right: 1em;
     		padding-left: 1em;

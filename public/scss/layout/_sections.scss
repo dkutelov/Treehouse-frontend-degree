@@ -5,7 +5,9 @@
 	}
 
 	&--projects-extra-b-margin {
-		margin-bottom: 1.5em;
+		@include screen(tablet) {
+			margin-bottom: 1.5em;
+		}
 	}
 
 	&--tb-padding {
@@ -70,7 +72,7 @@
 		
 		@include screen(tablet){
 			margin-top:0.5em;
-			width: 40%;
+			width: 70%;
  		}
  		@include screen(desktop){
 			margin-top:0.5em;
