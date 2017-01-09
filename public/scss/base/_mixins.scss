@@ -3,12 +3,22 @@
   @if $media == smallmobile {
     @media screen and (max-width:$break-very-small){@content;}
   }
+  @else if $media == smallmobileLandscape {
+    @media screen and (min-width:$break-very-small + 1) and (max-device-width: $break-landscape-small) and (orientation: landscape) {@content;}
+  }
   @else if $media == mobile {
-    @media screen and (min-width:$break-very-small + 1) {@content;}
+    @media screen and (min-width: 651px) {@content;}
+    // @media screen and (min-width:$break-very-small + 1) {@content;}
+  }
+  @else if $media == mobileLandscape {
+    @media screen and (min-width:$break-landscape-small + 1) and (max-width:$break-small) and (orientation: landscape) {@content;}
   }
   @else if $media == tablet {
     @media screen and (min-width:$break-small + 1) {@content;}
   }
+  // @else if $media == tabletLandscape {
+  //   @media screen and (min-width:$break-small + 1) and (orientation: landscape) {@content;}
+  // }
   @else if $media == desktop {
     @media screen and (min-width: $break-wide) {@content;}
   }

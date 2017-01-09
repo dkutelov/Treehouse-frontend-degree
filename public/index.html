@@ -16,7 +16,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
 
 		<!-- Favicon -->
-	<!-- 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
 		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
@@ -32,7 +32,7 @@
 		<link rel="manifest" href="/manifest.json">
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff"> -->
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 	<!-- SVG sprite -->
@@ -195,9 +195,10 @@
 		<video autoplay muted loop poster="img/backgroundtop.jpg" id="header-background-video">
 			<source src="video/backrgound-video-short.mp4" type="video/mp4">
 		</video>
-
-		<img srcset="img/backgroundtop1x.jpg 768w, img/backgroundtop2x.jpg 1267w" id="header-background-image">
-
+		<picture>
+			<source srcset="img/backgroundtoplandscape1x.jpg 768w, img/backgroundtoplandscape2x.jpg 1267w" media="(orientation: landscape)">
+			<img srcset="img/backgroundtop1x.jpg 768w, img/backgroundtop2x.jpg 1267w" id="header-background-image">
+		</picture>
 		<div class="container header-container">
 			<!-- Name -->
 			<h1 class="header-container-name">kutelov.com</h1>
@@ -228,7 +229,7 @@
 				<p class="key-messages-content-text">digital solutions that stand out, engage and inspire.</p>
 			</div>
 			<h3 class="key-messages-subtitle">Let's get down to work!</h3>
-			<div class="button button-grey js-inquiry">
+			<div class="button button-grey js-inquiry button-inquiry">
 				<span>inquire</span>
 			</div>
 		</div>
@@ -348,8 +349,8 @@
 				<div class="columns">
 					<div class="columns--x3-equal-width columns--x3-equal-width-gutter columns--x3-equal-width-overflow projects--animation js-animation js-project">
 						<div class="projects__picture">
-			    			<img class="projects__picture-image1" sizes="400px" srcset="dist/img/projects/music-search1-low-res.jpg 400w, dist/img/projects/music-search1.jpg 800w" alt="Music Serach API web site screen one">
-			    			<img class="projects__picture-image2" sizes="400px" srcset="dist/img/projects/music-search2-low-res.jpg 400w, dist/img/projects/music-search2.jpg 800w" alt="Music Serach API web site screen two">
+			    			<img class="projects__picture-image1" sizes="480px" srcset="dist/img/projects/music-search1-low-res.jpg 480w, dist/img/projects/music-search1.jpg 800w" alt="Music Serach API web site screen one">
+			    			<img class="projects__picture-image2" sizes="480px" srcset="dist/img/projects/music-search2-low-res.jpg 480w, dist/img/projects/music-search2.jpg 800w" alt="Music Serach API web site screen two">
 			    			<div class="projects__picture-title-box">
 			    				<h4 class="projects__picture-title">Web API - Music Search</h4>
 			    			</div>
@@ -357,8 +358,8 @@
 					</div>
 					<div class="columns--x3-equal-width columns--x3-equal-width-gutter columns--x3-equal-width-overflow projects--animation js-animation js-project">
 						<div class="projects__picture">
-			    			<img class="projects__picture-image1" sizes="400px" srcset="dist/img/projects/video1-low-res.jpg 400w, dist/img/projects/video1.jpg 800w" alt="Interactive video player image one">
-			    			<img class="projects__picture-image2" sizes="400px" srcset="dist/img/projects/video2-low-res.jpg 400w, dist/img/projects/video2.jpg 800w" alt="Interactive video player image two">
+			    			<img class="projects__picture-image1" sizes="480px" srcset="dist/img/projects/video1-low-res.jpg 480w, dist/img/projects/video1.jpg 800w" alt="Interactive video player image one">
+			    			<img class="projects__picture-image2" sizes="480px" srcset="dist/img/projects/video2-low-res.jpg 480w, dist/img/projects/video2.jpg 800w" alt="Interactive video player image two">
 			    			<div class="projects__picture-title-box">
 			    				<h4 class="projects__picture-title">Interactive Video Player</h4>
 			    			</div>
@@ -366,8 +367,8 @@
 					</div>
 					<div class="columns--x3-equal-width columns--x3-equal-width-gutter columns--x3-equal-width-overflow projects--animation js-animation js-project">
 						<div class="projects__picture">
-			    			<img class="projects__picture-image1" sizes="400px" srcset="dist/img/projects/web-app1-low-res.jpg 400w, dist/img/projects/web-app1.jpg 800w" alt=App Dashboard image one">
-			    			<img class="projects__picture-image2" sizes="400px" srcset="dist/img/projects/web-app2-low-res.jpg 400w, dist/img/projects/web-app2.jpg 800w" alt="App Dashboard image two">
+			    			<img class="projects__picture-image1" sizes="480px" srcset="dist/img/projects/web-app1-low-res.jpg 480w, dist/img/projects/web-app1.jpg 800w" alt=App Dashboard image one">
+			    			<img class="projects__picture-image2" sizes="480px" srcset="dist/img/projects/web-app2-low-res.jpg 480w, dist/img/projects/web-app2.jpg 800w" alt="App Dashboard image two">
 			    			<div class="projects__picture-title-box">
 			    				<h4 class="projects__picture-title">Web App Dashboard</h4>
 			    			</div>
@@ -375,8 +376,8 @@
 					</div>
 					<div class="columns--x3-equal-width columns--x3-equal-width-gutter columns--x3-equal-width-overflow projects--animation js-animation js-project">
 						<div class="projects__picture">
-			    			<img class="projects__picture-image1" sizes="400px" srcset="dist/img/projects/form1-low-res.jpg 400w, dist/img/projects/form1.jpg 800w" alt="Online registration form image one">
-			    			<img class="projects__picture-image2" sizes="400px" srcset="dist/img/projects/form2-low-res.jpg 400w, dist/img/projects/form2.jpg 800w" alt="Online registration form image two">
+			    			<img class="projects__picture-image1" sizes="480px" srcset="dist/img/projects/form1-low-res.jpg 480w, dist/img/projects/form1.jpg 800w" alt="Online registration form image one">
+			    			<img class="projects__picture-image2" sizes="480px" srcset="dist/img/projects/form2-low-res.jpg 480w, dist/img/projects/form2.jpg 800w" alt="Online registration form image two">
 			    			<div class="projects__picture-title-box">
 			    				<h4 class="projects__picture-title">Online Registration Form</h4>
 			    			</div>
@@ -384,8 +385,8 @@
 					</div>
 					<div class="columns--x3-equal-width columns--x3-equal-width-gutter columns--x3-equal-width-overflow projects--animation js-animation js-project">
 						<div class="projects__picture">
-			    			<img class="projects__picture-image1" sizes="400px" srcset="dist/img/projects/gallery1-low-res.jpg 400w, dist/img/projects/gallery1.jpg 800w" alt="Interactive image gallery - image one">
-			    			<img class="projects__picture-image2" sizes="400px" srcset="dist/img/projects/gallery2-low-res.jpg 400w, dist/img/projects/gallery2.jpg 800w" alt="Interactive image gallery - image two">
+			    			<img class="projects__picture-image1" sizes="480px" srcset="dist/img/projects/gallery1-low-res.jpg 480w, dist/img/projects/gallery1.jpg 800w" alt="Interactive image gallery - image one">
+			    			<img class="projects__picture-image2" sizes="480px" srcset="dist/img/projects/gallery2-low-res.jpg 480w, dist/img/projects/gallery2.jpg 800w" alt="Interactive image gallery - image two">
 			    			<div class="projects__picture-title-box">
 			    				<h4 class="projects__picture-title">Interactive Image Gallery</h4>
 			    			</div>
@@ -393,8 +394,8 @@
 					</div>
 					<div class="columns--x3-equal-width columns--x3-equal-width-gutter columns--x3-equal-width-overflow projects--animation js-animation js-project">
 						<div class="projects__picture">
-			    			<img class="projects__picture-image1" sizes="400px" srcset="dist/img/projects/svg-update1-low-res.jpg 400w, dist/img/projects/svg-update1.jpg 800w" alt="SVG site update - image one">
-			    			<img class="projects__picture-image2" sizes="400px" srcset="dist/img/projects/svg-update2-low-res.jpg 400w, dist/img/projects/svg-update2a.jpg 800w" alt="SVG site update - image two">
+			    			<img class="projects__picture-image1" sizes="480px" srcset="dist/img/projects/svg-update1-low-res.jpg 480w, dist/img/projects/svg-update1.jpg 800w" alt="SVG site update - image one">
+			    			<img class="projects__picture-image2" sizes="480px" srcset="dist/img/projects/svg-update2-low-res.jpg 480w, dist/img/projects/svg-update2a.jpg 800w" alt="SVG site update - image two">
 			    			<div class="projects__picture-title-box">
 			    				<h4 class="projects__picture-title">SVG Site Update</h4>
 			    			</div>

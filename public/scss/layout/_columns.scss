@@ -3,13 +3,19 @@
 	@include clearfix;
 
 	&--x2-equal-width {
+
 		@include screen(tablet){
 			float: left;
 			width: 50%;
 		}
+
 		@include screen(desktop){
 			width: 50%;
 		}
+	}
+
+	&--x2-equal-width:nth-child(odd) {
+		clear: both;
 	}
 
 	&--x2-equal-width-gutter {

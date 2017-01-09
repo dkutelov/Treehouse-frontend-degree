@@ -99,7 +99,7 @@ $(document).on('click', '.js-menu-icon', function() {
       $('.menu').css('transform', 'translateX(0)');
       onOff = 1;
     } else {
-      $('.menu').css('transform', 'translateX(-500px)');
+      $('.menu').css('transform', 'translateX(-700px)');
       onOff = 0;
     }
 });

@@ -5,7 +5,7 @@
 	right: 20%;
 	z-index: 500;
 	transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
-	transform: translateX(-500px);
+	transform: translateX(-700px);
 
 	@include screen(tablet) {
 		position: relative;
@@ -18,13 +18,22 @@
 
 	&-mobile-line {
 		position:absolute;
-		top: 92.5px;
+		top: 80px;
 		left: 0%;
 		width: 17.5%;
 		color: $plain-white;
 		background: $plain-black;
 		height: 45px;
 		margin: 0;
+
+		@include screen(smallmobileLandscape) {
+			width: 10%;
+			top: 70px;
+		}
+		@include screen(mobileLandscape) {
+			width: 10%;
+			top: 70px;
+		}
 
 		@include screen(tablet) {
 			display:none;
@@ -38,15 +47,6 @@
 			height: 35px;
 			margin: 5px 15px;
 		}
-
-		// &-text {
-		// 	position: absolute;
-		// 	z-index: 500;
-		// 	top: -5%;
-		// 	left: 50%;
-		// 	display: inline-block;
-		// 	text-transform: uppercase;
-		// }
 	}
 
 	&-item {

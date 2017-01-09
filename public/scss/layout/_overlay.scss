@@ -14,14 +14,19 @@
 	&__main-image {
 		display: block;
 		width: 100%;
-		padding: 1em 3em;
-
+		padding: 1em 3em;		
+		@include screen(mobileLandscape) {
+			padding-top: 4.5em;
+			padding-left: 1em;
+			width: 50%;
+		}
 		@include screen(tablet) {
 			padding: 1em;
+			width: 90%;
 		}
 		@include screen(desktop) {
-			width: 80%;
 			padding: 2.5em;
+			width: 80%;
 		}
 	}
 
@@ -31,10 +36,19 @@
 		left: 1em;
 		right: 1em;
 		@extend %overlayContentBox;
-
+		@include screen(smallmobileLandscape) {
+			top: .5em;
+			left: 45%;
+			right: 2.5em;
+		}
+		@include screen(mobileLandscape) {
+			top: 1em;
+			left: 45%;
+			right: 2.5em;
+		}
 		@include screen(tablet) {
-			top: 32.5%;
-			left: 36.5%;
+			top: 7.5%;
+			left: 32.5%;
 			right: 1.5em;
     	}
     	@include screen(desktop) {
@@ -54,6 +68,9 @@
 		text-align: center;
 		margin: .75em 2em 0.25em 2em;
 		@extend %subtitilesOnPopUp;
+		@include screen(smallmobileLandscape) {
+			margin: 0 2em 0.25em 2em;
+		}
 		@include screen(tablet) {
 			margin: 1.1em 3em 0.25em 3em;
 		}
@@ -76,6 +93,12 @@
 	&__desciption-container {
 		position: relative;
 		height: 11.5em;
+		@include screen(smallmobileLandscape) {
+			height: 6.9em;
+		}
+		@include screen(mobileLandscape) {
+			height: 7.85em;	
+		}
 		@include screen(tablet) {
 			height: 16.25em;
 		}
@@ -87,12 +110,28 @@
 		margin: 0 1em;
 		padding: 5px 0;
 		background: rgba(0,0,0,.7);
-		
+		@include screen(smallmobileLandscape) {
+			padding: 1px 0;
+		}
+		@include screen(mobileLandscape) {
+			padding: 2px 0;
+		}
+
 		&-row-container {
 			overflow: hidden;
 			padding: 0;
 			margin: 0.25em 0;
 			height: 30px;
+			@include screen(smallmobileLandscape) {
+				margin: 0.1em 0;
+				height: 18px;
+				padding: 0;
+			}
+			@include screen(mobileLandscape) {
+				margin: 0.15em 0;
+				height: 20px;
+				padding: 0;
+			}
 			@include screen(tablet) {
 				margin: 0.5em 0;
 				height: 42px;
@@ -103,10 +142,12 @@
 	&__info-skills {
 		color: $very-dark-grey;
 		margin: 1em 0;
+		@include screen(smallmobileLandscape) {
+			margin: .25em 0;
+		}
 		@include screen(mobile) {
 			margin: 1em;
-		}
-		
+		}	
 		@include screen(tablet) {
 			margin: 1em 3em .5em;
 		}
@@ -114,21 +155,18 @@
 
 	&__live-preview {
 		display: none;
-
-		@include screen(tablet) {
-			display: block;
-			bottom: 11em;
-    	}
-
-    	@include screen(desktop) {
-			bottom: 1em;
-    	}
-
 		@extend %overlayContentBox;
 		position: absolute;
 		left: 1em;
 		width: 16em;
 		height: 9em;
+		@include screen(tablet) {
+			display: block;
+			bottom: 3em;
+    	}
+    	@include screen(desktop) {
+			bottom: 1em;
+    	}
 		h1 {
 			margin: .25em;
 			background: rgba(255,255,255,0.8);
@@ -141,11 +179,17 @@
 		left: 1em;
 		right: 1em;
 		bottom: .5em;
+		@include screen(smallmobileLandscape) {
+			right:auto;
+		}
+		@include screen(mobileLandscape) {
+			right:auto;
+		}
 		@include screen(tablet) {
 			height: 3em;
 			left: 1em;
 			right: auto;
-			bottom: 20.5em;
+			bottom: 12.25em;
 			margin: .25em;
 		}
 		@include screen(desktop) {
