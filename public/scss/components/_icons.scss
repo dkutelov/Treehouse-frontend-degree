@@ -11,8 +11,6 @@
 		box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 		transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);	
 		margin: .25em .25em;
-		// -webkit-perspective: 300px;
-		// perspective: 300px;
 		@include screen(mobile) {
 			margin: .5em;
 		}
@@ -45,16 +43,6 @@
 			top: 9%;
 			width: 25px;
 			height: 25px;
-			// @include screen(mobileLandscape) {
-			// 	top: 9%;
-			// 	width: 25px;
-			// 	height: 25px;
-			// }
-			// @include screen(mobile) {
-			// 	top: 9%;
-			// 	width: 42.5px;
-			// 	height: 42.5px;
-			// }
 			@include screen(tablet) {
 				top: 9%;
 				width: 50px;
@@ -156,16 +144,6 @@
 	width: 20px;
 	height: 20px;
 
-	// @include screen(mobileLandscape) {
-	// 	background-size: 120px 40px;
-	// 	width: 20px;
-	// 	height: 20px;
-	// }
-	// @include screen(mobile) {
-	// 	background-size: 180px 60px;
-	// 	width: 30px;
-	// 	height: 30px;
-	// }
 	@include screen(tablet) {
 		background-size: 210px 70px;
 		width: 35px;
@@ -179,12 +157,6 @@
 
 .icon-css-sm{
 	background-position: -20px 0;
-	// @include screen(mobileLandscape){
-	// 	background-position: -20px 0;
-	// }
-	// @include screen(mobile) {
-	// 	background-position: -30px 0;
-	// }
 	@include screen(tablet) {
 		background-position: -35px 0;
 	}
@@ -192,10 +164,6 @@
 
 .icon-js-sm{
 	background-position: -39px 0;
-// 	@include screen(mobileLandscape){}
-// 	@include screen(mobile) {
-// 		background-position: -59px 0;
-// 	}
 	@include screen(tablet) {
 		background-position: -69px 0;
 	}	
@@ -203,10 +171,6 @@
 
 .icon-jq-sm{
 	background-position: -58px 0;
-	// @include screen(mobileLandscape){}
-	// @include screen(mobile) {
-	// 	background-position: -88px 0;
-	// }
 	@include screen(tablet) {
 		background-position: -102px 0;
 	}
@@ -214,12 +178,6 @@
 
 .icon-ajax-sm{
 	background-position: -78px 0;
-	// @include screen(mobileLandscape){
-	// 	background-position: -78px 0;
-	// }
-	// @include screen(mobile) {
-	// 	background-position: -118px 0;
-	// }
 	@include screen(tablet) {
 		background-position: -137px 0;
 	}
@@ -227,12 +185,6 @@
 
 .icon-git-sm{
 	background-position: -99px 0;
-	// @include screen(mobileLandscape){
-	// 	background-position: -99px 0;
-	// }
-	// @include screen(mobile) {
-	// 	background-position: -145px 0;
-	// }
 	@include screen(tablet) {
 		background-position: -174px 0;
 	}
@@ -240,12 +192,6 @@
 
 .icon-sass-sm{
 	background-position: 1px -20px;
-	// @include screen(mobileLandscape){
-	// 	background-position: 1px -20px;
-	// }
-	// @include screen(mobile) {
-	// 	background-position: 1px -30px;
-	// }
 	@include screen(tablet) {
 		background-position: 1px -35px;
 	}
@@ -253,12 +199,6 @@
 
 .icon-postcss-sm{
 	background-position: -20px -20px;
-	// @include screen(mobileLandscape){
-	// 	background-position: -20px -20px;
-	// }
-	// @include screen(mobile) {
-	// 	background-position: -30px -30px;
-	// }
 	@include screen(tablet) {
 		background-position: -35px -35px;
 	}
@@ -266,12 +206,6 @@
 
 .icon-gulp-sm{
 	background-position: -39px -20px;
-	// @include screen(mobileLandscape){
-	// 	background-position: -39px -20px;
-	// }
-	// @include screen(mobile) {
-	// 	background-position: -59px -30px;
-	// }
 	@include screen(tablet) {
 		background-position: -69px -35px;
 	}
@@ -279,12 +213,6 @@
 
 .icon-node-sm{
 	background-position: -59px -20px;
-	// @include screen(mobileLandscape){
-	// 	background-position: -59px -20px;
-	// }
-	// @include screen(mobile) {
-	// 	background-position: -89px -30px;
-	// }
 	@include screen(tablet) {
 		background-position: -104px -35px;
 	}
@@ -292,12 +220,6 @@
 
 .icon-npm-sm{
 	background-position: -78px -20px;
-	// @include screen(mobileLandscape){
-	// 	background-position: -78px -20px;
-	// }
-	// @include screen(mobile) {
-	// 	background-position: -118px -30px;
-	// }
 	@include screen(tablet) {
 		background-position: -138px -35px;
 	}
@@ -305,12 +227,6 @@
 
 .icon-svg-sm{
 	background-position: -100px -20px;
-	// @include screen(mobileLandscape){
-	// 	background-position: -100px -20px;
-	// }
-	// @include screen(mobile) {
-	// 	background-position: -150px -30px;
-	// }
 	@include screen(tablet) {
 		background-position: -175px -35px;
 	}
@@ -342,19 +258,15 @@
 		svg {
 			width: 3em;
 			height: 3em;
-			use {
-				fill: $medium-grey;
-				@extend %iconsTransition;
-			}
+			fill: $medium-grey;
+			@extend %iconsTransition;
 		}
 	}
 }
 
 .contacts--contact-row:hover {
 	svg {
-		use {
-			fill: $plain-white;
-		}
+		fill: $plain-white;
 	}
 }
 
@@ -371,18 +283,13 @@
 			width: 15px;
 			height: 15px;
 		}
-		use {
-			fill: $plain-white;
-			@extend %iconsTransition;
-		}
-
+		fill: $plain-white;
+		@extend %iconsTransition;
 	}
 
 	&:hover {
 		svg {
-			use {
-				fill: $lime;
-			}
+			fill: $lime;
 		}
 	}
 }

@@ -60,7 +60,7 @@ var skills = [
 		className	: "icon-npm",
 		borderColor	: "#939393"
 	}
-]
+];
 
 var skillsToShow = "all"; 
 
@@ -101,5 +101,5 @@ $(document).on('mousemove', '.skills__outer-circle', function(e) {
 });
 
 $(document).on('mouseout', '.skills__outer-circle', function(e) {
-	$(this).css({transform:'perspective(300px) rotateX(0deg) rotateY(0deg)'})
+	$(this).css({transform:'perspective(300px) rotateX(0deg) rotateY(0deg)'});
 });

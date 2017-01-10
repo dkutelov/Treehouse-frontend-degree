@@ -140,16 +140,16 @@ var projects = [
 			'The project challange was to optimize',
 			'ready and functioning site by replacing ',
 			'all images with Scalable Vector Graphics.',
-			'The completed web site was provided using',
-			'png images and icons with no amimations.',
+			'The completed web site, png images and',
+			'icons with no amimations were provided.',
 
-			'Background image, logo, navigation icons',
-			'and dogs images were replaced with SVGs.',
+			'A background image, logo, navigation icons',
+			'and images of dogs replaced with SVGs.',
 			'Eye catching animations for the logo on',
 			'site loading as well for navigation icons',
-			'and logo on mouse hover were creaded.',
+			'and logo on mouse hover were created.',
 
-			'Dog images were animated on mouse',
+			'The images of dogs animated on mouse',
 			'hover with CSS keyframe animation so',
 			'the main image rotates as well as its',
 			'inner elements - the eye and eyebrow - ',
@@ -184,7 +184,7 @@ var $tabletPreviewIcon = '<div class="preview-tablet js-preview-tablet"><svg><us
 var $desktopPreviewIcon = '<div class="preview-desktop js-preview-desktop"><svg><use xlink:href="#project-preview-desktop" x="0" y="0"/></svg></div>';
 // - - - 
 var $visitSiteButton = '<div class="button button-yellow overlay__visit-site"><a class="js-visit-site" target="_blank" href="#">Visit Site</a></div>';
-var $moreButton = '<div class="button button-lime more-button js-more">more</div>'
+var $moreButton = '<div class="button button-lime more-button js-more">more</div>';
 
 // - - - F U N C T I O N S
 function projectDescriptionHtml(projectIndex, batch) {
@@ -195,7 +195,7 @@ function projectDescriptionHtml(projectIndex, batch) {
 		// descritpionHTML += '<p class="overlay__info-text overlay__info-text-line' + (i+1) + '">';
 			descritpionHTML += '<p class="overlay__info-text">';
 		descritpionHTML += projects[projectIndex].description[y];
-		descritpionHTML += '</p></div>'
+		descritpionHTML += '</p></div>';
 	}
 
 	return descritpionHTML; 
@@ -210,7 +210,7 @@ function animateDescriptionText(selector){
 
 // Main function to build project pop up
 function showProject(index) {
-	var skillsToShow = projects[index].skills;
+	skillsToShow = projects[index].skills;
 	var $projectSkillsHTML = skillsHTML(skillsToShow);
 
 	$overlay.append(
