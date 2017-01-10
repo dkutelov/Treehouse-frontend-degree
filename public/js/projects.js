@@ -278,7 +278,7 @@ function showProject(index) {
   		livePreview(element, index);
 	});
 
-	$(document).on('click', '.js-more', function() {
+	$(document).on('click touch', '.js-more', function() {
   		batch += 5;
   		if ( batch < projects[index].description.length ) {
 	  		var descHTML = projectDescriptionHtml(index, batch);

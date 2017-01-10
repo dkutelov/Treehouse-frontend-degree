@@ -4,6 +4,9 @@
 		@include screen(tablet){
 			max-width: 80%;
 			margin: 2.5em auto;
+			-webkit-perspective: 800px;
+			-moz-perspective: 800px;
+			perspective: 800px;
 		}
 		@include screen(desktop){
 			max-width: 80%;

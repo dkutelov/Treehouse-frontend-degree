@@ -11,6 +11,8 @@
 		box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 		transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);	
 		margin: .25em .25em;
+		// -webkit-perspective: 300px;
+		// perspective: 300px;
 		@include screen(mobile) {
 			margin: .5em;
 		}
@@ -21,18 +23,6 @@
 			width: 37.5px;
 			height: 37.5px;
 			margin: .25em .15em;
-			// @include screen(mobileLandscape) {
-			// 	width: 37.5px;
-			// 	height: 37.5px;
-			// 	margin: .25em .15em;
-			// }
-
-			// @include screen(mobile) {
-			// 	width: 68px;
-			// 	height: 68px;
-			// 	margin: .25em .5em;
-			// }
-			
 			@include screen(tablet) {
 				width: 80px;
 				height: 80px;

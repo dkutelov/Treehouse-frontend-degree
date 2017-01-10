@@ -94,7 +94,7 @@ function prevProject() {
 
 // - - - end of functions
 
-$(document).on('click', '.js-menu-icon', function() {
+$(document).on('click touchstart', '.js-menu-icon', function() {
     if ( onOff === 0 ) {
       $('.menu').css('transform', 'translateX(0)');
       onOff = 1;

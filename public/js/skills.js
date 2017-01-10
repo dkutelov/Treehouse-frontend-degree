@@ -92,7 +92,12 @@ $(document).on('mousemove', '.skills__outer-circle', function(e) {
 	var h = this.clientHeight;
 	var y = (e.offsetX - w * 0.5) / w * 55;
 	var x = (1 - (e.offsetY - h * 0.5)) / h * 55;
-	$(this).css({transform:'perspective(300px) rotateX(' + x + 'deg) rotateY(' + y + 'deg)'})
+	// $(this).css({transform:'perspective(300px) rotateX(' + x + 'deg) rotateY(' + y + 'deg)'})
+	$(this).css({
+		'transform' :'rotateX(' + x + 'deg) rotateY(' + y + 'deg)',
+		'-webkit-transform' :'rotateX(' + x + 'deg) rotateY(' + y + 'deg)',
+		'-moz-transform' :'rotateX(' + x + 'deg) rotateY(' + y + 'deg)'
+	});
 });
 
 $(document).on('mouseout', '.skills__outer-circle', function(e) {
