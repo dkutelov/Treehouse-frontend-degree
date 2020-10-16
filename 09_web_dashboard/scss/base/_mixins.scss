@@ -1,0 +1,12 @@
+// Media queries
+@mixin screen($media){
+  @if $media == mobile {
+    @media screen and (max-width:$break-small){@content;}
+  }
+  @else if $media == tablet {
+    @media screen and (min-width:$break-small + 1) {@content;}
+  }
+  @else if $media == desktop {
+    @media screen and (min-width: $break-wide) {@content;}
+  }
+}

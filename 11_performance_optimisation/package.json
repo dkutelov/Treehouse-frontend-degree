@@ -1,0 +1,26 @@
+{
+  "name": "performance_optimization_project",
+  "version": "1.0.0",
+  "description": "Optimize stock photography web site to set targets for number of requirests and content length size.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dk",
+  "license": "ISC",
+  "devDependencies": {
+    "events": "^1.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-image": "^2.7.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^2.0.0",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-pngquant": "^5.0.0"
+  },
+  "dependencies": {
+    "static-server": "^2.0.3"
+  }
+}

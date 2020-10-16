@@ -1,0 +1,16 @@
+.container {		
+	max-width:100%;
+// 		max-width: 1200px;
+	margin: 0;
+	padding: 0;
+	@include screen(tablet) {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+
+#container-of-two-charts {
+	margin-top: 50px;
+}

@@ -1,0 +1,116 @@
+// - - - TRAFFIC LINE CHART - - - //
+
+#line-chart {
+	h2 {
+		color: #707070;
+		text-transform: uppercase;
+		font-weight: 300;
+		text-align: center;
+		@include screen(tablet) {
+			text-align: left;
+			float: left;
+			padding-left: 25px;
+		}
+	}
+	ul {
+		list-style: none;
+		width: 345px;
+		margin: 16px auto;
+		@include screen(tablet) {
+			float: right;
+			margin: 20px 5px 0 0;
+		}
+		li {
+			color: #8f8f8f;
+			font-weight: 600;
+			display: inline-block;
+			padding: 5px 15px;
+			&:hover {
+				cursor: pointer;
+				color:#70c07d;
+			}
+		}
+		#active {
+			color: #fff;
+			background: #70c07d;
+			border-radius: 20px;
+		}		
+	}
+	canvas {
+		max-height: 450px;
+		@include screen(tablet) {
+			max-height: 300px;
+		}
+		padding: 1em 0;
+	}
+	#line-chart-box {
+		padding: 1em 1em 0;
+		@include screen(tablet) {
+			padding: 1em;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+#bar-chart-box {
+	border-top: 1px solid grey;
+	@include screen(tablet) {
+		border-top:none;
+	}
+	#bar-canvas-container {
+		max-height: 550px;
+	}
+	canvas {
+		height: 450px;
+		@include screen(tablet) {
+			height: 550px;
+		}
+		padding: 1em 0;
+	}
+}
+
+#doughnut-chart-box {
+	h2 {
+		padding-top: 1em;
+		@include screen(tablet) {
+			padding-top: 0;
+		}
+	}
+	position: relative;
+	height: 450px;
+		@include screen(tablet) {
+			height: 550px;
+		}
+		@include screen(desktop) {
+			height: 550px;
+		}
+	#doughnut-canvas-container{
+		position:absolute;
+		top:0; left:0; right:40%; bottom:0;
+		canvas {
+			max-height: 400px;
+			@include screen(tablet) {
+				max-height: 550px;
+			}
+			padding: 1em 0;
+		}
+	}
+	#doughnut-legend {
+		position: absolute;
+		top:40%; left:75%; right:0;
+		li{
+			list-style:none;
+			color: #707070;
+			position:relative;
+			margin: .5em 0;
+			span {
+				position: absolute;
+				top:0; left:-35px;
+				width: 1em;
+				height: 1em;
+				margin: .25em .25em 0;
+				border-radius: 3px;
+			}
+		}
+	}
+}

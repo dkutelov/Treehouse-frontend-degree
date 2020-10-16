@@ -1,0 +1,40 @@
+body {
+	font-family: $stack-open-sans;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+header {
+	h1 {
+		font-size: 1.3em;
+		color: white;
+		font-weight: 300;
+		span {
+			font-weight: 600;
+		}
+	}
+}
+
+main {
+	h1 {
+		font-size: 1.3em;
+		color: grey;
+		font-weight: 400;
+	}
+}
+
+#right-column {
+	h2 {
+		font-size: 1.1em;
+		color: #707070;
+		text-transform: uppercase;
+		font-weight: 300;
+		text-align: center;
+		padding-top: 1em;
+		@include screen(tablet) {
+			text-align: left;
+			padding-left: 25px;
+			padding-top: 0;
+		}
+	}
+}

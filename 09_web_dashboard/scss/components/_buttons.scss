@@ -1,0 +1,121 @@
+// - - - Message From Send - - - //
+// - - - - - - - - - - - - - - - //
+#send-user-message,
+#settings {
+	button {
+		cursor: pointer;
+		margin: 0.5em 0 1em 0;
+		height: 50px;
+		background-color: #7377bf;
+		border-radius: 3px;
+		border: none;
+		color: #fff;
+		font-size: 1.2em;
+		text-transform: uppercase;
+		-webkit-transition: background 200ms ease-out;
+		-moz-transition: background 200ms ease-out;
+		-o-transition: background 200ms ease-out;
+		transition: background-color 200ms ease-out;
+		&:hover {
+			background-color: #565857;
+		}
+	}
+}
+
+#send-user-message {
+	button {
+		width:100%;
+	}
+}
+
+#settings {
+	button {
+		display: inline-block;
+		width:49%;
+		@include screen(desktop) {
+			width:49.5%;
+		}
+	}
+}
+
+// - - - On/Off switch in Settings section - - - //
+// - - - - - - - - - - - - - - - - - - - - - - - //
+
+.switch {
+	float: right;
+	position: relative;
+	display: inline-block;
+	width: 85px;
+	height: 38px;
+	cursor: pointer;
+	input {
+		display: none;
+  	}
+  	.buttonOn {
+		visibility: visible;
+		position: absolute;
+		top:8px;
+		left: 12px;
+		color:#fff;
+		z-index: 100;
+		font-weight: 600;
+		transition: visibility ease-out .1s;
+  	}
+  	.buttonOff {
+	  	visibility: hidden;
+	  	position: absolute;
+	  	top:8px;
+	  	left: 46px;
+	  	color:#fff;
+	  	z-index: 100;
+	  	font-weight: 600;
+	  	transition: visibility ease-out .1s;
+  	}
+}
+
+.slider {
+  	position: absolute;
+  	cursor: pointer;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	background-color: #ccc;
+  	-webkit-transition: .4s;
+  	transition: .4s;
+  	&:before {
+  		position: absolute;
+  		content: "";
+  		height: 26px;
+  		width: 26px;
+  		border: 2px solid #d3d3d3;
+  		left: 4px;
+  		bottom: 2px;
+  		background-color: white;
+  		-webkit-transition: .4s;
+  		transition: .4s;  
+  	}
+}
+
+input:checked + .slider {
+	background-color: #2196F3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  	-webkit-transform: translateX(44px);
+  	-ms-transform: translateX(44px);
+  	transform: translateX(44px);
+}
+
+.slider.round {
+  	border-radius: 34px;
+  	border: 2px solid #d3d3d3;
+}
+
+.slider.round:before {
+  	border-radius: 50%;
+}

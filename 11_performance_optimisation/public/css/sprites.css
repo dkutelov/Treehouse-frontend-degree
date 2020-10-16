@@ -1,0 +1,58 @@
+.avatar1, .avatar2, .avatar3, .avatar5, .avatar6, .avatar7{
+	background: url(img/sprites.png) no-repeat;
+	background-size: 300px 50px;
+}
+
+.avatar1{
+	background-position: 0 0;
+}
+
+.avatar2{
+	background-position: -50px 0;
+}
+
+.avatar3{
+	background-position: -100px 0;
+}
+
+.avatar5{
+	background-position: -150px 0;
+}
+
+.avatar6{
+	background-position: -200px 0;
+}
+
+.avatar7{
+	background-position: -250px 0;
+}
+
+.avatar1large, .avatar2large, .avatar3large, .avatar5large, .avatar6large, .avatar7large{
+	background: url(img/sprites.png) no-repeat;
+	background-size: 450px 75px;
+}
+
+.avatar1large{
+	background-position: 0 0;
+}
+
+.avatar2large{
+	background-position: -75px 0;
+}
+
+.avatar3large{
+	background-position: -150px 0;
+}
+
+.avatar5large{
+	background-position: -225px 0;
+}
+
+.avatar6large{
+	background-position: -300px 0;
+}
+
+.avatar7large{
+	background-position: -375px 0;
+}
+

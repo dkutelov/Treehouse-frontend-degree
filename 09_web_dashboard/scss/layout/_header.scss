@@ -1,0 +1,94 @@
+header {
+	height: 70px;
+	background: #7477bf;
+	h1 {
+		float: left;
+		margin: 0;
+		padding-left: 20px;
+		padding-top: 20px;
+	}	
+	#user-profile {
+		display: inline-block;
+		width: 150px;
+		height: 40px;
+		float: right;
+		border-left: 1px solid #5d61bf;
+		margin: 15px 0;
+		@include screen(tablet) {
+			width: 185px;
+		}
+		img {
+			display: inline-block;
+			width: 32px;
+			border-radius: 50%;
+			margin-top: 4px;
+			margin-left: 7.5px;
+			@include screen(tablet) {
+				margin-left: 10px;
+			}
+		}
+		p {
+			display: inline-block;
+			color: #fff;
+			margin-top: 0;
+			vertical-align: top;
+			padding-left: 7.5px;
+			padding-top:8px;
+			font-size: 0.9em;
+			@include screen(tablet) {
+				padding-left: 10px;
+				font-size: 1em;
+			}
+
+		}
+	}
+	#bell-container {
+		position:relative;
+		float: right;
+		cursor: pointer;
+	}
+	#notification-messages {
+		visibility: hidden;
+	}
+	.notificaiton-message {
+		position: absolute;
+		top: 75px;
+		right:15px;
+		width: 305px;
+		border: 1px dotted #fff;
+		border-radius: 3px;
+		background: #7377bf;
+		z-index: 500;
+		h2 {
+			font-size: 1em;
+			color:#fff;
+			margin: 10px 0;
+			padding: 0 5px;
+		}
+		p {
+			font-size: 0.8em;
+			color:#fff;
+			margin: 8px 0;
+			padding: 0 7px;
+		}
+		.message-close {
+			color:#fff;
+			width: 10px;
+			height: 10px;
+			cursor: pointer;
+			position: absolute;
+			right:10px;
+			padding: 7px;
+		}
+		&:nth-of-type(2) {
+			top: 120px;
+			right: 10px;
+			z-index: 600;
+		}
+		&:nth-of-type(3) {
+			top: 165px;
+			right: 5px;
+			z-index: 700;
+		}
+	}
+}

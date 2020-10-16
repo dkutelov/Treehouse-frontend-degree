@@ -1,0 +1,168 @@
+// - - - Bell - icon - - - //
+// - - - - - - - - - - - - //
+
+#bell-icon {
+	display: inline-block;
+	width: 20px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 22.5px;
+	transform-origin: 8px 8px;
+	animation: rotate-bell 3s linear;
+}
+
+@keyframes rotate-bell {
+	10% {
+		transform: rotate(12.5deg);
+	}
+	20% {		
+		transform: rotate(-12.5deg);
+	}
+	30% {
+		transform: rotate(12.5deg);
+	}
+	40% {		
+		transform: rotate(-12.5deg);
+	}
+	50% {
+		transform: rotate(12.5deg);
+	}
+	60% {		
+		transform: rotate(-12.5deg);
+	}
+	70% {
+		transform: rotate(12.5deg);
+	}
+	80% {		
+		transform: rotate(-12.5deg);
+	}
+	90% {
+		transform: rotate(12.5deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+.bell-icon {
+	fill:#fff;
+}
+
+
+// - - - Bell status - - - //
+#bell-status {
+	position:absolute;
+	left: 18px;
+	top: 20px;
+	width: 7px;
+	height: 7px;
+	background: red;
+	border-radius: 50%;
+}
+
+
+// Left column navigation icons - dashboard, members, visits, settings
+
+// - - - container of navigation icons
+.icon-box {
+	display: inline-block;
+	width:81px;
+	height: 55px;
+	position: relative;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	@include screen(desktop) {
+		display: block;
+		margin-bottom: 0;
+	}
+}
+
+// - - - Navigation icons styling
+.icon {
+	fill: #D6E5E3;
+}
+
+#dashboard-icon,
+#members-icon,
+#visits-icon,
+#settings-icon {
+	width: 30px;
+	height: 30px;
+}
+
+// - - - Border on left side of the navigation icon that highlights active status
+
+.active-icon-border {
+	position:absolute;
+	background: #4e4d73;
+	width: 55px;
+	margin: 0 auto;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	-webkit-transition: all 500ms ease-out;
+	-moz-transition: all 500ms ease-out;
+	-o-transition: all 500ms ease-out;
+	transition: all 500ms ease-out;
+	@include screen(tablet) {
+		top:0;
+		bottom: 0;
+		margin: auto 0;
+		height: 55px;
+		width: 6px;
+		border-top-left-radius: 0;
+		border-bottom-right-radius: 4px;
+	}
+}
+
+// - - - Social Media Icons - - - //
+// - - - codepen.io/ruandre/pen/howFi - - - /
+
+.social-icon {
+	box-sizing: content-box;
+	width: 70px;
+	height: 70px;
+	margin: 20px 0 0 20px;
+	background: #7377bf;
+	border: 2px solid #7377bf;
+	border-radius: 50%;
+	position: relative;
+	float: left;
+	 -webkit-transition: all .5s ease-out;
+	 -moz-transition: all .5s ease-out;
+	 -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    .social-icon-image {
+		position: absolute;
+		top:14.285%; left:14.285%;
+		stroke: #fff;
+		fill: #fff;			
+		width: 50px;
+		height: 50px;
+		#facebook-sign {
+			transform: translate(-1px,-2px);
+		}
+		#twitter-sign {
+			transform: translate(4px,7px);
+		}
+		#google-sign {
+			transform: translate(4px,4px);
+		}
+	}
+}
+
+// - - - Recent Activity Icons - - - //
+// - - - - - - - - - - - - - - - - - //
+
+.activityIcon {
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	float: left;
+	width: 42px;
+	height: 42px;
+	background-size: cover;
+	background-position: center center;
+}

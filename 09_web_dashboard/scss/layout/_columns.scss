@@ -1,0 +1,163 @@
+#left-column {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	background:#4d4c72;
+	@include screen(tablet) {
+		display: inline-block;
+		float: left;
+		flex: 0 0 85px;
+	}
+	@include screen(desktop) {
+		height:auto;
+	}
+	
+	a {
+		display: inline;
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left:0;
+		right:0;
+		margin: auto;
+		width: 30px;
+		height: 30px;
+	}
+	
+	a:hover .dashboard-icon,
+	a:hover .members-icon,
+	a:hover .visits-icon,
+	a:hover .settings-icon{
+		fill:#fff;
+	}
+}
+
+#right-column {
+	@include screen(tablet) {
+		width: -webkit-calc(#{$boxWdith} - #{$leftColumnWidth});
+		width:    -moz-calc(#{$boxWdith} - #{$leftColumnWidth});
+		width:         calc(#{$boxWdith} - #{$leftColumnWidth});
+		flex: 1 0 auto;
+		}
+	h1 {
+		display: block;
+		text-align: center;
+		@include screen(tablet) {
+			display: inline-block;
+			float: left;
+			margin: 25px 25px 0 25px;
+			}
+		}
+	#search {
+		display: block;
+		width: 100%;
+		height: 65px;
+		background: #fbfbfb;
+		margin-top:0;
+		padding: 0.1px;
+		@include screen(tablet) {
+			float: right;
+			width: -webkit-calc(#{$boxWdith} - #{$dashboardHeadingWidth});
+			width:    -moz-calc(#{$boxWdith} - #{$dashboardHeadingWidth});
+			width:         calc(#{$boxWdith} - #{$dashboardHeadingWidth});
+			border-bottom: 1px solid #dfdfdf;
+			border-left: 1px solid #dfdfdf;
+			padding: 0;
+			}
+		#searchInput {
+			display: block;
+			height: 38px;
+			width: 80%;
+			margin: 0 auto;
+			border: 1px solid #dbdbdb;
+			border-radius: 3px;
+			margin-top: 10px;
+			padding-left: 10px;
+			@include screen(tablet) {
+				display: inline-block;
+				width: 44%;
+				float:right;
+				margin-top: 10px;
+				margin-right: 20px;
+				padding: 0 1em;
+				}
+			}
+		}
+	.alerts {
+			padding-top: 10px;
+			@include screen(tablet) {
+				padding-top: 70px;
+			}
+			.alert-message {
+				position:relative;
+				visibility: visible;
+				width: 99%;
+				color: #fff;
+				margin: 5px;
+				background: #7377bf;
+				border-radius: 2px;
+				p {
+					font-size: 0.7em;
+					margin:0 20px 0 0;
+					padding: 10px;
+					@include screen(tablet) {
+						font-size: 0.8em;
+					}
+					@include screen(desktop) {
+						font-size: 0.9em;
+					}
+				}
+				.alert-close {
+					color:#fff;
+					width: 10px;
+					height: 10px;
+					cursor: pointer;
+					position: absolute;
+					right:10px;
+					padding: 10px;
+				}
+			}
+		}
+	#bar-chart {
+		width:46%;
+		margin-top: 50px;
+		@include screen(tablet) {
+			border-top: 1px solid #d8d8d8;
+			border-right: 1px solid #d8d8d8;
+			border-bottom: 1px solid #d8d8d8;
+		}
+	}
+	
+	// - - - Social Stats Flexbox - - - //
+
+	#social-stats {
+		@include screen(tablet) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+
+	// - - - New members, Recent activity, Message and Settings Sections - - - //
+	.containerContentBoxes {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		@include screen(tablet) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		.contentBox {
+			border-bottom: 1px solid grey;
+			margin: 1em;
+			@include screen(tablet) {
+				width:45%;
+			}
+			@include screen(desktop) {
+				width:46%;
+			}
+		}
+	}	
+}
