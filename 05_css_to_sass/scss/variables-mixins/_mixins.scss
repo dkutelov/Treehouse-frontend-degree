@@ -1,0 +1,177 @@
+// Media queries
+@mixin screen($media){
+  @if $media == mobile {
+    @media screen and (max-width:$break-small){@content;}
+  }
+  @else if $media == tablet {
+    @media screen and (min-width:$break-small + 1) {@content;}
+  }
+  @else if $media == desktop {
+    @media screen and (min-width: $break-wide) {@content;}
+  }
+}
+
+
+
+// Font import
+@mixin newFont($name) {	
+	@font-face {
+	font-family: '#{$nameFont}';
+	src: url('#{$fontPath}.eot') format('embedded-opentype'),
+         url('#{$fontPath}.woff2') format('woff2'),
+         url('#{$fontPath}.woff') format('woff'),
+         url('#{$fontPath}.ttf') format('truetype'),
+         url('#{$fontPath}.svg#alegreya_sansbold') format('svg');  
+	}
+}
+
+
+// Mixin for setting text characteristics - size, weight, line-height, text alignment
+@mixin fontCharacteristics($size:map-get($add-font-char, size), // mixin to set size, weight, line-height and alignment of text
+	$weight:map-get($add-font-char, weight), 
+	$line: map-get($add-font-char, line), 
+	$align: map-get($add-font-char, align)) {
+		font-size: $size;
+		font-weight: $weight;
+		line-height: $line;
+		text-align: $align;	
+}
+
+
+// Mixin for setting container width and alignment
+$set-container: ( //Setting default values for width and max-width
+	width: 980px,
+	max-width: 1050px,
+) !default;
+@mixin wrapCenter($width:map-get($set-container, width),$maxwidth:map-get($set-container, max-width)) {
+	width: $width;
+	max-width: $maxwidth;
+	margin: 0 auto;
+}
+
+
+// Mixin for Adding border and border radius
+@mixin add-border($position:map-get($add-border, position),
+	$size:map-get($add-border, size),
+	$style:map-get($add-border, style),
+	$color:map-get($add-border, brd-color),
+	$radius:map-get($add-border, brd-radius)) {
+	  @if $radius > 0 {
+		border-radius: $radius;
+		}
+	@if $position == all {
+		border: $size $style $color;
+	} @else {
+		border-#{$position}:  $size $style $color;
+	}
+};
+
+
+// Mixin to set some selectors of a text in a box and the box itself for skills labels and navigation on off button
+@mixin button-box($background-color, $text-color, $v-padding, $h-padding, $font-size) {
+	background-color:$background-color;
+	color:$text-color;
+	padding: $v-padding $h-padding;
+	font-size: $font-size;
+}
+
+
+// Mixin for Skills label
+
+@mixin skills-label($background-color:$label-background-color,
+	$text-color:$label-text-color,
+	$font-size: $label-font-size,
+	$text-align:$lebel-text-align,
+	$display:$label-display,
+	$width:$label-width,
+	$h-padding:$label-h-padding,
+	$v-padding:$label-v-padding,
+	$h-margin:$label-h-marging,	
+	$v-margin:$label-v-marging,
+	$shadow-color:$label-border-color){
+	@include button-box($background-color,$text-color, $v-padding, $h-padding,$font-size);
+	text-align: $text-align;
+	display: $display;
+	width: $width;
+	margin: $v-margin $h-margin;
+	@include add-border($size:$label-border-size, $color:$label-border-color);
+	box-shadow: .5px .5px .5px lighten($shadow-color,10%);
+}
+
+// Mixin for formating button for navigation on/ off
+
+
+@mixin nav-button($background-color: $button-color,
+  	$line-height:$button-line-height,
+  	$radius:$button-border-radius,
+  	$padding-horz:$button-padding-horz,
+  	$padding-vert:$button-padding-vert,
+  	$size:$button-font-size,
+  	$weight:$button-weight,
+  	$width:$button-width,
+  	$color:$button-text-color){
+  	$shadow-color: grayscale(transparentize($button-color,0.1));
+  	$border-color: darken($button-color, 1%);
+  	@include button-box($background-color, $color, $padding-vert, $padding-horz, $size);
+  	@include add-border(all, 1px, solid, $border-color, $button-border-radius);
+  	width: $width;
+  	font-weight: $weight; 
+  	line-height: $button-line-height;
+  	text-shadow: 0 1px 1px darken($button-color, 20%);
+  	box-shadow: 0 2px 6px 0 $shadow-color;  
+  	&:hover {
+    	background-color: darken($button-color, 100%);
+    	img:nth-of-type(1){display:none}
+	}
+}
+
+
+// Mixin for setting padding using bourbon @include padding
+
+@mixin set-padding($position:map-get($add-padding, position), 
+		$top:map-get($add-padding, top),
+		$right:map-get($add-padding, right),
+		$bottom:map-get($add-padding, bottom),
+		$left:map-get($add-padding, left)){
+	@if $position == all {
+		@include padding($top $right $bottom $left);
+	}	
+	@if $position == top {
+		@include padding($top null null);
+	}
+	@if $position == right {
+		@include padding(null $right null null);
+	}
+	@if $position == bottom {
+		@include padding(null null $bottom null);
+	}
+	@if $position == left {
+		@include padding(null null null $left);
+	}
+}
+
+// Mixin for setting margin using bourbon @include margin
+
+@mixin set-margin($position:map-get($add-margin, position), 
+		$top:map-get($add-margin, top),
+		$right:map-get($add-margin, right),
+		$bottom:map-get($add-margin, bottom),
+		$left:map-get($add-margin, left)){
+	@if $position == all {
+		@include margin($top $right $bottom $left);
+	}	
+	@if $position == top {
+		@include margin($top null null);
+	}
+	@if $position == right {
+		@include margin(null $right null null);
+	}
+	@if $position == bottom {
+		@include margin(null null $bottom null);
+	}
+	@if $position == left {
+		@include margin(null null null $left);
+	}
+}
+
+

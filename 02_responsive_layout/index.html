@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Dariy Kutelov</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize_v_4-0-0.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<script src="js/picturefill.min.js" async></script>
+</head>
+
+<body>	
+	
+	<div class="wrap">
+		
+		<header class="clearfix" id="home">
+			<h1 class="name"><a href="index.html">Dariy Kutelov</a></h1>
+			<nav>
+				<ul class="navigation">
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#portfolio">PORTFOLIO</a></li>
+					<li><a href="#skills">SKILLS</a></li>
+					<li><a href="#contacts">CONTACT</a></li>
+				</ul>
+			</nav>
+		</header>
+			
+		<section id="profile_info">
+			
+			<div class="profile-block">
+				
+				<div id="profile">
+					
+					<picture>
+					
+						<img src="img/background.png" alt="background image for responsive height" class="background-image-for-responsive-height">					
+					</picture>									
+					
+					<picture>
+					
+						<img src="img/profile-small.jpg" alt="My profile photo"  class="desaturate bottom-layer-image">
+					
+					</picture>
+					
+					<div>
+						<p class="my-initials">DK</p>
+					</div>
+
+					<picture class="top-layer-image">				
+						<source
+							media='(max-width: 768px)'
+							srcset="img/profile-small.jpg 200w"
+							sizes="35vw">
+						<source
+							media='(max-width: 1024px)'
+							srcset="img/profile-medium.jpg 400w"
+							sizes="20vw">
+						<source
+							srcset="img/profile-large.jpg 800w"
+							sizes="20vw">
+						<img src="img/profile.jpg" alt="My profile photo">
+					</picture>
+				</div>
+				
+				<div class="intro-text">
+					<p id="introduction-text">Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="portfolio-wrap">
+		
+			<h2 id="portfolio">PORTFOLIO</h2>
+		
+			<section class="portfolio">	
+						
+				<figure class="portfolio-project">
+					
+					  <img class="fade" src="img/portfolio-1.png" alt="Marketing Page snapshot">
+					  
+					  <figcaption>
+					  	<h3>Marketing Page</h3>
+					  	<p>This project shows the front page of a marketing website meant for a specific business I am interested in.</p>
+					  </figcaption>
+					  
+				</figure>
+					
+				<figure class="portfolio-project">
+					
+					  <img class="fade" src="img/portfolio-2.png" alt="Search Page snapshot">
+					  
+					  <figcaption>
+					  	<h3>Search Page</h3>
+					  	<p>This project searches through a specific database to find information that the user is trying to look up.</p>
+					  </figcaption>
+					  
+				</figure>
+					
+				<figure class="portfolio-project">
+					
+					  <img class="fade" src="img/portfolio-3.png" alt="Travel app snapshot">
+					  
+					  <figcaption>
+					  	<h3>Travel App</h3>
+					  	<p>This project compares travel times based on different transportation methods and tells you the best one.</p>
+					  </figcaption>
+					  
+				</figure>
+					
+				<figure class="portfolio-project">
+					
+					  <img class="fade" src="img/portfolio-6.png" alt="Map of Favorite Spots snapshot">
+					  
+					  <figcaption>
+					  	<h3>Map of Favourite Spots</h3>
+					  	<p>This project uses mapping apis to plot points for my favourite spots in the city for a do-it-yourself walking tour.</p>
+					  </figcaption>
+				</figure>
+					
+				<figure class="portfolio-project">
+					
+					  <img class="fade" src="img/portfolio-5.png" alt="Photo gallery snapshot">
+					  
+					  <figcaption>
+					  	<h3>Photo Gallery</h3>
+					  	<p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
+					  </figcaption>
+					  
+				</figure>
+					
+				<figure class="portfolio-project">
+					  <img class="fade" src="img/portfolio-4.png" alt="Calculator snapshot">
+					  <figcaption>
+					  	<h3>Calculator</h3>
+					  	<p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
+					  </figcaption>
+					  
+				</figure>
+				
+			<div class="last-raw-1024">	
+				
+				<figure class="portfolio-project">
+					  <img class="fade" src="img/portfolio-7.png" alt="">
+					  <figcaption>
+					  	<h3>Video player</h3>
+					  	<p>The project creates a simple video player with basic video control functionalities. Simply click on the video box and the video will start playing.</p>
+					  </figcaption>
+					  
+				</figure>					
+
+				<figure class="portfolio-project">
+					  <img class="fade" src="img/portfolio-8.png" alt="">
+					  <figcaption>
+					  	<h3>Video play list</h3>
+					  	<p>Easy to browse video play list with medium sized video boxes - two boxes for each raw. There is a convenient search box on the top.</p>
+					  </figcaption>
+					  
+				</figure>					
+
+			</div>
+
+			</section>
+			
+			<section id="skills">
+					<h2>SKILLS</h2>
+					<p>I have developed knowledge and skills in the following areas:</p>
+					<div class="skills-list">
+						<p>HTML</p>
+						<p>CSS</p>
+					</div>
+			</section>			
+	</div>
+
+	<footer>
+		<div class="wrap" id="contacts">
+
+			<div class="footer-contacts">
+				<h2>CONTACT</h2>
+				<p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
+				<div class="contacts">
+					<p>Phone <span class="contact_bold">+1 (111) 555-1234</span></p>
+					<p>Email <span class="contact_bold">email@yoursite.com</span></p>
+				</div>
+			</div>
+
+			<div class="footer-end">
+				<p>Dariy Kutelov</p>
+				<p id="backtotop"><a href="#home">BACK TO TOP</a></p>
+				<ul class="navigation-bottom">
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#portfolio">PORTFOLIO</a></li>
+					<li><a href="#skills">SKILLS</a></li>
+					<li><a href="#contacts">CONTACT</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</footer>
+	
+</body>
+</html>

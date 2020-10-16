@@ -1,0 +1,372 @@
+/* ------------ Import font AlegreyaSans ----------------*/
+
+
+@font-face {
+	font-family: 'AlegreyaSans';
+	src: url('../font/alegreyasans-bold-webfont.eot') format('embedded-opentype'),
+         url('../font/alegreyasans-bold-webfont.woff2') format('woff2'),
+         url('../font/alegreyasans-bold-webfont.woff') format('woff'),
+         url('../font/alegreyasans-bold-webfont.ttf') format('truetype'),
+         url('../font/alegreyasans-bold-webfont.svg#alegreya_sansbold') format('svg');  
+	}
+
+
+
+/* ------------ Base elements ----------------*/
+
+
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	text-align: center;
+	color: grey;
+	background-color: #fafafa;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+
+figure {
+	margin:0;
+	padding: 0;
+}
+
+
+ul li{
+	list-style: none;
+}
+
+
+ul {
+	margin:0;
+	padding: 0;
+}
+
+
+h2,h3 {
+	color: #000;
+	font-weight: normal;
+}
+
+p {
+	font-size: 1em;
+}
+
+.contact_bold{
+	font-weight: 800;
+}
+
+/* ------------ Name styling ----------------*/
+
+
+
+.name {
+	font-family: 'AlegreyaSans', Helvetica, Arial, sans-serif;
+	font-size: 1.6em;
+	margin: 0;
+	padding-top: 22.5px;
+	padding-bottom: 22.5px;	
+}
+
+
+.name a{
+	color: #000;
+}
+
+
+.name a:hover {
+	color: grey;
+}
+
+
+
+/* ------------ Navigation styling ----------------*/
+
+
+
+nav {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 0.85em;
+	line-height: 0.75;
+}
+
+
+.navigation li {
+	background-color: white;
+	margin-bottom: 5px;
+}
+
+
+.navigation a {
+	display:block;
+	color: #4a4a4a;
+	margin:0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+.navigation a:hover {
+	background-color: #303030;
+	color: #fff;
+}
+
+
+
+/* ------------ Wrappers ----------------*/
+
+
+
+.wrap {
+	background-color: #fafafa;
+	padding: 0 0.875em 0 1em;
+}
+
+
+.portfolio-wrap {
+	background-color: #fff;
+	margin-top: 40px;
+	padding: 0 0.875em 0 1em;
+}
+
+
+
+/* ------------ Profile picture ----------------*/
+
+
+
+#profile { /* Size on mobile 200px x 124px */
+	width: 69.4445%; /* 200px divided by 288px */
+	margin: 35px auto 23px;
+	background-color: #ededed;
+	line-height: 0px;
+}
+
+
+.top-layer-image img{ /* Size on mobile 96px x 96px */
+	width: 51%; /* 96px + 6px border divided by 200px*/
+	border-radius: 50%;
+	border: 3px solid #fff;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+
+.my-initials,
+.bottom-layer-image,
+.background-image-for-responsive-height {
+	display:none;
+}
+
+
+img.desaturate { 
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+
+
+/* ------------ Introduction text ----------------*/
+
+
+
+.intro-text p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+#introduction-text {
+	line-height: 24px;
+}
+
+/* height of header and .profile-block should be 555px : made of .wrap - 515px plus top margin of 40px*/
+
+/* ------------ Content ----------------*/
+
+
+
+.portfolio-wrap h2 {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 0.85em;
+	line-height: 0.75;
+	margin: 0;
+	padding-top: 51px;
+	padding-bottom: 51px;
+}
+
+
+.portfolio-project {
+	line-height: 0px;
+}
+
+
+figcaption {
+	height: 140px;
+	line-height: 1.45;
+	font-size: 0.925em;
+}
+
+
+figcaption h3 {
+	font-size: 1.17em;
+	margin-top: 30px;
+}
+
+
+.portfolio-wrap figure p {
+	padding-left: 0.7em;
+	padding-right: 0.7em;
+	margin-top: 15px;
+}
+
+
+.portfolio-wrap figure:last-child{
+	padding-bottom: 23px;
+	margin-bottom: 0;
+}
+
+
+/* height of porfolio should be 2127px : made of .contentwrap - 2127px - this is w/o additionally added portfolio elements*/
+
+
+
+/* ------------ Skills Section ----------------*/
+
+
+
+#skills {
+	margin-top: -35px;
+}
+
+
+#skills h2 {
+	padding-top:30px;
+}
+
+
+#skills p {
+	margin-top: 0;
+}
+
+
+.skills-list {
+	margin-top: 35px;
+	padding-bottom: 45px;
+}
+
+
+.skills-list p{
+	background-color: #303030;
+	border: 0.5px solid #ff3600;
+	box-shadow: .5px .5px .5px #ff3600;
+	color: #fff;
+	margin: 5px auto;
+	padding: 10px 0;
+	width:50%;
+}
+
+/* ------------ Footer ----------------*/
+
+
+
+footer {
+	margin: 0;
+}
+
+
+footer h2 {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 0.85em;
+	line-height: 0.75;
+	color: #4a4a4a;
+	padding-top: 67px;
+	padding-bottom: 19px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+.contacts {
+	padding-top: 5px;
+}
+
+
+.contacts p {
+	margin-top: 7px;
+	margin-bottom: 13px;
+	padding-bottom: 0px;
+}
+
+
+.footer-contacts p {
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+
+.footer-end {
+	text-align:justify;
+	border-top: 1px solid lightgrey;
+	margin-top: 62px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+
+.footer-end p{
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 0;
+	}
+
+
+.footer-end p,
+.footer-end p a {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 0.85em;	
+	color: #4a4a4a;
+}
+
+
+.footer-end::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+
+.navigation-bottom {
+	display:none;
+}
+
+
+
+/* ---- Float clearfix ---- */
+
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}

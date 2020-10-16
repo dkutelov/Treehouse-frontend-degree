@@ -1,0 +1,687 @@
+/* --------------- general --------------- */
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Merriweather', Helvetica, Arial, sans-serif;
+	}
+	
+
+input,
+textarea {
+	display: block;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+
+
+/* --------------- header --------------- */
+
+
+
+header h1 {
+	font-size: 1.1em;
+	line-height: 1.15em;
+	text-align: center;
+	text-transform: uppercase;
+	color:#fff;
+	text-shadow: 0px 0px 0.7px #edecec;
+	background-color: #ffbb39;
+	border: 1px solid #daa300;
+	padding: 25px 0;
+	margin: 0;
+}
+
+
+/* --------------- form --------------- */
+
+
+form {
+	padding:3px 1em 0;
+}
+
+
+/* --------------- form headings --------------- */
+
+
+#form-headings {
+	text-align: center;
+	border-bottom: 4px solid #daa300;
+	margin-bottom: 3px;
+}
+
+
+#form-headings img {
+	width: 7.5%;
+	margin: 5px auto;
+}
+
+
+form h2 {
+	font-size: 1.1em;
+	line-height: 1em;
+	color:#2d3945;
+	padding-bottom: 10px;
+	margin: 0;
+}
+
+
+form h3 {
+	font-size: 0.85em;
+	line-height: 1.25em;
+	color: #9da3a8;
+	font-weight: 400;
+	padding: 4px 0 37px;
+	margin: 0;
+	
+}
+
+
+
+/* --------------- fieldset and legend  --------------- */
+
+
+
+fieldset {
+	border: none;
+	padding: 3px 0 0;
+	margin: 0;
+}
+
+
+.name {
+	display: block;
+	border-top: 2px solid #a6a6a6;
+	width:100%;
+	padding-top: 30px;
+	padding-bottom: 3px;
+	font-size: 1.1em;
+	line-height: 1em;
+	font-weight: 700;
+}
+
+
+
+/* --------------- labels styling --------------- */
+
+
+
+label {
+	display: inline-block;
+	margin: 15px 0;
+	font-size: 0.9em;
+	color: #9da3a8;
+	margin-top: 18px;
+	margin-bottom: 10px;
+}
+
+
+
+/* --------------- input fields  --------------- */
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea
+
+ {
+	width:100%;
+	margin: 0;
+	outline: 0;
+	background-color: #eff0f1;
+	-webkit-transition: background 100ms ease-out 0.1s;
+	-moz-transition: background 100ms ease-out 0.1s;
+	-o-transition: background 100ms ease-out 0.1s;
+	transition: background-color 100ms ease-out 0.1s;
+	border: 1px solid #eff0f1;
+	border-radius: 3px;
+	padding: 15.5px 20px;
+}
+
+
+input[type="date"] {
+	width: 100%;
+	margin: 0;
+	outline: 0;
+	background-color: #eff0f1;
+	border: 1px solid #eff0f1;
+	border-radius: 3px;
+	padding: 15.5px 20px;
+}
+
+
+textarea {
+	padding: 12px 20px;
+	resize:none;
+}
+
+
+#zip-code {
+	width:50%;
+}
+
+#bday {
+	width:50%;
+	padding-bottom: 30px;
+}
+
+
+input:hover,
+select:hover,
+textarea:hover {
+	border-color: #daa300;
+}
+
+
+
+/* --------------- dropdown menu choose state --------------- */
+
+
+select {
+	width:100%;
+	margin: 0;
+	outline: 0;
+	background-color: #eff0f1;
+	border: 1px solid #eff0f1;
+	border-radius: 3px;
+	padding: 15.5px 20px;
+	-webkit-appearance: button;
+    -moz-appearance: button;
+    -moz-appearance:window;
+    -webkit-user-select: none;
+    -moz-user-select: none;	
+    display: block;
+	height:51px;
+	padding-left: 10px;
+	font-weight:300;
+	overflow: hidden;
+	background: url(../img/arrow.png) no-repeat right #eff0f1;
+	background-position: 95% 60%;
+	}
+
+
+select {
+	font-size: 0.9em;
+	color: #9da3a8;
+}
+
+
+select::-ms-expand { 
+    display: none;
+}
+
+
+/* --------------- Header tag for checkbox and radio buttons --------------- */
+
+form h4 {
+	font-size: 0.9em;
+	line-height: 1.85;
+	font-weight: 400;
+	color: #9da3a8;
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+
+h4:nth-of-type(n+2){
+	margin-top: 23px;
+}
+
+
+
+/* --------------- checkbox  --------------- */
+
+
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+}
+
+
+.checkbox::before {
+	content: "";
+	display: inline-block;
+	position:relative;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #eff0f1;
+	border-radius: 3px;
+	background-color: #eff0f1;
+	margin-right: 18px;
+}
+
+
+input[type=checkbox]:checked + .checkbox::before {
+	content: "";
+	background: url(../img/checkmark.svg);
+	background-size: 13px 13px;
+	transition: background 100ms ease 0.1s;
+	border: 2px solid #a6a6a6;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0, 0, 0, 0.07);
+	box-shadow:0 0 3px 1px rgba(228,121,17,.5);
+	width: 18px;
+	height: 18px;
+	margin-right: 18px;
+}
+
+
+label.checkbox {
+	margin-top:11px;
+	margin-bottom: 0;
+	vertical-align: top;
+}
+
+
+
+/* --------------- radio buttons  --------------- */
+
+
+
+.radio-circle::before {
+	content: "";
+	display: inline-block;
+	position:relative;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #eff0f1;
+	border-radius: 50%;
+	background-color: #eff0f1;
+	margin-right: 18px;
+}
+
+
+input[type=radio]:checked + .radio-circle::before {
+	content: "";
+	background: url(../img/dot.png) no-repeat;
+	background-size: 8px 8px;	
+	background-position: center center;
+	transition: background 100ms ease 0.1s;
+	border: 2px solid #a6a6a6;
+	border-radius: 50%;
+	box-shadow: 0 1px 0 rgba(255,255,255,.5),0 1px 0 rgba(0,0,0,.07) inset;
+	box-shadow:0 0 3px 1px rgba(228,121,17,.5);
+	width: 18px;
+	height: 18px;
+	margin-right: 18px;
+}
+
+
+label.radio-circle {
+	margin-top:11px;
+	margin-bottom: 0;
+	vertical-align: top;
+}
+
+
+
+/* --------------- radio buttons frequency --------------- */
+
+
+
+#newsletter-frequency {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+label.radio-square {
+	display: inline-block;
+	padding: 5px 5px;
+	cursor: pointer;
+	text-align: center;
+	margin: 11px 0 0 0;
+}
+
+
+.radio-square::before {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 15px;
+	border: 1px solid #daa300;
+	border-radius: 3px;
+	background-color: #eff0f1;
+}
+
+
+input[type=radio]:checked + .radio-square::before {
+	content: "";
+	background-color:#daa300; 
+	transition: background 100ms ease 0.1s;
+	border: 2px solid #daa300;
+}
+
+
+/* --------------- focus transitions --------------- */
+
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus
+ {
+	background-color: #fff;
+	-webkit-transition: background 100ms ease-in 0.1s;
+	-moz-transition: background 100ms ease-in 0.1s;
+	-o-transition: background 100ms ease-in 0.1s;
+	transition: background 100ms ease-in 0.1s;
+	border: 1px solid #a6a6a6;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(255,255,255,.5),0 1px 0 rgba(0,0,0,.07) inset;
+	box-shadow: 0 0 3px 1px rgba(228,121,17,.5);
+}
+
+
+
+/* --------------- other topics --------------- */
+
+
+
+label[for="other-topics"] {
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+
+
+/* --------------- Bday date format --------------- */
+
+
+
+.date-format {
+    display:none;
+}
+
+input:focus + .date-format {
+    display:inline-block;
+    font-size: 0.9em;
+	color: #9da3a8;
+
+}
+
+
+
+
+/* --------------- button --------------- */
+
+
+
+button {
+	margin-top: 30px;
+	width:100%;
+	height: 60px;
+	background-color: #0896ff;
+	border-radius: 3px;
+	border: none;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+
+button:hover {
+	background-color: #ffbb39;
+	}
+
+
+
+button + p{
+	text-align: center;
+	text-transform: capitalize; 
+	color: #9da3a8;
+	font-size: 0.8em;
+	font-weight: 300;
+	font-style: italic;
+	margin-top: 30px;
+	margin-bottom: 200px;
+}
+
+
+
+/* --------------- paceholder --------------- */
+
+
+
+::-webkit-input-placeholder {
+    text-align: right;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 0.8em;
+	line-height: 1.45;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   	text-align: right;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 0.8em;
+	line-height: 1.45; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   	text-align: right;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 0.8em;
+	line-height: 1.45;
+}
+
+:-ms-input-placeholder {  
+  	text-align: right;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 0.8em;
+	line-height: 1.45;
+}
+
+textarea::-webkit-input-placeholder {
+	text-align: left;
+}
+
+
+textarea::-moz-placeholder {
+	text-align: left;
+}
+
+
+textarea::-ms-input-placeholder {
+	text-align: left;
+}
+
+
+/* --------------- Media 760px --------------- */
+
+
+
+
+@media (min-width:480px) {
+
+
+form h2 {
+	font-size: 1.25em;
+}
+
+
+form {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+label.radio-square {
+	padding: 5px 10px;	
+}
+
+
+.radio-square::before {
+	width: 35px;
+}
+	
+
+button + p {
+	margin-top: 35px;
+	margin-bottom: 250px;
+}
+
+
+
+}
+
+
+
+@media (min-width:760px) {
+
+
+
+form {
+	width: 50%;
+}
+
+
+form h2 {
+	font-size: 1.5em;
+	line-height: 1em;
+	padding-bottom: 12px;
+}
+
+form h3 {
+	padding-top: 0;
+	padding-bottom: 45px;
+}
+
+#form-headings img {
+	width: 7%;
+	margin: 15px auto 7px;
+}
+
+
+.name {
+	padding-top: 45px;
+}
+
+
+#zip-code {
+	width:25.833333%;
+}
+
+
+#bday {
+	padding-bottom: 50px;
+}
+
+
+label.radio-square {
+	padding: 5px 15px;	
+}
+
+
+.radio-square::before {
+	width: 45px;
+}
+
+
+button + p {
+	margin-top: 40px;
+	margin-bottom: 300px;
+}
+
+}
+
+
+
+@media (min-width:1400px) {
+
+
+
+form {
+	width:70%;
+}
+
+
+#form-headings img {
+	width: 5%;
+}
+
+
+fieldset {
+	width: 50%;
+	float:left;
+}
+
+
+fieldset:nth-of-type(1) {
+	padding-right: 1.5em;
+}
+
+
+fieldset:nth-of-type(2) {
+	padding-left: 1.5em;
+}
+	
+
+.name {
+	border:none;
+}
+
+
+.wrapper {
+	padding-top: 3px;
+	border-top: 2px solid #a6a6a6;
+}
+
+
+#zip-code {
+	width:50%;
+}
+
+
+label.radio-square {
+	padding: 5px 10px;	
+}
+
+
+.radio-square::before {
+	width: 40px;
+}
+
+
+button {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+
+h4:nth-of-type(1) {
+	margin-top: 13px;
+}
+
+
+}
+
+/* ---- Float clearfix ---- */
+
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}

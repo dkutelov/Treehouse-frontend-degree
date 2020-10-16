@@ -1,0 +1,36 @@
+// Containers for desctop screens
+
+.wrap {	
+	background-color:map-get($containers-background, wrap);
+	@include set-padding(all, 0, 0.875em, 0, 1em);
+	
+	@include screen(tablet) {
+		@extend %backgroundPattern;
+		@include set-padding(all, 0, 1.875em, 55px, 1.875em);
+		}
+
+	@include screen(desktop) {
+		@include wrapCenter(calc(100% - 7.5em), 1050px);
+		@include set-padding(all,0, 0, 2px, 0);
+	}
+
+}
+
+
+.portfolio-wrap {
+	background-color: map-get($containers-background, portfolio-wrap);
+	@include set-padding(all, 0, 0.875em, 0, 1em);
+	@include set-margin(top, $top:40px);
+	
+	
+	@include screen(tablet) {
+		@include set-margin(top);
+		@include set-padding(all, 0, 1.875em, 0, 1.875em);
+	}
+	
+	@include screen(desktop) {	
+		@include wrapCenter(calc(100% - (2 * 1.875em)), null);
+	}
+}
+
+	

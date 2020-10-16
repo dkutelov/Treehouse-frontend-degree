@@ -1,0 +1,117 @@
+footer {
+	@include set-margin(all);
+	h2 {
+		color: map-get($footer, heading);
+		@include fontCharacteristics(0.85em, 700, 0.75, center);
+		@include set-padding(all, 67px, null, 19px, null);
+		@include set-margin(all, $left:null, $right:null);
+		@include screen(tablet) {
+			@include set-padding(top, 63px);
+		}		
+		@include screen(desktop) {
+			@include set-padding(top, 61px);
+		}
+	}
+}
+
+
+.footer-contacts {
+	@include screen(desktop) {
+		width: 70%;
+		@include set-margin(all, 0, auto, 0, auto);
+	}	
+	p {
+		@include fontCharacteristics(1em, null, 1.5, null);
+		@include screen(tablet) {
+			@include fontCharacteristics(1.3em, null, 1.4, null);
+			@include set-margin(all, 29px, null, 10px, null);
+			@include set-padding(all, null, 3em, null, 3em);
+			}
+		@include screen(desktop) {
+			@include fontCharacteristics(1.2em, null, 1.5, null);
+			@include set-margin(all, 17px, null, 0, null);
+			@include set-padding(top, 0)
+		}
+	}
+}
+
+.contacts {
+	@include set-padding(top, 5px);
+	@include screen(tablet) {
+		@include set-padding(top, 20px);	
+	};
+	@include screen(desktop) {
+		@include set-padding(top, 37.5px);	
+	}
+	p {
+		@include set-margin(all, 7px, null, 13px, null);
+		@include set-padding(bottom);
+		@include screen(tablet) {
+			@include set-margin(top, 15px);
+			@include set-padding(top, 4px);	
+		}
+		@include screen(desktop) {
+			@include set-margin(top, 12.5px);
+			@include set-padding(top);	
+		}
+	}
+}
+
+
+.footer-end {
+	text-align:justify;
+	@include set-margin(top, 62px);
+	@include set-padding(all, 10px, null, 5px, null);
+	@include add-border($position:top, $size:1px, $color:lightgrey);
+	@include screen(tablet) {
+		@include set-margin(top, 67px);
+		@include set-padding(bottom,$bottom:3px);
+	}
+	@include screen(desktop) {
+		@include set-margin(top, 75px);
+    	@include set-padding(bottom,$bottom:3.5px);
+	}
+	p	{
+		display: inline-block;
+		@include set-margin(all, 15px, null, 0, null);
+		@extend %footer-text-and-links;
+		@include screen(desktop) {
+			@include set-margin(top, 14px);
+		}
+		a {
+			@extend %footer-text-and-links;
+		}
+	}
+	&::after {
+		content: '';
+	    display: inline-block;
+	    width: 100%;		
+	}
+}
+
+
+.navigation-bottom {
+	display:none;
+	@include screen(tablet){
+		display: inline-block;
+		li {
+			display: inline-block;
+			font-size: 0.85em;
+			a {
+				color: map-get($footer, navigation-text);
+				font-family: $mainFont;
+				@include fontCharacteristics(0.85em, 700, 100%, center);
+				@include set-padding(left, $left:20px);
+			}
+			a:hover {
+				color: map-get($footer, navigation-text-hover);			
+			}
+		}
+	}
+}
+
+@include screen(tablet) {
+	#backtotop {
+		display: none;
+	}
+}

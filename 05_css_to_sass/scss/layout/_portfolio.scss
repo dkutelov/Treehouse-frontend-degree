@@ -1,0 +1,129 @@
+// Portfoltio section
+
+.portfolio-wrap {	
+	h2 {
+		font-family: $mainFont;
+		@include fontCharacteristics(0.85em, 700, 0.75, null);
+		@include set-margin($position:all);
+		@include set-padding(all, 51px, null, 51px, null);
+		
+		@include screen(desktop) {
+		@include set-padding(all, 61px, null, 61px, null);
+		}
+	}
+
+	figure {		
+		&:last-child{
+			@include set-padding(bottom, $bottom: 23px);
+			@include set-margin(bottom);
+
+			@include screen(tablet) {
+				@include set-padding(bottom, $bottom:8px);
+			}
+		}
+
+		p { 
+			@include set-margin(top, 15px);
+			@include set-padding(all, null, 0.7em, null, 0.7em);
+			@include screen(tablet) {
+				@include set-margin(top, 13px);
+				@include set-padding(all, null, 2.75em, null, 2.75em);
+				line-height: 1.5em;
+			}
+			@include screen(desktop) {
+				@include set-margin(top, 13px);
+				@include set-padding(all, null, 0.9em, null, 0.9em);
+			}
+		}		
+	}
+
+}
+
+
+.portfolio-project {
+	
+	line-height: 0px;	
+	@include screen(tablet) {
+		width: calc(100% / 2 - 6px); /* 348px x 195px */
+	}
+	@include screen(desktop) {
+		width: calc(100% / 3 - 0.708em);
+		@include set-padding(all);
+	}
+}
+
+
+figcaption {
+	height: 140px;
+	@include fontCharacteristics(0.925em, null, 1.45, null);
+	@include screen(tablet) {
+		height: 161px;
+	}
+	@include screen(desktop) {
+		height: 161.5px;
+	}
+	h3 {
+		font-size: 1.17em;
+		@include set-margin(top,30px);
+		
+		@include screen(tablet) {
+		@include set-margin(top,24px);
+		@include set-margin(bottom);
+		}
+		@include screen(desktop) {
+			@include set-margin(top,26.5px);
+		}	
+	}
+}
+
+// placeholder for portfolio display. Created here because if placed in extends file it creates undesired overriding of screen(desktop) display definition - lines 102,103 in this file
+@include screen(tablet) {
+	%portfolio-display {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;		
+	}
+}
+
+.portfolio {
+		@include screen(tablet) {
+			@extend %portfolio-display;	
+		}
+		@include screen(desktop) {
+			@include set-padding(all);
+		}
+	}
+
+.last-raw-1024 {
+		@include screen(tablet) {
+				@extend %portfolio-display;	
+				}
+		@include screen(desktop) {
+			flex-wrap: nowrap;
+			justify-content: flex-start;			
+			figure:first-child {
+				@include set-margin(left, $left: -0.5em);
+			}	
+		}
+		
+		.portfolio-project {
+			@include screen(desktop) {
+				width: calc(100% / 3 + 0.355em);
+				@include set-padding(all, 0, 0.53125em, 0, 0.53125em);
+			}			
+		}
+	}
+
+@include screen(tablet) {
+	.fade {
+		opacity: 1;
+		transition: opacity .3s ease;
+	   -moz-transition: opacity .3s ease;
+	   -webkit-transition: opacity .3s ease;
+	   &:hover {
+			opacity: 0.7;
+			cursor: pointer;
+			box-shadow: 1px 1px 3px lightgrey;
+	   }
+	}
+}

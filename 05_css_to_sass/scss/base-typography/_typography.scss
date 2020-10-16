@@ -1,0 +1,16 @@
+// Fonts import
+
+@include newFont($nameFont);
+
+// Font stacks
+
+body {
+	font-family: $mainFont;
+	}
+	
+.name {
+	font-family: $fontMyName;
+}
+
+
+// Font sizes

@@ -1,0 +1,140 @@
+// Color variables
+
+$main-text-color			: 	#000;
+$main-body-text				:	grey;
+
+$header						: (
+							main: (
+								name-text-color: $main-text-color, 
+								name-text-color-hover: lighten($main-text-color, 50%)
+								),
+							sub-header: (
+								initials-text: #ff3600,
+								background-mobile: #ededed,
+								background-tablet: #535353
+								),
+							);
+
+$nav 						: (
+						    text: (
+							    mobile: #4a4a4a,
+								mobile-hover: #fff,	
+								tablet-and-desktop: #ff3600,
+								tablet-and-desktop-hover: lighten($main-text-color, 50%),						
+								),
+							background: (
+								mobile: #fff,
+								mobile-hover: #303030,
+								tablet-and-desktop: transparent,
+								tablet-and-desktop-hover: transparent,
+								)
+							);
+
+
+$containers-background		: (
+								wrap: #fafafa, 
+								portfolio-wrap: #fff
+								);
+
+$footer						: (
+								heading: #4a4a4a, 
+								navigation-text: #4a4a4a,
+								navigation-text-hover: #ff3600
+								);
+
+
+
+
+// Font import
+$nameFont					:	AlegreyaSans;
+$fontPath					:	'../font/#{$nameFont}-bold-webfont';
+
+// Font stacks
+$fontMyName					: 	'#{$nameFont}', Helvetica, Arial, sans-serif;
+$mainFont					:	'Open Sans', Helvetica, Arial, sans-serif;
+
+// Media queries break points
+$break-small				: 768px;
+$break-wide					: 1200px;
+
+
+
+// Background pattern image
+
+$backgroundImage			: 'background-pattern.jpg';
+
+
+// Dafault border color
+$base-border-color			: #fff;
+
+
+// Default variables for Mixin for setting text characteristics - size, weight, line-height, text alignment
+$add-font-char: (
+	size: 1em,
+	weight: 300,
+	line: 1.5,
+	align: left
+) !default;
+
+
+// Default variables for Mixin for adding border and border radius
+$add-border: (
+	position: all,
+	size: 1px,
+	style: solid,
+	brd-color: $base-border-color,
+	brd-radius: 0
+) !default;
+
+
+// Default variables for Mixin creating labes for skills
+$label-background-color		: #303030!default;
+$label-text-color			: #fff!default;
+$label-font-size			: 1em!default;
+$lebel-text-align			: center!default;
+$label-display				: block!default;
+$label-width				: 50%!default;
+$label-v-padding			: 10px!default;
+$label-h-padding			: 0!default;
+$label-v-marging			: 5px!default;
+$label-h-marging			: auto!default;
+$label-border-size			: 0.5px!default;
+$label-border-color			: #ff3600!default;
+
+
+// Default variables for Mixin setting padding
+$add-padding: (
+	position: all,
+	top: 0,
+	right: 0,
+	bottom: 0,
+	left: 0,
+) !default;
+
+
+// Default variables for Mixin setting margin
+$add-margin: (
+	position: all,
+	top: 0,
+	right: 0,
+	bottom: 0,
+	left: 0,
+) !default;
+
+
+// Default variables for mixin Nav-button
+// $button-backgrond-color: #4285f4;
+$button-backgrond-color: #fff;
+$button-color: $button-backgrond-color!default;
+$button-text-color: #000!default;
+$button-line-height: 1.3!default;
+$button-border-radius: 3px!default;
+$button-padding-horz: 5px!default;
+$button-padding-vert: 7px!default;
+$button-font-size: 1em!default;
+$button-weight: bold!default;
+$button-width: 42px!default;
+
+
+
+

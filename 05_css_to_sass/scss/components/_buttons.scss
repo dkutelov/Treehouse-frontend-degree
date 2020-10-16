@@ -1,0 +1,29 @@
+// Button to show/ hide navigation on mobile screens
+.nav-toggle {
+	position:relative;
+	float:left;
+	height:42px;
+	@include nav-button;
+	@include set-margin(all, 20px, 0, 0, 0);
+	@include screen(tablet) {
+		display:none;
+	}
+	
+	img {
+		position:absolute;
+		width: 20px;
+		height: 20px;
+		top: 10px;
+		left: 10px;
+	}
+
+	img:nth-of-type(1){
+		z-index: 100;
+	}
+}
+
+.nav-toggle:hover {
+	img:nth-of-type(1) {
+		display: none;
+	}
+}

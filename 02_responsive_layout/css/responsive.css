@@ -1,0 +1,539 @@
+@media (min-width:768px) {
+
+
+
+/* ------------ General and wrappers ----------------*/
+
+
+
+body,
+.wrap {
+	background: url(../img/background-pattern.jpg) repeat;
+}
+
+
+.wrap,
+.portfolio-wrap {
+	padding: 0 1.875em;	
+}
+
+
+.wrap {
+	padding-bottom: 55px;
+}
+
+
+.portfolio-wrap {
+	margin-top: 0px;
+}
+
+
+
+/* ------------ Header and Navigation styling ----------------*/
+
+
+
+.name,
+.name h1{
+	margin-bottom: 0;
+}
+
+
+.name {
+	padding-top: 50px;
+	padding-bottom: 15px;
+}
+
+
+.navigation {
+	margin: 8px 0 0;
+}
+
+
+.navigation li {
+	display: inline-block;
+	background: transparent;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 0;
+}
+
+
+.navigation li a {
+	color: #ff3600;
+	padding: 16px 10px;
+}
+
+
+.navigation li a:hover {
+	background: transparent;
+	color: #000;
+}
+
+
+
+/* ------------ Introduction text and profile photo styling ----------------*/
+
+
+.profile-block {
+	display: inline-flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	padding-top: 55px;
+}
+
+
+#profile {/* Size 288px x 175px */
+	position: relative;
+	width: 40.6779661%; /* 288px divided by 708px */
+	margin: 0px;
+	background-color: #535353;
+}
+
+
+.top-layer-image {
+	width: 100%;
+	z-index: 5;
+	margin-top: 0;
+	margin-bottom: 0;
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.top-layer-image img {
+	width: 50%;
+	margin: 0;
+	padding: 0;
+}
+
+.my-initials,
+.bottom-layer-image,
+.background-image-for-responsive-height 
+	{
+	display:block;
+}
+
+.my-initials {
+	width: 50%;
+	color: #ff3600;
+	font-family: 'AlegreyaSans', Helvetica, Arial, sans-serif;
+	font-size: 5em;
+	z-index: 3;
+}
+
+
+.bottom-layer-image {
+	width: 50%;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	z-index: 1;
+}
+
+.bottom-layer-image,
+.my-initials {
+	margin-top: 0;
+	margin-bottom: 0;
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.top-layer-image img:hover {
+	opacity: 0;
+	cursor: pointer;
+	z-index: 5;
+}
+
+.intro-text {
+	width: 59.3220339%; /* 100% - #profile width of 40.6779661% */
+}
+
+
+.intro-text p {
+	margin-top: 0;
+	text-align: left;
+}
+
+
+#introduction-text {
+	font-size: 1.25em;
+	line-height: 1.3;
+	padding-right: 0.75em;
+	margin-top: -3px;
+}
+
+/* height of header and .profile-block should be 435px : made of .wrap - 435px */
+
+
+
+/* ------------ Portfolio section styling ----------------*/
+
+
+
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+.last-raw-1024 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;	
+}
+
+
+.portfolio-project {
+	width: calc(100% / 2 - 6px); /* 348px x 195px */
+}
+
+
+figcaption {
+	height: 161px;
+}
+
+
+figcaption h3 {
+	margin-top: 24px;
+	margin-bottom: 0;
+}
+
+
+.portfolio-wrap figure:last-child{
+	padding-bottom: 8px;
+}
+
+
+.portfolio-wrap figure p {
+	margin-top: 13px;
+	line-height: 1.5em;
+	padding-left: 2.75em;
+	padding-right: 2.75em;
+}
+
+.fade {
+	opacity: 1;
+	transition: opacity .3s ease;
+   -moz-transition: opacity .3s ease;
+   -webkit-transition: opacity .3s ease;
+}
+
+
+.fade:hover {
+	opacity: 0.7;
+	cursor: pointer;
+	box-shadow: 1px 1px 3px lightgrey;
+}
+
+/* height of portfolio should be 1256px : made of .contentwrap - 1256px */
+
+/* ------------ Skills Section ----------------*/
+
+
+
+#skills {
+	margin-top: 0;
+}
+
+
+#skills h2 {
+	padding-top:22.8px;
+}
+
+
+.skills-list p{
+	display: inline-block;
+	text-align: center;
+	margin: 0 15px;
+	padding: 10px 0;
+	width:25%;
+}
+
+
+/* ------------ Footer ----------------*/
+
+
+footer h2 {
+	padding-top: 63px;
+}
+
+
+.footer-contacts p {
+	font-size: 1.3em;
+	line-height: 1.4;
+	margin-top: 29px;
+	margin-bottom: 10px;
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
+
+.contacts {
+	padding-top: 20px;
+}
+
+
+.contacts p {
+	margin-top: 15px;
+	padding-top: 4px;
+}
+
+
+.footer-end {
+	margin-top: 67px;
+	padding-bottom: 3px;
+}
+
+
+#backtotop {
+	display: none;
+}
+
+
+.navigation-bottom {
+	display: inline-block;
+}
+
+
+.navigation-bottom li {
+	font-size: 0.85em;
+	display: inline-block;
+}
+
+
+.navigation-bottom li a {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 0.85em;
+	color: #4a4a4a;
+	padding-left: 20px;
+}
+
+
+.navigation-bottom li a:hover {
+	color: #ff3600;
+}
+
+}
+
+
+
+
+
+@media (min-width:1024px) {
+
+
+
+/* ------------ Wrappers ----------------*/
+
+
+
+.wrap {
+	width: calc(100% - 7.5em); /* 60px left/ right margin x 2 = 120px / 16px = 7.5em*/
+	margin: 0 auto;
+	padding: 0 0 2px 0;
+	max-width: 1050px;
+}
+
+
+.portfolio-wrap {
+	width: calc(100% - (2 * 1.875em));
+	padding: 0 1.875em 0;
+	margin: 0 auto;
+}
+
+
+/* ------------ Header and Navigation styling ----------------*/
+
+
+
+.name {
+	float:left;
+	padding-top: 54px;
+}
+
+
+nav {
+	float: right;
+	padding-top: 53px;
+}
+
+
+.navigation {
+	margin: 0;
+}
+
+
+.navigation li a {
+	padding-left: 20px;
+	padding-right: 20px;
+	}
+
+
+.navigation li:last-child a {
+	padding-right: 0;
+}
+
+
+#profile_info {
+	padding-bottom: 50px;
+}
+
+
+/* ------------ Introduction text and profile photo styling ----------------*/
+
+
+
+.profile-block {
+	padding-top: 40px;
+}
+
+
+#profile {
+	width: 40.5973451%; /* 367px divided by 904px*/
+/* 	height: 255px; */
+}
+
+
+.bottom-layer-image {
+	width: 49.3188011%; /* 175px image plus 6px for border divided by 367px*/
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* height of header and .profile-block should be 421px : made of .wrap - 421px */
+
+
+#introduction-text {
+	padding-right: 1.4em;
+}
+
+
+/* ------------ Portfolio section styling ----------------*/
+
+
+.portfolio-wrap h2 {
+	padding-top: 61px;
+	padding-bottom: 61px;
+}
+
+
+.portfolio {
+	padding: 0;
+}
+
+
+.portfolio-project {
+	width: calc(100% / 3 - 0.708em);
+	padding: 0px
+	}	
+
+/* image size - 290px x 162px, space b/w the images 17px, space left/right 30px */
+
+
+.last-raw-1024 {
+	flex-wrap: nowrap;
+	justify-content: flex-start;	
+}
+
+
+.last-raw-1024 .portfolio-project {
+	width: calc(100% / 3 + 0.355em);
+	padding: 0 0.53125em;
+}
+
+
+.last-raw-1024 figure:first-child {
+	margin-left: -0.5em;
+}
+
+
+figcaption h3 {
+	margin-top: 26.5px;
+/* 	margin-bottom: 0; */
+}
+
+
+figcaption {
+    height: 161.5px;
+}
+
+
+.portfolio-wrap figure p {
+	margin-top: 13px;
+/* 	line-height: 1.5; */
+	padding-left: .9em;
+	padding-right: .9em;
+}
+
+
+.portfolio-wrap figure:last-child{
+	padding-bottom: 8px;
+}
+
+
+
+/* ------------ Skills Section ----------------*/
+
+
+
+#skills h2 {
+	padding-top:20.8px;
+}
+
+
+.skills-list {
+	margin-top: 35px;
+	padding-bottom: 65px;
+}
+
+
+/* ------------ Footer ----------------*/
+
+
+
+footer h2 {
+	padding-top: 61px;
+}
+
+.footer-contacts {
+	width: 70%;
+	margin: 0 auto;
+}
+
+
+.footer-contacts p {
+	margin-top: 17px;
+	margin-bottom: 0;
+	padding-top: 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+
+.contacts {
+    padding-top: 37.5px;
+}
+
+
+.contacts p{
+    margin-top: 12.5px;
+}
+
+
+.footer-end {
+    margin-top: 75px;
+    padding-bottom: 3.5px;
+}
+
+
+.footer-end p {
+	margin-top: 14px;
+}
+
+}

@@ -1,0 +1,92 @@
+/* ------------ Name styling ----------------*/
+
+.name {
+	@include fontCharacteristics(1.6em, bold, normal, center);
+	@include set-margin(all);
+	@include padding(22.5px 0);	
+	a{
+		@include set-margin(left, $left:-42px);
+		color: map-get-z($header, main, name-text-color);
+		&:hover {
+			color: map-get-z($header, main, name-text-color-hover);
+			}
+	}
+	@include screen(tablet) {
+		@include margin(null null 0);
+		@include padding(50px null 15px);	
+		h1 {
+			@include margin(null null 0);
+		}
+		}
+	@include screen(desktop) {
+		float:left;
+		@include padding(54px null null);		
+		}
+}
+
+
+/* ------------ Navigation styling ----------------*/
+
+
+nav {
+	@include fontCharacteristics(0.85em, 700, 0.75, center);
+	@include screen(desktop) {
+		float:right;
+		@include set-padding(top, $top:53px);		
+		}
+}
+
+.navigation {
+	display: none;
+	@include screen(tablet) {
+		display: block;
+		@include set-margin(top, 8px);
+	}
+	@include screen(desktop) {
+		@include set-margin(top, 0);
+	}	
+	li {
+		background-color: map-get-z($nav, background, mobile);
+		@include set-margin(bottom, $bottom:5px);
+		@include screen(tablet) {
+			display: inline-block;
+			background: map-get-z($nav, background, tablet-and-desktop);
+			text-align: center;
+			@include set-padding(all, null, 0, null, 0);
+			@include set-margin(bottom, $bottom:0);
+		}
+		@include screen(desktop) {
+			&:last-child a {
+				@include set-padding(right);
+			}
+		}
+	}
+	a {
+		display:block;
+		color: map-get-z($nav, text, mobile);
+		@include set-margin(all);
+		@include set-padding(all, 15px, null, 15px, null);
+		&:hover {
+			background-color: map-get-z($nav, background, mobile-hover);
+			color: map-get-z($nav, text, mobile-hover);
+		}	
+		@include screen(tablet) {
+			color: map-get-z($nav, text, tablet-and-desktop);
+			@include set-padding(all, 16px, 10px, 16px, 10px);
+			&:hover {
+				color: map-get-z($nav, text, tablet-and-desktop-hover);
+				background: map-get-z($nav, background, tablet-and-desktop-hover);
+				}
+			}
+		@include screen(desktop) {
+			@include set-padding(all, null, 20px, null, 20px);
+			}
+	}
+}
+
+
+// clearfix to prevent margin colapse
+
+header {
+	@extend %clearfix;
+}

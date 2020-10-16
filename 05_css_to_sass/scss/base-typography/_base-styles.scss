@@ -1,0 +1,54 @@
+* {
+ 	box-sizing:border-box;
+}
+
+body {
+	@include fontCharacteristics(1em, 300, null, center);
+	color: $main-body-text;
+	background-color: map-get($containers-background, wrap);
+
+	@include screen(tablet) {
+		@extend %backgroundPattern;
+	}
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+
+figure {
+	@include set-margin(all);
+	@include set-padding(all);
+}
+
+
+ul li{
+	list-style: none;
+}
+
+
+ul {
+	@include set-margin(all);
+	@include set-padding(all);
+}
+
+
+h2,h3 {
+	color:$main-text-color;
+	font-weight: normal;
+}
+
+p {
+	font-size: 1em;
+}
+
+.contact_bold{
+	font-weight: 800;
+}

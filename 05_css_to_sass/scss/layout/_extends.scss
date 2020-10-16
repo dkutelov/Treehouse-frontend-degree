@@ -1,0 +1,54 @@
+// Wrap padding for mobile
+%wrapPadding {
+	padding: 0 0.875em 0 1em;
+}
+
+%displayProfilePhotoNon { // extended on 3 selectors
+	display:none;
+}
+
+
+// Background pattern
+@include screen(tablet) {
+	%backgroundPattern {
+		background: url(../img/#{$backgroundImage}) repeat;
+	}
+	
+	%displayProfilePhotoBlock {
+		display:block;
+	}
+
+	%bottomImagePosition {
+		margin-top: 0;
+		margin-bottom: 0;
+		position:absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+// size of last row in desktop size
+@include screen(desktop) {
+	%lastRowDesktop {
+		width: calc(100% / 3 + 0.355em);
+		padding: 0 0.53125em;
+	}
+}
+
+
+// footer navigation text color and size - for p and p a 
+%footer-text-and-links {
+	color: #4a4a4a;
+	@include fontCharacteristics(0.85em, 700, null, null);
+}
+
+
+// clearfix for header
+%clearfix {
+	&::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}

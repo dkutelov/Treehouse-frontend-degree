@@ -1,0 +1,132 @@
+/* ------------ Profile picture ----------------*/
+
+#profile { 
+	width: 69.4445%;
+	background-color: map-get-z($header, sub-header, background-mobile);
+	line-height: 0px;
+	@include set-margin(all, 35px, auto, 23px, auto);
+	@include screen(tablet) {
+		position: relative;
+		width: 40.6779661%;
+		@include set-margin(all);
+		background-color: map-get-z($header, sub-header, background-tablet);
+	}
+}
+
+@include screen(desktop) {
+	#profile_info {
+		@include set-padding(bottom, $bottom:50px);
+	}
+}
+
+
+.top-layer-image {
+	img{
+		width: 51%; 
+		@include add-border($size:3px,$radius:50%);
+		@include set-margin(all, 12px, null, 12px, null);		
+		@include screen(tablet){
+			width: 50%;
+			@include set-margin(all);
+			@include set-padding(all);	
+			&:hover {
+				opacity: 0;
+				cursor: pointer;
+				z-index: 5;
+			}
+		}
+	}
+	@include screen(tablet){
+		width: 100%;
+		z-index: 5;
+		@include set-margin(top);
+		@include set-margin(bottom);
+		position:absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.my-initials {
+	@extend %displayProfilePhotoNon;
+	@include screen(tablet){
+		@extend %displayProfilePhotoBlock;
+		width: 50%;
+		color:  map-get-z($header, sub-header, initials-text);
+		font-family: $fontMyName;
+		font-size: 5em;
+		z-index: 3;
+		@extend %bottomImagePosition;
+	}
+}
+
+.bottom-layer-image {
+	@extend %displayProfilePhotoNon;
+	@include screen(tablet){
+		@extend %displayProfilePhotoBlock;
+		width: 50%;
+		@include add-border($size:3px, $radius:50%);
+		z-index: 1;
+		@extend %bottomImagePosition;
+	}
+
+}
+
+.background-image-for-responsive-height {
+	@extend %displayProfilePhotoNon;
+	@include screen(tablet){
+		@extend %displayProfilePhotoBlock;
+	}
+}
+
+
+img.desaturate { 
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.profile-block {
+	@include screen(tablet) {
+		display: inline-flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+		@include set-padding(top, 55px);
+	}
+	@include screen(desktop) {
+		@include set-padding(top, 40px);
+	}
+}
+
+
+/* ------------ Introduction text ----------------*/
+
+
+.intro-text {
+	p {
+		@include set-margin(all, 0, null, 0, null);
+
+	@include screen(tablet) {
+		@include set-margin(top);
+		text-align: left;
+		}
+	}
+
+	@include screen(tablet) {
+		width: 59.3220339%; /* 100% - #profile width of 40.6779661% */
+	}
+}
+
+
+#introduction-text {
+	line-height: 24px;
+	
+	@include screen(tablet) {
+		@include fontCharacteristics(1.25em, null, 1.3, null);
+		@include set-padding(right, $right:0.75em);
+		@include set-margin(top, -3px);
+	}
+	@include screen(desktop) {
+		@include set-padding(right, $right:1.4em);
+	}
+}
